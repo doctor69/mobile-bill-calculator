@@ -4,8 +4,8 @@ import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  site: 'https://saketsharma.github.io',
-  base: '/tmobile-calculator',
+  site: 'https://doctor69.github.io',
+  base: '/mobile-bill-calculator',
   output: 'static',
   integrations: [react()],
   vite: {
