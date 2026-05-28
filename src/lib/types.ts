@@ -66,6 +66,7 @@ export interface MonthRecord {
   verifiedTotal: number;
   notes?: string;
   savedAt: string;
+  paidBy?: string;  // 'Saket' | 'Sanjay' — who paid T-Mobile that month
 }
 
 export interface AppConfig {

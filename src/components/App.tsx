@@ -9,11 +9,19 @@ import BillUploader from './BillUploader';
 import BillResults from './BillResults';
 import HistoryTable from './HistoryTable';
 import CreditConfig from './CreditConfig';
+import Dashboard from './Dashboard';
 
-type Tab = 'upload' | 'history' | 'credits';
+type Tab = 'dashboard' | 'upload' | 'history' | 'credits';
+
+const TAB_LABELS: Record<Tab, string> = {
+  dashboard: '🏠 Overview',
+  upload:    '📄 Calculator',
+  history:   '📋 History',
+  credits:   '⚙️ Credits',
+};
 
 export default function App() {
-  const [tab, setTab] = useState<Tab>('upload');
+  const [tab, setTab] = useState<Tab>('dashboard');
   const [parsing, setParsing] = useState(false);
   const [parseError, setParseError] = useState<string | null>(null);
   const [parsedBill, setParsedBill] = useState<ParsedBill | null>(null);
@@ -27,7 +35,6 @@ export default function App() {
   const [saveStatus, setSaveStatus] = useState<'idle' | 'saved' | 'error'>('idle');
 
   useEffect(() => {
-    // Merge built-in history with localStorage
     const stored = loadAllRecords();
     const storedMonths = new Set(stored.map((r) => r.month));
     const merged = [
@@ -48,11 +55,9 @@ export default function App() {
       setParsedBill(bill);
       setTotalBill(bill.totalDue || 0);
 
-      // Try to load previous balances
       const prevRecord = loadRecord(detectedMonth);
       const prevBalances: Record<string, number> = {};
       if (!prevRecord) {
-        // Look for most recent prior month
         const sortedHistory = savedRecords.filter((r) => r.month < detectedMonth);
         if (sortedHistory.length > 0) {
           const latest = sortedHistory[0];
@@ -67,6 +72,7 @@ export default function App() {
       setTab('upload');
     } catch (err) {
       setParseError(err instanceof Error ? err.message : 'Failed to parse PDF');
+      setTab('upload');
     } finally {
       setParsing(false);
     }
@@ -75,7 +81,6 @@ export default function App() {
   function handleManualEntry(totalAmount: number, selectedMonth: string) {
     setTotalBill(totalAmount);
     setMonth(selectedMonth);
-    // Create empty bill for manual entry
     const bill: ParsedBill = {
       month: selectedMonth,
       totalDue: totalAmount,
@@ -85,6 +90,7 @@ export default function App() {
     setParsedBill(bill);
     const shares = calculateBillSplit(bill, DEFAULT_CONFIG, {});
     setPersonShares(shares.map((s) => ({ ...s, total: 0, balance: 0 })));
+    setTab('upload');
   }
 
   function handleSharesChange(updated: PersonShare[]) {
@@ -133,38 +139,47 @@ export default function App() {
   const verified = Math.abs(diff) < 0.02;
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
       {/* Header */}
-      <header className="bg-magenta-700 shadow-sm border-b border-gray-200 bg-[#e20074]">
-        <div className="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
-              <span className="text-[#e20074] font-bold text-sm">T</span>
+      <header className="bg-[#e20074] shadow-lg">
+        <div className="max-w-6xl mx-auto px-4 py-4">
+          <div className="flex items-center justify-between">
+            {/* Logo + title */}
+            <div className="flex items-center gap-3">
+              <div className="w-9 h-9 bg-white rounded-xl flex items-center justify-center shadow-sm">
+                <span className="text-[#e20074] font-black text-base leading-none">T</span>
+              </div>
+              <div>
+                <h1 className="text-white font-bold text-lg leading-tight">T-Mobile Bill Splitter</h1>
+                <p className="text-pink-200 text-xs">Account 969064451 · Sanjay</p>
+              </div>
             </div>
-            <div>
-              <h1 className="text-white font-semibold text-lg leading-tight">T-Mobile Bill Splitter</h1>
-              <p className="text-pink-100 text-xs">Saket's account calculator</p>
-            </div>
+
+            {/* Nav */}
+            <nav className="flex gap-1">
+              {(['dashboard', 'upload', 'history', 'credits'] as Tab[]).map((t) => (
+                <button
+                  key={t}
+                  onClick={() => setTab(t)}
+                  className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${
+                    tab === t
+                      ? 'bg-white text-[#e20074] shadow-sm'
+                      : 'text-pink-100 hover:bg-white/10'
+                  }`}
+                >
+                  {TAB_LABELS[t]}
+                </button>
+              ))}
+            </nav>
           </div>
-          <nav className="flex gap-1">
-            {(['upload', 'history', 'credits'] as Tab[]).map((t) => (
-              <button
-                key={t}
-                onClick={() => setTab(t)}
-                className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${
-                  tab === t
-                    ? 'bg-white text-[#e20074]'
-                    : 'text-pink-100 hover:bg-pink-700'
-                }`}
-              >
-                {t === 'upload' ? '📄 Calculator' : t === 'history' ? '📋 History' : '⚙️ Credits'}
-              </button>
-            ))}
-          </nav>
         </div>
       </header>
 
-      <main className="max-w-5xl mx-auto px-4 py-6">
+      <main className="max-w-6xl mx-auto px-4 py-6">
+        {tab === 'dashboard' && (
+          <Dashboard records={savedRecords} />
+        )}
+
         {tab === 'upload' && (
           <div className="space-y-6">
             <BillUploader

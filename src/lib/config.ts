@@ -38,6 +38,12 @@ export const DEFAULT_CONFIG: AppConfig = {
       color: '#ec4899',
       lines: ['Chiranjiwi', 'Dadha Router', 'Chiranjiwi Extra'],
     },
+    {
+      name: 'newline',
+      displayName: 'New Line (701)',
+      color: '#64748b',
+      lines: ['NewLine', '701-412-4006'],
+    },
   ],
 
   // Credits from iPhone 16 Pro / iPhone 16 promotions
@@ -120,5 +126,7 @@ export const DEFAULT_CONFIG: AppConfig = {
     'Dadha Router': 'chiranjiwi',
     'Chiranjiwi Extra': 'chiranjiwi',
     'Home Internet': 'shared',
+    'NewLine': 'newline',
+    '701-412-4006': 'newline',
   },
 };
