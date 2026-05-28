@@ -20,5 +20,11 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 
+# PDF uploads (never commit bills)
+*.pdf
+
+# pdfjs worker (copied from node_modules at build time)
+public/pdf.worker.min.mjs
+
 # jetbrains setting folder
 .idea/
