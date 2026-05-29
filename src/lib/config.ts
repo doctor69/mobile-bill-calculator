@@ -6,13 +6,13 @@ export const DEFAULT_CONFIG: AppConfig = {
       name: 'saket',
       displayName: 'Saket (Me)',
       color: '#3b82f6',
-      lines: ['Saket', 'Saket iPhone', 'Dadha Router', 'Home Internet', 'Dada iPhone', 'NewLine', '701-412-4006'],
+      lines: ['Saket', 'Saket iPhone', 'Dadha Router', 'Home Internet', 'Dada iPhone', 'NewLine'],
     },
     {
       name: 'dari',
       displayName: 'Dari / Sanjay / Mahima',
       color: '#10b981',
-      lines: ['Sanjay', 'Dari iPhone', 'Dari', 'Dari 2nd iPhone', 'Dari SO iPhone', 'Dari SO'],
+      lines: ['Sanjay', 'Dari iPhone', 'Dari', 'Dari 2nd iPhone', 'Dari SO iPhone', 'Dari SO', '701-412-4006'],
     },
     {
       name: 'bajpayee',
@@ -170,7 +170,7 @@ export const DEFAULT_CONFIG: AppConfig = {
     'Dari SO iPhone': 'dari',
     'Dari SO': 'dari',
     'NewLine': 'saket',
-    '701-412-4006': 'saket',
+    '701-412-4006': 'dari',
     // Bajpayee family
     'Bajpayee': 'bajpayee',
     'Bajpayee Extra': 'bajpayee',
