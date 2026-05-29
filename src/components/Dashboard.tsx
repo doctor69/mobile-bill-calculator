@@ -16,12 +16,11 @@ const GROUP_ACCENT: Record<string, { bg: string; border: string; text: string; d
   ritesh:     { bg: 'bg-red-50',      border: 'border-red-200',     text: 'text-red-700',     dot: 'bg-red-500',     bar: 'bg-red-400',     balanceBg: 'bg-red-500'     },
   saroj:      { bg: 'bg-violet-50',   border: 'border-violet-200',  text: 'text-violet-700',  dot: 'bg-violet-500',  bar: 'bg-violet-400',  balanceBg: 'bg-violet-500'  },
   chiranjiwi: { bg: 'bg-pink-50',     border: 'border-pink-200',    text: 'text-pink-700',    dot: 'bg-pink-500',    bar: 'bg-pink-400',    balanceBg: 'bg-pink-500'    },
-  newline:    { bg: 'bg-emerald-50',  border: 'border-emerald-200', text: 'text-emerald-700', dot: 'bg-emerald-500', bar: 'bg-emerald-400', balanceBg: 'bg-emerald-500' },
 };
 
 const EMOJI: Record<string, string> = {
   dari: '🟢', saket: '🔵', bajpayee: '🟡', mainali: '🟣', bikas: '🩵',
-  ritesh: '🔴', saroj: '🟣', chiranjiwi: '🩷', newline: '🟢',
+  ritesh: '🔴', saroj: '🟣', chiranjiwi: '🩷',
 };
 
 function formatMonth(m: string) {
