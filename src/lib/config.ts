@@ -72,50 +72,57 @@ export const DEFAULT_CONFIG: AppConfig = {
   //   Mainali  (4/21): +$7.10 credit
   //   Total credits = $12.50 + $8.95 + $8.95 + $7.10 = $37.50 ✓
   creditConfigs: [
-    // ── Sapana line billing correction (T-Mobile error, Jan 2024 – Dec 2025) ──
+    // ── Sapana line cost-sharing arrangement (Jan 2024 – ongoing) ─────────────
+    // Sapana (252-350-3063) is on Bajpayee's T-Mobile account. Her ~$37.50/mo
+    // net line cost is shared across groups by ratio 7:5:4:5 (total 21):
+    //   Bajpayee pays full T-Mobile bill (includes Sapana), then others chip in.
+    //   Net correction: Bajpayee +$25/mo; Saket −$8.95; Dari −$8.95; Mainali −$7.10
+    //
+    // Jan 2024–Dec 2025: also corrects T-Mobile billing error where Sapana's
+    //   iPhone installment was misapplied to other groups' account credits.
     {
       accountGroup: 'bajpayee',
-      description: 'Sapana line charge — T-Mobile billing correction (−$37.50/mo net cost)',
-      totalCredit: -900,          // −$37.50 × 24 months
+      description: 'Sapana line charge — cost-sharing arrangement (−$37.50/mo)',
+      totalCredit: -900,          // −$37.50 × 24 months (Jan 2024–Dec 2025); ongoing after
       monthlyCredit: -37.50,      // negative = extra charge to Bajpayee
       startDate: '2024-01',
-      endDate: '2025-12',
+      endDate: '2027-12',
       appliedTo: ['Sapana iPhone'],
     },
     {
       accountGroup: 'bajpayee',
       description: 'Sapana credit — Bajpayee share (7/21 × $37.50 = $12.50/mo)',
-      totalCredit: 300,           // $12.50 × 24 months
+      totalCredit: 300,           // $12.50 × 24 months; ongoing
       monthlyCredit: 12.50,
       startDate: '2024-01',
-      endDate: '2025-12',
+      endDate: '2027-12',
       appliedTo: ['Sapana iPhone'],
     },
     {
       accountGroup: 'saket',
       description: 'Sapana credit — Saket share (5/21 × $37.50 = $8.95/mo)',
-      totalCredit: 214.80,        // $8.95 × 24 months
+      totalCredit: 214.80,        // $8.95 × 24 months; ongoing
       monthlyCredit: 8.95,
       startDate: '2024-01',
-      endDate: '2025-12',
+      endDate: '2027-12',
       appliedTo: ['Sapana iPhone'],
     },
     {
       accountGroup: 'dari',
       description: 'Sapana credit — Dari share (5/21 × $37.50 = $8.95/mo)',
-      totalCredit: 214.80,        // $8.95 × 24 months
+      totalCredit: 214.80,        // $8.95 × 24 months; ongoing
       monthlyCredit: 8.95,
       startDate: '2024-01',
-      endDate: '2025-12',
+      endDate: '2027-12',
       appliedTo: ['Sapana iPhone'],
     },
     {
       accountGroup: 'mainali',
       description: 'Sapana credit — Mainali share (4/21 × $37.50 = $7.10/mo)',
-      totalCredit: 170.40,        // $7.10 × 24 months
+      totalCredit: 170.40,        // $7.10 × 24 months; ongoing
       monthlyCredit: 7.10,
       startDate: '2024-01',
-      endDate: '2025-12',
+      endDate: '2027-12',
       appliedTo: ['Sapana iPhone'],
     },
   ],

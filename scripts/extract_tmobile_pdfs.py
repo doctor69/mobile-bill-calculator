@@ -146,6 +146,7 @@ def parse_bill_summary(full_text, total_due_hint=None):
     lines = {}
 
     # Phone number rows in bill summary table
+    # Handles both 4-col (Plans/Equip/Svc/Total) and 5-col (Plans/Equip/Svc/One-time/Total) formats
     dollar_re = r'\-?\$[\d,]+\.\d{2}'
     phone_re = re.compile(
         r'\((\d{3})\)\s+(\d{3}-\d{4})\s+'
@@ -153,6 +154,7 @@ def parse_bill_summary(full_text, total_due_hint=None):
         r'(Included|' + dollar_re + r')\s+'
         r'(' + dollar_re + r'|-)\s+'
         r'(' + dollar_re + r'|-)\s+'
+        r'(?:(?:' + dollar_re + r'|-)\s+)?'   # optional One-time charges column (5-col format)
         r'(' + dollar_re + r')'
     )
     for m in phone_re.finditer(summary_text):

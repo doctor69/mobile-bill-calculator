@@ -27,10 +27,24 @@ export function getLineItemsForShare(
   share: PersonShare
 ): PersonShareLineItem[] {
   const monthData = LINE_ITEMS_DB[month];
-  if (!monthData) return [];
+
+  // No PDF data at all for this month — fall back to single line charge entry
+  if (!monthData) {
+    if (share.lineCharges > 0) {
+      return [{ label: 'Plan share', sublabel: 'Account plan (no per-line PDF data)', amount: share.lineCharges, kind: 'plan' }];
+    }
+    return [];
+  }
 
   const groupData = monthData[share.accountGroup];
-  if (!groupData) return [];
+
+  // Month has PDF data but this group has no line items (Magenta MAX era: included in plan)
+  if (!groupData) {
+    if (share.lineCharges > 0) {
+      return [{ label: 'Plan share', sublabel: 'Included in shared account plan', amount: share.lineCharges, kind: 'plan' }];
+    }
+    return [];
+  }
 
   const { items, phone_sum } = groupData;
   const baseCharges = share.lineCharges + share.sharedCostShare;
