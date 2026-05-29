@@ -94,6 +94,26 @@
     }
   },
   "2020-03": {
+    "dari": {
+      "items": [
+        {
+          "label": "Sanjay \u2014 plan",
+          "amount": 20.0,
+          "kind": "plan"
+        }
+      ],
+      "phone_sum": 20.0
+    },
+    "saket": {
+      "items": [
+        {
+          "label": "Saket \u2014 plan",
+          "amount": 20.0,
+          "kind": "plan"
+        }
+      ],
+      "phone_sum": 20.0
+    },
     "chiranjiwi": {
       "items": [
         {
@@ -102,7 +122,17 @@
           "kind": "plan"
         }
       ],
-      "phone_sum": 5.17
+      "phone_sum": 25.17
+    },
+    "ritesh": {
+      "items": [
+        {
+          "label": "Ritesh \u2014 plan",
+          "amount": 20.0,
+          "kind": "plan"
+        }
+      ],
+      "phone_sum": 20.0
     }
   },
   "2020-04": {
@@ -232,6 +262,36 @@
     }
   },
   "2020-07": {
+    "dari": {
+      "items": [
+        {
+          "label": "Sanjay \u2014 plan",
+          "amount": 20.0,
+          "kind": "plan"
+        }
+      ],
+      "phone_sum": 20.0
+    },
+    "saket": {
+      "items": [
+        {
+          "label": "Saket \u2014 plan",
+          "amount": 20.0,
+          "kind": "plan"
+        }
+      ],
+      "phone_sum": 20.0
+    },
+    "chiranjiwi": {
+      "items": [
+        {
+          "label": "Chiranjiwi \u2014 plan",
+          "amount": 20.0,
+          "kind": "plan"
+        }
+      ],
+      "phone_sum": 20.0
+    },
     "ritesh": {
       "items": [
         {
@@ -240,7 +300,7 @@
           "kind": "plan"
         }
       ],
-      "phone_sum": 93.13
+      "phone_sum": 113.13
     }
   },
   "2020-08": {
@@ -369,6 +429,48 @@
       "phone_sum": 20.0
     }
   },
+  "2020-11": {
+    "dari": {
+      "items": [
+        {
+          "label": "Sanjay \u2014 plan",
+          "amount": 20.0,
+          "kind": "plan"
+        }
+      ],
+      "phone_sum": 20.0
+    },
+    "saket": {
+      "items": [
+        {
+          "label": "Saket \u2014 plan",
+          "amount": 20.0,
+          "kind": "plan"
+        }
+      ],
+      "phone_sum": 20.0
+    },
+    "chiranjiwi": {
+      "items": [
+        {
+          "label": "Chiranjiwi \u2014 plan",
+          "amount": 20.0,
+          "kind": "plan"
+        }
+      ],
+      "phone_sum": 20.0
+    },
+    "ritesh": {
+      "items": [
+        {
+          "label": "Ritesh \u2014 plan",
+          "amount": 20.0,
+          "kind": "plan"
+        }
+      ],
+      "phone_sum": 20.0
+    }
+  },
   "2020-12": {
     "dari": {
       "items": [
@@ -424,6 +526,22 @@
     }
   },
   "2021-01": {
+    "dari": {
+      "items": [
+        {
+          "label": "Sanjay \u2014 plan",
+          "amount": 20.0,
+          "kind": "plan"
+        },
+        {
+          "label": "Sanjay \u2014 iPhone 12 mini - Green - 64GB",
+          "sublabel": "installment 2/24",
+          "amount": 25.04,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 45.04
+    },
     "saket": {
       "items": [
         {
@@ -438,7 +556,27 @@
           "kind": "equipment"
         }
       ],
-      "phone_sum": -1.2
+      "phone_sum": 28.22
+    },
+    "chiranjiwi": {
+      "items": [
+        {
+          "label": "Chiranjiwi \u2014 plan",
+          "amount": 20.0,
+          "kind": "plan"
+        }
+      ],
+      "phone_sum": 20.0
+    },
+    "ritesh": {
+      "items": [
+        {
+          "label": "Ritesh \u2014 plan",
+          "amount": 20.0,
+          "kind": "plan"
+        }
+      ],
+      "phone_sum": 20.0
     }
   },
   "2021-02": {
@@ -456,10 +594,24 @@
           "kind": "equipment"
         }
       ],
-      "phone_sum": 30.0
-    }
-  },
-  "2021-03": {
+      "phone_sum": 75.04
+    },
+    "saket": {
+      "items": [
+        {
+          "label": "Saket \u2014 plan",
+          "amount": 20.0,
+          "kind": "plan"
+        },
+        {
+          "label": "Saket \u2014 iPhone 12 mini - White - 64GB",
+          "sublabel": "installment 3/17",
+          "amount": 9.42,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 29.42
+    },
     "chiranjiwi": {
       "items": [
         {
@@ -468,7 +620,71 @@
           "kind": "plan"
         }
       ],
-      "phone_sum": 5.0
+      "phone_sum": 20.0
+    },
+    "ritesh": {
+      "items": [
+        {
+          "label": "Ritesh \u2014 plan",
+          "amount": 20.0,
+          "kind": "plan"
+        }
+      ],
+      "phone_sum": 20.0
+    }
+  },
+  "2021-03": {
+    "dari": {
+      "items": [
+        {
+          "label": "Sanjay \u2014 plan",
+          "amount": 20.0,
+          "kind": "plan"
+        },
+        {
+          "label": "Sanjay \u2014 iPhone 12 mini - Green - 64GB",
+          "sublabel": "installment 4/19",
+          "amount": 25.04,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 45.04
+    },
+    "saket": {
+      "items": [
+        {
+          "label": "Saket \u2014 plan",
+          "amount": 20.0,
+          "kind": "plan"
+        },
+        {
+          "label": "Saket \u2014 iPhone 12 mini - White - 64GB",
+          "sublabel": "installment 4/17",
+          "amount": 9.42,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 29.42
+    },
+    "chiranjiwi": {
+      "items": [
+        {
+          "label": "Chiranjiwi \u2014 plan",
+          "amount": 20.0,
+          "kind": "plan"
+        }
+      ],
+      "phone_sum": 25.0
+    },
+    "ritesh": {
+      "items": [
+        {
+          "label": "Ritesh \u2014 plan",
+          "amount": 20.0,
+          "kind": "plan"
+        }
+      ],
+      "phone_sum": 20.0
     }
   },
   "2021-04": {
@@ -525,6 +741,60 @@
       "phone_sum": 20.0
     }
   },
+  "2021-05": {
+    "dari": {
+      "items": [
+        {
+          "label": "Sanjay \u2014 iPhone 12 mini - Green - 64GB",
+          "sublabel": "installment 6/19",
+          "amount": 25.04,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 5.7
+    },
+    "saket": {
+      "items": [
+        {
+          "label": "Saket \u2014 iPhone 12 mini - White - 64GB",
+          "sublabel": "installment 6/17",
+          "amount": 9.42,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": -9.92
+    }
+  },
+  "2021-06": {
+    "dari": {
+      "items": [
+        {
+          "label": "Sanjay \u2014 iPhone 12 mini - Green - 64GB",
+          "sublabel": "installment 7/19",
+          "amount": 25.04,
+          "kind": "equipment"
+        },
+        {
+          "label": "Dari \u2014 iPhone 12 mini - White - 64GB",
+          "sublabel": "installment 2/24",
+          "amount": 17.92,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 42.96
+    },
+    "saket": {
+      "items": [
+        {
+          "label": "Saket \u2014 iPhone 12 mini - White - 64GB",
+          "sublabel": "installment 7/17",
+          "amount": 9.42,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 9.42
+    }
+  },
   "2021-07": {
     "dari": {
       "items": [
@@ -559,18 +829,52 @@
     "dari": {
       "items": [
         {
+          "label": "Sanjay \u2014 iPhone 12 mini - Green - 64GB",
+          "sublabel": "installment 9/19",
+          "amount": 25.04,
+          "kind": "equipment"
+        },
+        {
           "label": "Dari \u2014 iPhone 12 mini - White - 64GB",
           "sublabel": "installment 4/24",
           "amount": 17.92,
           "kind": "equipment"
         }
       ],
-      "phone_sum": 3.24
+      "phone_sum": 46.2
+    },
+    "saket": {
+      "items": [
+        {
+          "label": "Saket \u2014 iPhone 12 mini - White - 64GB",
+          "sublabel": "installment 9/17",
+          "amount": 9.42,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 9.42
+    },
+    "chiranjiwi": {
+      "items": [
+        {
+          "label": "Chiranjiwi \u2014 iPhone 12 Pro",
+          "sublabel": "installment 1/24",
+          "amount": 14.37,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 14.37
     }
   },
   "2021-09": {
     "dari": {
       "items": [
+        {
+          "label": "Sanjay \u2014 iPhone 12 mini - Green - 64GB",
+          "sublabel": "installment 10/19",
+          "amount": 25.04,
+          "kind": "equipment"
+        },
         {
           "label": "Dari \u2014 iPhone 12 mini - White - 64GB",
           "sublabel": "installment 5/24",
@@ -578,7 +882,29 @@
           "kind": "equipment"
         }
       ],
-      "phone_sum": 3.24
+      "phone_sum": 46.2
+    },
+    "saket": {
+      "items": [
+        {
+          "label": "Saket \u2014 iPhone 12 mini - White - 64GB",
+          "sublabel": "installment 10/17",
+          "amount": 9.42,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 9.42
+    },
+    "chiranjiwi": {
+      "items": [
+        {
+          "label": "Chiranjiwi \u2014 iPhone 12 Pro",
+          "sublabel": "installment 2/23",
+          "amount": 14.37,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 14.37
     }
   },
   "2021-10": {
@@ -793,13 +1119,63 @@
     "dari": {
       "items": [
         {
+          "label": "Sanjay \u2014 iPhone 12 mini - Green - 64GB",
+          "sublabel": "installment 15/19",
+          "amount": 25.04,
+          "kind": "equipment"
+        },
+        {
           "label": "Dari \u2014 iPhone 12 mini - White - 64GB",
           "sublabel": "installment 10/24",
           "amount": 17.92,
           "kind": "equipment"
         }
       ],
-      "phone_sum": 6.41
+      "phone_sum": 49.37
+    },
+    "saket": {
+      "items": [
+        {
+          "label": "Saket \u2014 iPhone 12 mini - White - 64GB",
+          "sublabel": "installment 15/17",
+          "amount": 9.42,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 9.42
+    },
+    "chiranjiwi": {
+      "items": [
+        {
+          "label": "Chiranjiwi \u2014 iPhone 12 Pro",
+          "sublabel": "installment 7/23",
+          "amount": 14.37,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 14.37
+    },
+    "bikas": {
+      "items": [
+        {
+          "label": "Bikas \u2014 iPhone 13",
+          "sublabel": "installment 3/30",
+          "amount": 5.83,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 5.83
+    },
+    "mainali": {
+      "items": [
+        {
+          "label": "Saroj \u2014 iPhone 13",
+          "sublabel": "installment 3/30",
+          "amount": 6.0,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 6.0
     }
   },
   "2022-03": {
@@ -931,13 +1307,61 @@
     "dari": {
       "items": [
         {
+          "label": "Sanjay \u2014 iPhone 12 mini",
+          "sublabel": "installment 18/19",
+          "amount": 25.04,
+          "kind": "equipment"
+        },
+        {
           "label": "Dari \u2014 iPhone 12 mini",
           "sublabel": "installment 13/24",
           "amount": 17.92,
           "kind": "equipment"
         }
       ],
-      "phone_sum": 3.2
+      "phone_sum": 46.16
+    },
+    "saket": {
+      "items": [
+        {
+          "label": "Saket \u2014 promo credit",
+          "amount": 21.0,
+          "kind": "promo_credit"
+        }
+      ],
+      "phone_sum": -21.0
+    },
+    "chiranjiwi": {
+      "items": [
+        {
+          "label": "Chiranjiwi \u2014 iPhone 12 Pro",
+          "sublabel": "installment 10/23",
+          "amount": 14.37,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 14.37
+    },
+    "bikas": {
+      "items": [
+        {
+          "label": "Bikas \u2014 iPhone 13",
+          "sublabel": "installment 6/30",
+          "amount": 5.83,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 5.83
+    },
+    "mainali": {
+      "items": [
+        {
+          "label": "Saroj \u2014 device installment",
+          "amount": 6.0,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 6.0
     }
   },
   "2022-06": {
@@ -1006,13 +1430,61 @@
     "dari": {
       "items": [
         {
+          "label": "Sanjay \u2014 promo credit",
+          "amount": 5.38,
+          "kind": "promo_credit"
+        },
+        {
           "label": "Dari \u2014 iPhone 12 mini",
           "sublabel": "installment 15/24",
           "amount": 17.92,
           "kind": "equipment"
         }
       ],
-      "phone_sum": 3.24
+      "phone_sum": 15.78
+    },
+    "saket": {
+      "items": [
+        {
+          "label": "Saket \u2014 promo credit",
+          "amount": 21.0,
+          "kind": "promo_credit"
+        }
+      ],
+      "phone_sum": -21.0
+    },
+    "chiranjiwi": {
+      "items": [
+        {
+          "label": "Chiranjiwi \u2014 iPhone 12 Pro",
+          "sublabel": "installment 12/23",
+          "amount": 14.37,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 14.37
+    },
+    "bikas": {
+      "items": [
+        {
+          "label": "Bikas \u2014 iPhone 13",
+          "sublabel": "installment 8/30",
+          "amount": 5.83,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 5.83
+    },
+    "mainali": {
+      "items": [
+        {
+          "label": "Saroj \u2014 iPhone 13",
+          "sublabel": "installment 8/30",
+          "amount": 6.0,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 6.0
     }
   },
   "2022-08": {
@@ -1080,13 +1552,126 @@
     "dari": {
       "items": [
         {
+          "label": "Sanjay \u2014 T393 2020 Apple Trade P16",
+          "sublabel": "installment 1/24",
+          "amount": -5.38,
+          "kind": "equipment"
+        },
+        {
           "label": "Dari \u2014 iPhone 12 mini",
           "sublabel": "installment 17/24",
           "amount": 17.92,
           "kind": "equipment"
         }
       ],
-      "phone_sum": 3.24
+      "phone_sum": 37.03
+    },
+    "saket": {
+      "items": [
+        {
+          "label": "Saket \u2014 T459 2020 Apple Trade P29",
+          "sublabel": "installment 1/24",
+          "amount": -21.0,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 0.25
+    },
+    "chiranjiwi": {
+      "items": [
+        {
+          "label": "Chiranjiwi \u2014 iPhone 12 Pro",
+          "sublabel": "installment 14/23",
+          "amount": 14.37,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 14.37
+    },
+    "bikas": {
+      "items": [
+        {
+          "label": "Bikas \u2014 iPhone 13",
+          "sublabel": "installment 10/30",
+          "amount": 5.83,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 5.83
+    },
+    "mainali": {
+      "items": [
+        {
+          "label": "Saroj \u2014 iPhone 13",
+          "sublabel": "installment 10/30",
+          "amount": 6.0,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 6.0
+    }
+  },
+  "2022-10": {
+    "dari": {
+      "items": [
+        {
+          "label": "Sanjay \u2014 T393 2020 Apple Trade P16",
+          "sublabel": "installment 2/24",
+          "amount": -5.38,
+          "kind": "equipment"
+        },
+        {
+          "label": "Dari \u2014 iPhone 12 mini",
+          "sublabel": "installment 18/24",
+          "amount": 17.92,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 33.79
+    },
+    "saket": {
+      "items": [
+        {
+          "label": "Saket \u2014 T459 2020 Apple Trade P29",
+          "sublabel": "installment 2/24",
+          "amount": -21.0,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 0.25
+    },
+    "chiranjiwi": {
+      "items": [
+        {
+          "label": "Chiranjiwi \u2014 iPhone 12 Pro",
+          "sublabel": "installment 15/23",
+          "amount": 14.37,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 14.37
+    },
+    "bikas": {
+      "items": [
+        {
+          "label": "Bikas \u2014 iPhone 13",
+          "sublabel": "installment 11/30",
+          "amount": 5.83,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 5.83
+    },
+    "mainali": {
+      "items": [
+        {
+          "label": "Saroj \u2014 iPhone 13",
+          "sublabel": "installment 11/30",
+          "amount": 6.0,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 6.0
     }
   },
   "2022-11": {
@@ -1105,7 +1690,51 @@
           "kind": "equipment"
         }
       ],
-      "phone_sum": 8.22
+      "phone_sum": 42.13
+    },
+    "saket": {
+      "items": [
+        {
+          "label": "Saket \u2014 T459 2020 Apple Trade P29",
+          "sublabel": "installment 3/24",
+          "amount": -20.99,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 0.26
+    },
+    "chiranjiwi": {
+      "items": [
+        {
+          "label": "Chiranjiwi \u2014 iPhone 12 Pro",
+          "sublabel": "installment 16/23",
+          "amount": 14.37,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 14.37
+    },
+    "bikas": {
+      "items": [
+        {
+          "label": "Bikas \u2014 iPhone 13",
+          "sublabel": "installment 12/30",
+          "amount": 5.83,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 5.83
+    },
+    "mainali": {
+      "items": [
+        {
+          "label": "Saroj \u2014 iPhone 13",
+          "sublabel": "installment 12/30",
+          "amount": 6.0,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 6.0
     }
   },
   "2022-12": {
@@ -1116,9 +1745,59 @@
           "sublabel": "installment 4/24",
           "amount": 21.25,
           "kind": "equipment"
+        },
+        {
+          "label": "Dari \u2014 iPhone 12 mini",
+          "sublabel": "installment 20/24",
+          "amount": 17.92,
+          "kind": "equipment"
         }
       ],
-      "phone_sum": 60.0
+      "phone_sum": 99.17
+    },
+    "saket": {
+      "items": [
+        {
+          "label": "Saket \u2014 iPhone 14 Pro Max",
+          "sublabel": "installment 4/24",
+          "amount": 21.25,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 21.25
+    },
+    "chiranjiwi": {
+      "items": [
+        {
+          "label": "Chiranjiwi \u2014 iPhone 12 Pro",
+          "sublabel": "installment 17/23",
+          "amount": 14.37,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 14.37
+    },
+    "bikas": {
+      "items": [
+        {
+          "label": "Bikas \u2014 iPhone 13",
+          "sublabel": "installment 13/30",
+          "amount": 5.83,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 5.83
+    },
+    "mainali": {
+      "items": [
+        {
+          "label": "Saroj \u2014 iPhone 13",
+          "sublabel": "installment 13/30",
+          "amount": 6.0,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 6.0
     }
   },
   "2023-01": {
@@ -1741,6 +2420,28 @@
     }
   },
   "2023-11": {
+    "dari": {
+      "items": [
+        {
+          "label": "Sanjay \u2014 iPhone 14 Pro Max",
+          "sublabel": "installment 15/24",
+          "amount": 21.25,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 21.25
+    },
+    "saket": {
+      "items": [
+        {
+          "label": "Saket \u2014 iPhone 14 Pro Max",
+          "sublabel": "installment 15/24",
+          "amount": 21.25,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 21.25
+    },
     "bikas": {
       "items": [
         {
@@ -1750,7 +2451,33 @@
           "kind": "equipment"
         }
       ],
-      "phone_sum": 0.57
+      "phone_sum": 6.57
+    },
+    "mainali": {
+      "items": [
+        {
+          "label": "Saroj \u2014 iPhone 13",
+          "sublabel": "installment 24/30",
+          "amount": 6.0,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 6.0
+    },
+    "bajpayee": {
+      "items": [
+        {
+          "label": "Manoj (Bajpayee) \u2014 plan",
+          "amount": 30.0,
+          "kind": "plan"
+        },
+        {
+          "label": "Sapana \u2014 plan",
+          "amount": 35.0,
+          "kind": "plan"
+        }
+      ],
+      "phone_sum": 65.0
     }
   },
   "2023-12": {
@@ -2329,6 +3056,39 @@
       "phone_sum": 30.0
     }
   },
+  "2024-12": {
+    "saket": {
+      "items": [
+        {
+          "label": "Home Internet \u2014 plan",
+          "amount": 55.0,
+          "kind": "plan"
+        }
+      ],
+      "phone_sum": 55.0
+    },
+    "bikas": {
+      "items": [
+        {
+          "label": "Bikas \u2014 razr - 2024",
+          "sublabel": "installment 3/24",
+          "amount": 2.16,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 2.16
+    },
+    "bajpayee": {
+      "items": [
+        {
+          "label": "Sapana \u2014 plan",
+          "amount": 30.0,
+          "kind": "plan"
+        }
+      ],
+      "phone_sum": 30.28
+    }
+  },
   "2025-01": {
     "saket": {
       "items": [
@@ -2444,6 +3204,45 @@
         }
       ],
       "phone_sum": 67.5
+    }
+  },
+  "2025-04": {
+    "saket": {
+      "items": [
+        {
+          "label": "Home Internet \u2014 plan",
+          "amount": 55.0,
+          "kind": "plan"
+        }
+      ],
+      "phone_sum": 55.0
+    },
+    "bikas": {
+      "items": [
+        {
+          "label": "Bikas \u2014 razr - 2024",
+          "sublabel": "installment 7/24, $23.00 \u2212 $20.84 promo = $2.16",
+          "amount": 2.16,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 2.16
+    },
+    "bajpayee": {
+      "items": [
+        {
+          "label": "Sapana \u2014 plan",
+          "amount": 35.0,
+          "kind": "plan"
+        },
+        {
+          "label": "Sapana \u2014 iPhone 16 Pro Max - Desert Titanium - \u2026",
+          "sublabel": "installment 4/24, $50.00 \u2212 $12.50 promo = $37.50",
+          "amount": 37.5,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 72.5
     }
   },
   "2025-05": {
@@ -2672,6 +3471,43 @@
     }
   },
   "2025-07": {
+    "dari": {
+      "items": [
+        {
+          "label": "Sanjay \u2014 plan",
+          "amount": 4.98,
+          "kind": "plan"
+        },
+        {
+          "label": "Sanjay \u2014 iPhone 16 Pro - Natural Titanium - 128GB",
+          "sublabel": "installment 3/24, $41.67 \u2212 $20.63 promo = $21.04",
+          "amount": 21.04,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 26.02
+    },
+    "saket": {
+      "items": [
+        {
+          "label": "Saket \u2014 plan",
+          "amount": 4.98,
+          "kind": "plan"
+        },
+        {
+          "label": "Saket \u2014 iPhone 16 Pro - Desert Titanium - 128GB",
+          "sublabel": "installment 3/24, $41.67 \u2212 $20.63 promo = $21.04",
+          "amount": 21.04,
+          "kind": "equipment"
+        },
+        {
+          "label": "Home Internet \u2014 plan",
+          "amount": 61.6,
+          "kind": "plan"
+        }
+      ],
+      "phone_sum": 87.62
+    },
     "chiranjiwi": {
       "items": [
         {
@@ -2680,7 +3516,76 @@
           "kind": "plan"
         }
       ],
-      "phone_sum": 0.75
+      "phone_sum": 5.73
+    },
+    "bikas": {
+      "items": [
+        {
+          "label": "Bikas \u2014 plan",
+          "amount": 4.98,
+          "kind": "plan"
+        },
+        {
+          "label": "Bikas \u2014 razr - 2024",
+          "sublabel": "installment 10/24, $23.00 \u2212 $20.84 promo = $2.16",
+          "amount": 2.16,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 7.14
+    },
+    "ritesh": {
+      "items": [
+        {
+          "label": "Ritesh \u2014 plan",
+          "amount": 4.98,
+          "kind": "plan"
+        }
+      ],
+      "phone_sum": 4.98
+    },
+    "mainali": {
+      "items": [
+        {
+          "label": "Saroj \u2014 plan",
+          "amount": 4.98,
+          "kind": "plan"
+        },
+        {
+          "label": "Saroj \u2014 iPhone 16 - Teal - 128GB",
+          "sublabel": "installment 3/24, $34.59 \u2212 $20.63 promo = $13.96",
+          "amount": 13.96,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 18.94
+    },
+    "bajpayee": {
+      "items": [
+        {
+          "label": "Manoj (Bajpayee) \u2014 plan",
+          "amount": 4.98,
+          "kind": "plan"
+        },
+        {
+          "label": "Manoj (Bajpayee) \u2014 APL IPHONE 16 PRO MAX 256G NAT EXCH",
+          "sublabel": "installment 3/24, $50.00 \u2212 $23.96 promo = $26.04",
+          "amount": 26.04,
+          "kind": "equipment"
+        },
+        {
+          "label": "Sapana \u2014 plan",
+          "amount": 55.18,
+          "kind": "plan"
+        },
+        {
+          "label": "Sapana \u2014 iPhone 16 Pro Max - Desert Titanium - \u2026",
+          "sublabel": "installment 3/19",
+          "amount": 17.49,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 91.19
     }
   },
   "2025-08": {
@@ -3386,6 +4291,80 @@
     }
   },
   "2026-03": {
+    "dari": {
+      "items": [
+        {
+          "label": "Sanjay \u2014 plan",
+          "amount": 5.51,
+          "kind": "plan"
+        },
+        {
+          "label": "Sanjay \u2014 iPhone 16 Pro - Natural Titanium - 128GB",
+          "sublabel": "installment 11/24, $41.67 \u2212 $20.63 promo = $21.04",
+          "amount": 21.04,
+          "kind": "equipment"
+        },
+        {
+          "label": "Mahima \u2014 plan",
+          "amount": 57.26,
+          "kind": "plan"
+        },
+        {
+          "label": "Mahima \u2014 iPhone 17 Pro - Cosmic Orange - 256GB",
+          "sublabel": "installment 3/24, $45.84 \u2212 $12.30 promo = $33.54",
+          "amount": 33.54,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 117.35
+    },
+    "saket": {
+      "items": [
+        {
+          "label": "Saket \u2014 plan",
+          "amount": 5.51,
+          "kind": "plan"
+        },
+        {
+          "label": "Saket \u2014 iPhone 16 Pro - Desert Titanium - 128GB",
+          "sublabel": "installment 11/24, $41.67 \u2212 $20.63 promo = $21.04",
+          "amount": 21.04,
+          "kind": "equipment"
+        },
+        {
+          "label": "Home Internet \u2014 plan",
+          "amount": 62.1,
+          "kind": "plan"
+        }
+      ],
+      "phone_sum": 88.65
+    },
+    "chiranjiwi": {
+      "items": [
+        {
+          "label": "Chiranjiwi \u2014 plan",
+          "amount": 5.51,
+          "kind": "plan"
+        }
+      ],
+      "phone_sum": 5.51
+    },
+    "bikas": {
+      "items": [
+        {
+          "label": "Bikas \u2014 plan",
+          "amount": 5.51,
+          "kind": "plan"
+        },
+        {
+          "label": "Bikas \u2014 razr - 2024",
+          "sublabel": "installment 18/24, $23.00 \u2212 $20.84 promo = $2.16",
+          "amount": 2.16,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 7.67
+    },
     "ritesh": {
       "items": [
         {
@@ -3394,7 +4373,49 @@
           "kind": "plan"
         }
       ],
-      "phone_sum": 6.84
+      "phone_sum": 12.35
+    },
+    "mainali": {
+      "items": [
+        {
+          "label": "Saroj \u2014 plan",
+          "amount": 5.51,
+          "kind": "plan"
+        },
+        {
+          "label": "Saroj \u2014 iPhone 16 - Teal - 128GB",
+          "sublabel": "installment 11/24, $34.59 \u2212 $20.63 promo = $13.96",
+          "amount": 13.96,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 19.47
+    },
+    "bajpayee": {
+      "items": [
+        {
+          "label": "Manoj (Bajpayee) \u2014 plan",
+          "amount": 5.51,
+          "kind": "plan"
+        },
+        {
+          "label": "Manoj (Bajpayee) \u2014 APL IPHONE 16 PRO MAX 256G NAT EXCH",
+          "sublabel": "installment 11/24, $50.00 \u2212 $23.96 promo = $26.04",
+          "amount": 26.04,
+          "kind": "equipment"
+        },
+        {
+          "label": "Sapana \u2014 plan",
+          "amount": 50.7,
+          "kind": "plan"
+        },
+        {
+          "label": "Sapana \u2014 promo credit",
+          "amount": 12.5,
+          "kind": "promo_credit"
+        }
+      ],
+      "phone_sum": 69.75
     }
   },
   "2026-04": {
@@ -3521,6 +4542,64 @@
     }
   },
   "2026-05": {
+    "dari": {
+      "items": [
+        {
+          "label": "Sanjay \u2014 plan",
+          "amount": 5.51,
+          "kind": "plan"
+        },
+        {
+          "label": "Sanjay \u2014 iPhone 16 Pro",
+          "sublabel": "installment 13/24, $41.67 \u2212 $20.63 promo = $21.04",
+          "amount": 21.04,
+          "kind": "equipment"
+        },
+        {
+          "label": "Mahima \u2014 plan",
+          "amount": 57.24,
+          "kind": "plan"
+        },
+        {
+          "label": "Mahima \u2014 iPhone 17 Pro",
+          "sublabel": "installment 5/24, $45.84 \u2212 $12.30 promo = $33.54",
+          "amount": 33.54,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 117.33
+    },
+    "saket": {
+      "items": [
+        {
+          "label": "Saket \u2014 plan",
+          "amount": 5.51,
+          "kind": "plan"
+        },
+        {
+          "label": "Saket \u2014 iPhone 16 Pro",
+          "sublabel": "installment 13/24, $41.67 \u2212 $20.63 promo = $21.04",
+          "amount": 21.04,
+          "kind": "equipment"
+        },
+        {
+          "label": "Home Internet \u2014 plan",
+          "amount": 62.1,
+          "kind": "plan"
+        }
+      ],
+      "phone_sum": 88.65
+    },
+    "chiranjiwi": {
+      "items": [
+        {
+          "label": "Chiranjiwi \u2014 plan",
+          "amount": 5.51,
+          "kind": "plan"
+        }
+      ],
+      "phone_sum": 5.51
+    },
     "bikas": {
       "items": [
         {
@@ -3535,7 +4614,59 @@
           "kind": "equipment"
         }
       ],
-      "phone_sum": 0.29
+      "phone_sum": 7.96
+    },
+    "ritesh": {
+      "items": [
+        {
+          "label": "Ritesh \u2014 plan",
+          "amount": 5.51,
+          "kind": "plan"
+        }
+      ],
+      "phone_sum": 5.51
+    },
+    "mainali": {
+      "items": [
+        {
+          "label": "Saroj \u2014 plan",
+          "amount": 5.51,
+          "kind": "plan"
+        },
+        {
+          "label": "Saroj \u2014 iPhone 16",
+          "sublabel": "installment 13/24, $34.59 \u2212 $20.63 promo = $13.96",
+          "amount": 13.96,
+          "kind": "equipment"
+        }
+      ],
+      "phone_sum": 19.47
+    },
+    "bajpayee": {
+      "items": [
+        {
+          "label": "Manoj (Bajpayee) \u2014 plan",
+          "amount": 5.51,
+          "kind": "plan"
+        },
+        {
+          "label": "Manoj (Bajpayee) \u2014 APL IPHONE 16 PRO MAX 256G NAT EXCH",
+          "sublabel": "installment 13/24, $50.00 \u2212 $23.96 promo = $26.04",
+          "amount": 26.04,
+          "kind": "equipment"
+        },
+        {
+          "label": "Sapana \u2014 plan",
+          "amount": 50.69,
+          "kind": "plan"
+        },
+        {
+          "label": "Sapana \u2014 promo credit",
+          "amount": 25.0,
+          "kind": "promo_credit"
+        }
+      ],
+      "phone_sum": 57.24
     }
   }
 }

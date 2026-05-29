@@ -976,6 +976,58 @@
     },
     "account_line": {},
     "lines": {
+      "208-840-1299": {
+        "plans": 0.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 0.0,
+        "included_in_plan": true,
+        "name": "Sanjay",
+        "group": "dari",
+        "lineName": "Sanjay"
+      },
+      "401-207-7052": {
+        "plans": 0.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 0.0,
+        "included_in_plan": true,
+        "name": "Saket",
+        "group": "saket",
+        "lineName": "Saket iPhone"
+      },
+      "401-338-8422": {
+        "plans": 0.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 0.0,
+        "included_in_plan": true,
+        "name": "Chiranjiwi",
+        "group": "chiranjiwi",
+        "lineName": "Chiranjiwi"
+      },
+      "617-955-9929": {
+        "plans": 0.0,
+        "equipment": 2.16,
+        "services": 0.0,
+        "total": 2.16,
+        "included_in_plan": true,
+        "name": "Bikas",
+        "group": "bikas",
+        "lineName": "Bikas",
+        "equipment_detail": [
+          {
+            "device": "razr - 2024",
+            "net": 2.16,
+            "gross": 23.0,
+            "promo_credit": 20.84,
+            "promo_name": "P",
+            "installment_num": 7,
+            "installment_of": 24,
+            "balance": 414.0
+          }
+        ]
+      },
       "857-205-9815": {
         "plans": 0.0,
         "equipment": 0.0,
@@ -1017,9 +1069,94 @@
             "balance": null
           }
         ]
+      },
+      "857-264-9862": {
+        "plans": 0.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 0.0,
+        "included_in_plan": true,
+        "name": "Saroj/Mainali",
+        "group": "mainali",
+        "lineName": "Mainali iPhone"
+      },
+      "407-416-5178": {
+        "plans": 0.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 0.0,
+        "included_in_plan": true,
+        "name": "Manoj/Bajpayee",
+        "group": "bajpayee",
+        "lineName": "Bajpayee iPhone"
+      },
+      "252-350-3063": {
+        "plans": 35.0,
+        "equipment": 37.5,
+        "services": 0.0,
+        "total": 72.5,
+        "included_in_plan": false,
+        "name": "Sapana",
+        "group": "bajpayee",
+        "lineName": "Sapana iPhone",
+        "equipment_detail": [
+          {
+            "device": "iPhone 16 Pro Max - Desert Titanium - 256GB",
+            "net": 37.5,
+            "gross": 50.0,
+            "promo_credit": 12.5,
+            "promo_name": "P",
+            "installment_num": 4,
+            "installment_of": 24,
+            "balance": 1049.99
+          }
+        ]
+      },
+      "863-449-8681": {
+        "plans": 55.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 55.0,
+        "included_in_plan": false,
+        "name": "Home Internet",
+        "group": "saket",
+        "lineName": "Home Internet"
       }
     },
     "group_totals": {
+      "dari": {
+        "lines": [
+          "208-840-1299"
+        ],
+        "total": 0.0,
+        "plans": 0.0,
+        "equipment": 0.0
+      },
+      "saket": {
+        "lines": [
+          "401-207-7052",
+          "863-449-8681"
+        ],
+        "total": 55.0,
+        "plans": 55.0,
+        "equipment": 0.0
+      },
+      "chiranjiwi": {
+        "lines": [
+          "401-338-8422"
+        ],
+        "total": 0.0,
+        "plans": 0.0,
+        "equipment": 0.0
+      },
+      "bikas": {
+        "lines": [
+          "617-955-9929"
+        ],
+        "total": 2.16,
+        "plans": 0.0,
+        "equipment": 2.16
+      },
       "ritesh": {
         "lines": [
           "857-205-9815"
@@ -1027,6 +1164,23 @@
         "total": 10.41,
         "plans": 0.0,
         "equipment": 0.0
+      },
+      "mainali": {
+        "lines": [
+          "857-264-9862"
+        ],
+        "total": 0.0,
+        "plans": 0.0,
+        "equipment": 0.0
+      },
+      "bajpayee": {
+        "lines": [
+          "407-416-5178",
+          "252-350-3063"
+        ],
+        "total": 72.5,
+        "plans": 35.0,
+        "equipment": 37.5
       }
     },
     "taxes": {
@@ -1814,11 +1968,107 @@
     },
     "account_line": {},
     "lines": {
+      "208-840-1299": {
+        "plans": 0.0,
+        "equipment": 25.04,
+        "services": 0.0,
+        "total": 25.04,
+        "included_in_plan": true,
+        "name": "Sanjay",
+        "group": "dari",
+        "lineName": "Sanjay",
+        "equipment_detail": [
+          {
+            "device": "iPhone 12 mini - Green - 64GB",
+            "net": 25.04,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 9,
+            "installment_of": 19,
+            "balance": 285.21
+          }
+        ]
+      },
+      "401-207-7052": {
+        "plans": 0.0,
+        "equipment": 9.42,
+        "services": 0.0,
+        "total": 9.42,
+        "included_in_plan": true,
+        "name": "Saket",
+        "group": "saket",
+        "lineName": "Saket iPhone",
+        "equipment_detail": [
+          {
+            "device": "iPhone 12 mini - White - 64GB",
+            "net": 9.42,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 9,
+            "installment_of": 17,
+            "balance": 230.21
+          }
+        ]
+      },
+      "401-338-8422": {
+        "plans": 0.0,
+        "equipment": 14.37,
+        "services": 0.0,
+        "total": 14.37,
+        "included_in_plan": true,
+        "name": "Chiranjiwi",
+        "group": "chiranjiwi",
+        "lineName": "Chiranjiwi",
+        "equipment_detail": [
+          {
+            "device": "iPhone 12 Pro",
+            "net": 14.37,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 1,
+            "installment_of": 24,
+            "balance": 958.32
+          }
+        ]
+      },
+      "617-955-9929": {
+        "plans": 0.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 0.0,
+        "included_in_plan": true,
+        "name": "Bikas",
+        "group": "bikas",
+        "lineName": "Bikas"
+      },
+      "857-205-9815": {
+        "plans": 0.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 0.0,
+        "included_in_plan": true,
+        "name": "Ritesh",
+        "group": "ritesh",
+        "lineName": "Ritesh"
+      },
+      "857-264-9862": {
+        "plans": 0.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 0.0,
+        "included_in_plan": true,
+        "name": "Saroj/Mainali",
+        "group": "mainali",
+        "lineName": "Mainali iPhone"
+      },
       "701-415-5731": {
         "plans": 0.0,
         "equipment": 17.92,
         "services": 0.0,
-        "total": 3.24,
+        "total": 21.16,
         "included_in_plan": true,
         "name": "Dari-old",
         "group": "dari",
@@ -1870,11 +2120,52 @@
     "group_totals": {
       "dari": {
         "lines": [
+          "208-840-1299",
           "701-415-5731"
         ],
-        "total": 3.24,
+        "total": 46.2,
         "plans": 0.0,
-        "equipment": 17.92
+        "equipment": 42.96
+      },
+      "saket": {
+        "lines": [
+          "401-207-7052"
+        ],
+        "total": 9.42,
+        "plans": 0.0,
+        "equipment": 9.42
+      },
+      "chiranjiwi": {
+        "lines": [
+          "401-338-8422"
+        ],
+        "total": 14.37,
+        "plans": 0.0,
+        "equipment": 14.37
+      },
+      "bikas": {
+        "lines": [
+          "617-955-9929"
+        ],
+        "total": 0.0,
+        "plans": 0.0,
+        "equipment": 0.0
+      },
+      "ritesh": {
+        "lines": [
+          "857-205-9815"
+        ],
+        "total": 0.0,
+        "plans": 0.0,
+        "equipment": 0.0
+      },
+      "mainali": {
+        "lines": [
+          "857-264-9862"
+        ],
+        "total": 0.0,
+        "plans": 0.0,
+        "equipment": 0.0
       }
     },
     "taxes": {
@@ -3541,7 +3832,7 @@
         "plans": 0.0,
         "equipment": 21.25,
         "services": 0.0,
-        "total": 60.0,
+        "total": 81.25,
         "included_in_plan": true,
         "name": "Sanjay",
         "group": "dari",
@@ -3568,16 +3859,194 @@
             "balance": null
           }
         ]
+      },
+      "401-207-7052": {
+        "plans": 0.0,
+        "equipment": 21.25,
+        "services": 0.0,
+        "total": 21.25,
+        "included_in_plan": true,
+        "name": "Saket",
+        "group": "saket",
+        "lineName": "Saket iPhone",
+        "equipment_detail": [
+          {
+            "device": "iPhone 14 Pro Max",
+            "net": 21.25,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 4,
+            "installment_of": 24,
+            "balance": 916.63
+          }
+        ]
+      },
+      "401-338-8422": {
+        "plans": 0.0,
+        "equipment": 14.37,
+        "services": 0.0,
+        "total": 14.37,
+        "included_in_plan": true,
+        "name": "Chiranjiwi",
+        "group": "chiranjiwi",
+        "lineName": "Chiranjiwi",
+        "equipment_detail": [
+          {
+            "device": "iPhone 12 Pro",
+            "net": 14.37,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 17,
+            "installment_of": 23,
+            "balance": 216.6
+          }
+        ]
+      },
+      "617-955-9929": {
+        "plans": 0.0,
+        "equipment": 5.83,
+        "services": 0.0,
+        "total": 5.83,
+        "included_in_plan": true,
+        "name": "Bikas",
+        "group": "bikas",
+        "lineName": "Bikas",
+        "equipment_detail": [
+          {
+            "device": "iPhone 13",
+            "net": 5.83,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 13,
+            "installment_of": 30,
+            "balance": 453.28
+          }
+        ]
+      },
+      "857-205-9815": {
+        "plans": 0.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 0.0,
+        "included_in_plan": true,
+        "name": "Ritesh",
+        "group": "ritesh",
+        "lineName": "Ritesh"
+      },
+      "857-264-9862": {
+        "plans": 0.0,
+        "equipment": 6.0,
+        "services": 0.0,
+        "total": 6.0,
+        "included_in_plan": true,
+        "name": "Saroj/Mainali",
+        "group": "mainali",
+        "lineName": "Mainali iPhone",
+        "equipment_detail": [
+          {
+            "device": "iPhone 13",
+            "net": 6.0,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 13,
+            "installment_of": 30,
+            "balance": 453.28
+          }
+        ]
+      },
+      "701-415-5731": {
+        "plans": 0.0,
+        "equipment": 17.92,
+        "services": 0.0,
+        "total": 17.92,
+        "included_in_plan": true,
+        "name": "Dari-old",
+        "group": "dari",
+        "lineName": "Dari",
+        "equipment_detail": [
+          {
+            "device": "iPhone 12 mini",
+            "net": 17.92,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 20,
+            "installment_of": 24,
+            "balance": 121.59
+          }
+        ]
+      },
+      "863-212-5403": {
+        "plans": 50.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 50.0,
+        "included_in_plan": false,
+        "name": "Unknown (863-212-5403)",
+        "group": "unknown"
       }
     },
     "group_totals": {
       "dari": {
         "lines": [
-          "208-840-1299"
+          "208-840-1299",
+          "701-415-5731"
         ],
-        "total": 60.0,
+        "total": 99.17,
+        "plans": 0.0,
+        "equipment": 39.17
+      },
+      "saket": {
+        "lines": [
+          "401-207-7052"
+        ],
+        "total": 21.25,
         "plans": 0.0,
         "equipment": 21.25
+      },
+      "chiranjiwi": {
+        "lines": [
+          "401-338-8422"
+        ],
+        "total": 14.37,
+        "plans": 0.0,
+        "equipment": 14.37
+      },
+      "bikas": {
+        "lines": [
+          "617-955-9929"
+        ],
+        "total": 5.83,
+        "plans": 0.0,
+        "equipment": 5.83
+      },
+      "ritesh": {
+        "lines": [
+          "857-205-9815"
+        ],
+        "total": 0.0,
+        "plans": 0.0,
+        "equipment": 0.0
+      },
+      "mainali": {
+        "lines": [
+          "857-264-9862"
+        ],
+        "total": 6.0,
+        "plans": 0.0,
+        "equipment": 6.0
+      },
+      "unknown": {
+        "lines": [
+          "863-212-5403"
+        ],
+        "total": 50.0,
+        "plans": 50.0,
+        "equipment": 0.0
       }
     },
     "taxes": {
@@ -3847,6 +4316,78 @@
     },
     "account_line": {},
     "lines": {
+      "208-840-1299": {
+        "plans": 0.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 0.0,
+        "included_in_plan": true,
+        "name": "Sanjay",
+        "group": "dari",
+        "lineName": "Sanjay"
+      },
+      "401-207-7052": {
+        "plans": 0.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 0.0,
+        "included_in_plan": true,
+        "name": "Saket",
+        "group": "saket",
+        "lineName": "Saket iPhone"
+      },
+      "401-338-8422": {
+        "plans": 0.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 0.0,
+        "included_in_plan": true,
+        "name": "Chiranjiwi",
+        "group": "chiranjiwi",
+        "lineName": "Chiranjiwi"
+      },
+      "617-955-9929": {
+        "plans": 0.0,
+        "equipment": 2.16,
+        "services": 0.0,
+        "total": 2.16,
+        "included_in_plan": true,
+        "name": "Bikas",
+        "group": "bikas",
+        "lineName": "Bikas",
+        "equipment_detail": [
+          {
+            "device": "razr - 2024",
+            "net": 2.16,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 3,
+            "installment_of": 24,
+            "balance": 506.0
+          }
+        ]
+      },
+      "857-205-9815": {
+        "plans": 0.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 0.0,
+        "included_in_plan": true,
+        "name": "Ritesh",
+        "group": "ritesh",
+        "lineName": "Ritesh"
+      },
+      "857-264-9862": {
+        "plans": 0.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 0.0,
+        "included_in_plan": true,
+        "name": "Saroj/Mainali",
+        "group": "mainali",
+        "lineName": "Mainali iPhone"
+      },
       "407-416-5178": {
         "plans": 0.0,
         "equipment": 0.0,
@@ -3888,15 +4429,85 @@
             "balance": null
           }
         ]
+      },
+      "252-350-3063": {
+        "plans": 30.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 30.0,
+        "included_in_plan": false,
+        "name": "Sapana",
+        "group": "bajpayee",
+        "lineName": "Sapana iPhone"
+      },
+      "863-449-8681": {
+        "plans": 55.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 55.0,
+        "included_in_plan": false,
+        "name": "Home Internet",
+        "group": "saket",
+        "lineName": "Home Internet"
       }
     },
     "group_totals": {
+      "dari": {
+        "lines": [
+          "208-840-1299"
+        ],
+        "total": 0.0,
+        "plans": 0.0,
+        "equipment": 0.0
+      },
+      "saket": {
+        "lines": [
+          "401-207-7052",
+          "863-449-8681"
+        ],
+        "total": 55.0,
+        "plans": 55.0,
+        "equipment": 0.0
+      },
+      "chiranjiwi": {
+        "lines": [
+          "401-338-8422"
+        ],
+        "total": 0.0,
+        "plans": 0.0,
+        "equipment": 0.0
+      },
+      "bikas": {
+        "lines": [
+          "617-955-9929"
+        ],
+        "total": 2.16,
+        "plans": 0.0,
+        "equipment": 2.16
+      },
+      "ritesh": {
+        "lines": [
+          "857-205-9815"
+        ],
+        "total": 0.0,
+        "plans": 0.0,
+        "equipment": 0.0
+      },
+      "mainali": {
+        "lines": [
+          "857-264-9862"
+        ],
+        "total": 0.0,
+        "plans": 0.0,
+        "equipment": 0.0
+      },
       "bajpayee": {
         "lines": [
-          "407-416-5178"
+          "407-416-5178",
+          "252-350-3063"
         ],
-        "total": 0.28,
-        "plans": 0.0,
+        "total": 30.28,
+        "plans": 30.0,
         "equipment": 0.0
       }
     },
@@ -4594,11 +5205,31 @@
     },
     "account_line": {},
     "lines": {
+      "617-955-9929": {
+        "plans": 0.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 0.0,
+        "included_in_plan": true,
+        "name": "Bikas",
+        "group": "bikas",
+        "lineName": "Bikas"
+      },
+      "857-264-9862": {
+        "plans": 0.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 0.0,
+        "included_in_plan": true,
+        "name": "Saroj/Mainali",
+        "group": "mainali",
+        "lineName": "Mainali iPhone"
+      },
       "208-840-1299": {
         "plans": 20.0,
         "equipment": 25.04,
         "services": 0.0,
-        "total": 30.0,
+        "total": 75.04,
         "included_in_plan": false,
         "name": "Sanjay",
         "group": "dari",
@@ -4625,16 +5256,98 @@
             "balance": null
           }
         ]
+      },
+      "401-207-7052": {
+        "plans": 20.0,
+        "equipment": 9.42,
+        "services": 0.0,
+        "total": 29.42,
+        "included_in_plan": false,
+        "name": "Saket",
+        "group": "saket",
+        "lineName": "Saket iPhone",
+        "equipment_detail": [
+          {
+            "device": "iPhone 12 mini - White - 64GB",
+            "net": 9.42,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 3,
+            "installment_of": 17,
+            "balance": 412.73
+          }
+        ]
+      },
+      "401-338-8422": {
+        "plans": 20.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 20.0,
+        "included_in_plan": false,
+        "name": "Chiranjiwi",
+        "group": "chiranjiwi",
+        "lineName": "Chiranjiwi"
+      },
+      "857-205-9815": {
+        "plans": 20.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 20.0,
+        "included_in_plan": false,
+        "name": "Ritesh",
+        "group": "ritesh",
+        "lineName": "Ritesh"
       }
     },
     "group_totals": {
+      "bikas": {
+        "lines": [
+          "617-955-9929"
+        ],
+        "total": 0.0,
+        "plans": 0.0,
+        "equipment": 0.0
+      },
+      "mainali": {
+        "lines": [
+          "857-264-9862"
+        ],
+        "total": 0.0,
+        "plans": 0.0,
+        "equipment": 0.0
+      },
       "dari": {
         "lines": [
           "208-840-1299"
         ],
-        "total": 30.0,
+        "total": 75.04,
         "plans": 20.0,
         "equipment": 25.04
+      },
+      "saket": {
+        "lines": [
+          "401-207-7052"
+        ],
+        "total": 29.42,
+        "plans": 20.0,
+        "equipment": 9.42
+      },
+      "chiranjiwi": {
+        "lines": [
+          "401-338-8422"
+        ],
+        "total": 20.0,
+        "plans": 20.0,
+        "equipment": 0.0
+      },
+      "ritesh": {
+        "lines": [
+          "857-205-9815"
+        ],
+        "total": 20.0,
+        "plans": 20.0,
+        "equipment": 0.0
       }
     },
     "taxes": {
@@ -4655,11 +5368,131 @@
     },
     "account_line": {},
     "lines": {
+      "208-840-1299": {
+        "plans": 0.0,
+        "equipment": 25.04,
+        "services": 0.0,
+        "total": 25.04,
+        "included_in_plan": true,
+        "name": "Sanjay",
+        "group": "dari",
+        "lineName": "Sanjay",
+        "equipment_detail": [
+          {
+            "device": "iPhone 12 mini - Green - 64GB",
+            "net": 25.04,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 15,
+            "installment_of": 19,
+            "balance": 102.69
+          }
+        ]
+      },
+      "401-207-7052": {
+        "plans": 0.0,
+        "equipment": 9.42,
+        "services": 0.0,
+        "total": 9.42,
+        "included_in_plan": true,
+        "name": "Saket",
+        "group": "saket",
+        "lineName": "Saket iPhone",
+        "equipment_detail": [
+          {
+            "device": "iPhone 12 mini - White - 64GB",
+            "net": 9.42,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 15,
+            "installment_of": 17,
+            "balance": 47.69
+          }
+        ]
+      },
+      "401-338-8422": {
+        "plans": 0.0,
+        "equipment": 14.37,
+        "services": 0.0,
+        "total": 14.37,
+        "included_in_plan": true,
+        "name": "Chiranjiwi",
+        "group": "chiranjiwi",
+        "lineName": "Chiranjiwi",
+        "equipment_detail": [
+          {
+            "device": "iPhone 12 Pro",
+            "net": 14.37,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 7,
+            "installment_of": 23,
+            "balance": 633.3
+          }
+        ]
+      },
+      "617-955-9929": {
+        "plans": 0.0,
+        "equipment": 5.83,
+        "services": 0.0,
+        "total": 5.83,
+        "included_in_plan": true,
+        "name": "Bikas",
+        "group": "bikas",
+        "lineName": "Bikas",
+        "equipment_detail": [
+          {
+            "device": "iPhone 13",
+            "net": 5.83,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 3,
+            "installment_of": 30,
+            "balance": 719.98
+          }
+        ]
+      },
+      "857-205-9815": {
+        "plans": 0.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 0.0,
+        "included_in_plan": true,
+        "name": "Ritesh",
+        "group": "ritesh",
+        "lineName": "Ritesh"
+      },
+      "857-264-9862": {
+        "plans": 0.0,
+        "equipment": 6.0,
+        "services": 0.0,
+        "total": 6.0,
+        "included_in_plan": true,
+        "name": "Saroj/Mainali",
+        "group": "mainali",
+        "lineName": "Mainali iPhone",
+        "equipment_detail": [
+          {
+            "device": "iPhone 13",
+            "net": 6.0,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 3,
+            "installment_of": 30,
+            "balance": 719.98
+          }
+        ]
+      },
       "701-415-5731": {
         "plans": 0.0,
         "equipment": 17.92,
         "services": 0.0,
-        "total": 6.41,
+        "total": 24.33,
         "included_in_plan": true,
         "name": "Dari-old",
         "group": "dari",
@@ -4711,11 +5544,52 @@
     "group_totals": {
       "dari": {
         "lines": [
+          "208-840-1299",
           "701-415-5731"
         ],
-        "total": 6.41,
+        "total": 49.37,
         "plans": 0.0,
-        "equipment": 17.92
+        "equipment": 42.96
+      },
+      "saket": {
+        "lines": [
+          "401-207-7052"
+        ],
+        "total": 9.42,
+        "plans": 0.0,
+        "equipment": 9.42
+      },
+      "chiranjiwi": {
+        "lines": [
+          "401-338-8422"
+        ],
+        "total": 14.37,
+        "plans": 0.0,
+        "equipment": 14.37
+      },
+      "bikas": {
+        "lines": [
+          "617-955-9929"
+        ],
+        "total": 5.83,
+        "plans": 0.0,
+        "equipment": 5.83
+      },
+      "ritesh": {
+        "lines": [
+          "857-205-9815"
+        ],
+        "total": 0.0,
+        "plans": 0.0,
+        "equipment": 0.0
+      },
+      "mainali": {
+        "lines": [
+          "857-264-9862"
+        ],
+        "total": 6.0,
+        "plans": 0.0,
+        "equipment": 6.0
       }
     },
     "taxes": {
@@ -5541,11 +6415,53 @@
     },
     "account_line": {},
     "lines": {
+      "617-955-9929": {
+        "plans": 0.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 0.0,
+        "included_in_plan": true,
+        "name": "Bikas",
+        "group": "bikas",
+        "lineName": "Bikas"
+      },
+      "857-264-9862": {
+        "plans": 0.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 0.0,
+        "included_in_plan": true,
+        "name": "Saroj/Mainali",
+        "group": "mainali",
+        "lineName": "Mainali iPhone"
+      },
+      "208-840-1299": {
+        "plans": 20.0,
+        "equipment": 25.04,
+        "services": 0.0,
+        "total": 45.04,
+        "included_in_plan": false,
+        "name": "Sanjay",
+        "group": "dari",
+        "lineName": "Sanjay",
+        "equipment_detail": [
+          {
+            "device": "iPhone 12 mini - Green - 64GB",
+            "net": 25.04,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 2,
+            "installment_of": 24,
+            "balance": 669.15
+          }
+        ]
+      },
       "401-207-7052": {
         "plans": 20.0,
         "equipment": 9.42,
         "services": 0.0,
-        "total": -1.2,
+        "total": 28.22,
         "included_in_plan": false,
         "name": "Saket",
         "group": "saket",
@@ -5572,16 +6488,76 @@
             "balance": null
           }
         ]
+      },
+      "401-338-8422": {
+        "plans": 20.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 20.0,
+        "included_in_plan": false,
+        "name": "Chiranjiwi",
+        "group": "chiranjiwi",
+        "lineName": "Chiranjiwi"
+      },
+      "857-205-9815": {
+        "plans": 20.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 20.0,
+        "included_in_plan": false,
+        "name": "Ritesh",
+        "group": "ritesh",
+        "lineName": "Ritesh"
       }
     },
     "group_totals": {
+      "bikas": {
+        "lines": [
+          "617-955-9929"
+        ],
+        "total": 0.0,
+        "plans": 0.0,
+        "equipment": 0.0
+      },
+      "mainali": {
+        "lines": [
+          "857-264-9862"
+        ],
+        "total": 0.0,
+        "plans": 0.0,
+        "equipment": 0.0
+      },
+      "dari": {
+        "lines": [
+          "208-840-1299"
+        ],
+        "total": 45.04,
+        "plans": 20.0,
+        "equipment": 25.04
+      },
       "saket": {
         "lines": [
           "401-207-7052"
         ],
-        "total": -1.2,
+        "total": 28.22,
         "plans": 20.0,
         "equipment": 9.42
+      },
+      "chiranjiwi": {
+        "lines": [
+          "401-338-8422"
+        ],
+        "total": 20.0,
+        "plans": 20.0,
+        "equipment": 0.0
+      },
+      "ritesh": {
+        "lines": [
+          "857-205-9815"
+        ],
+        "total": 20.0,
+        "plans": 20.0,
+        "equipment": 0.0
       }
     },
     "taxes": {
@@ -7082,11 +8058,61 @@
     },
     "account_line": {},
     "lines": {
+      "617-955-9929": {
+        "plans": 0.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 0.0,
+        "included_in_plan": true,
+        "name": "Bikas",
+        "group": "bikas",
+        "lineName": "Bikas"
+      },
+      "857-264-9862": {
+        "plans": 0.0,
+        "equipment": 0.0,
+        "services": 14.0,
+        "total": 14.0,
+        "included_in_plan": true,
+        "name": "Saroj/Mainali",
+        "group": "mainali",
+        "lineName": "Mainali iPhone"
+      },
+      "208-840-1299": {
+        "plans": 20.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 20.0,
+        "included_in_plan": false,
+        "name": "Sanjay",
+        "group": "dari",
+        "lineName": "Sanjay"
+      },
+      "401-207-7052": {
+        "plans": 20.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 20.0,
+        "included_in_plan": false,
+        "name": "Saket",
+        "group": "saket",
+        "lineName": "Saket iPhone"
+      },
+      "401-338-8422": {
+        "plans": 20.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 20.0,
+        "included_in_plan": false,
+        "name": "Chiranjiwi",
+        "group": "chiranjiwi",
+        "lineName": "Chiranjiwi"
+      },
       "857-205-9815": {
         "plans": 20.0,
         "equipment": 0.0,
         "services": 0.0,
-        "total": 93.13,
+        "total": 113.13,
         "included_in_plan": false,
         "name": "Ritesh",
         "group": "ritesh",
@@ -7094,11 +8120,51 @@
       }
     },
     "group_totals": {
+      "bikas": {
+        "lines": [
+          "617-955-9929"
+        ],
+        "total": 0.0,
+        "plans": 0.0,
+        "equipment": 0.0
+      },
+      "mainali": {
+        "lines": [
+          "857-264-9862"
+        ],
+        "total": 14.0,
+        "plans": 0.0,
+        "equipment": 0.0
+      },
+      "dari": {
+        "lines": [
+          "208-840-1299"
+        ],
+        "total": 20.0,
+        "plans": 20.0,
+        "equipment": 0.0
+      },
+      "saket": {
+        "lines": [
+          "401-207-7052"
+        ],
+        "total": 20.0,
+        "plans": 20.0,
+        "equipment": 0.0
+      },
+      "chiranjiwi": {
+        "lines": [
+          "401-338-8422"
+        ],
+        "total": 20.0,
+        "plans": 20.0,
+        "equipment": 0.0
+      },
       "ritesh": {
         "lines": [
           "857-205-9815"
         ],
-        "total": 93.13,
+        "total": 113.13,
         "plans": 20.0,
         "equipment": 0.0
       }
@@ -7302,11 +8368,131 @@
     },
     "account_line": {},
     "lines": {
+      "208-840-1299": {
+        "plans": 0.0,
+        "equipment": -5.38,
+        "services": 0.0,
+        "total": -5.38,
+        "included_in_plan": true,
+        "name": "Sanjay",
+        "group": "dari",
+        "lineName": "Sanjay",
+        "equipment_detail": [
+          {
+            "device": "T393 2020 Apple Trade P16",
+            "net": -5.38,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          }
+        ]
+      },
+      "401-207-7052": {
+        "plans": 0.0,
+        "equipment": -21.0,
+        "services": 0.0,
+        "total": -21.0,
+        "included_in_plan": true,
+        "name": "Saket",
+        "group": "saket",
+        "lineName": "Saket iPhone",
+        "equipment_detail": [
+          {
+            "device": "T459 2020 Apple Trade P29",
+            "net": -21.0,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          }
+        ]
+      },
+      "401-338-8422": {
+        "plans": 0.0,
+        "equipment": 14.37,
+        "services": 0.0,
+        "total": 14.37,
+        "included_in_plan": true,
+        "name": "Chiranjiwi",
+        "group": "chiranjiwi",
+        "lineName": "Chiranjiwi",
+        "equipment_detail": [
+          {
+            "device": "iPhone 12 Pro",
+            "net": 14.37,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 12,
+            "installment_of": 23,
+            "balance": 424.95
+          }
+        ]
+      },
+      "617-955-9929": {
+        "plans": 0.0,
+        "equipment": 5.83,
+        "services": 0.0,
+        "total": 5.83,
+        "included_in_plan": true,
+        "name": "Bikas",
+        "group": "bikas",
+        "lineName": "Bikas",
+        "equipment_detail": [
+          {
+            "device": "iPhone 13",
+            "net": 5.83,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 8,
+            "installment_of": 30,
+            "balance": 586.63
+          }
+        ]
+      },
+      "857-205-9815": {
+        "plans": 0.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 0.0,
+        "included_in_plan": true,
+        "name": "Ritesh",
+        "group": "ritesh",
+        "lineName": "Ritesh"
+      },
+      "857-264-9862": {
+        "plans": 0.0,
+        "equipment": 6.0,
+        "services": 0.0,
+        "total": 6.0,
+        "included_in_plan": true,
+        "name": "Saroj/Mainali",
+        "group": "mainali",
+        "lineName": "Mainali iPhone",
+        "equipment_detail": [
+          {
+            "device": "iPhone 13",
+            "net": 6.0,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 8,
+            "installment_of": 30,
+            "balance": 586.63
+          }
+        ]
+      },
       "701-415-5731": {
         "plans": 0.0,
         "equipment": 17.92,
         "services": 0.0,
-        "total": 3.24,
+        "total": 21.16,
         "included_in_plan": true,
         "name": "Dari-old",
         "group": "dari",
@@ -7358,11 +8544,52 @@
     "group_totals": {
       "dari": {
         "lines": [
+          "208-840-1299",
           "701-415-5731"
         ],
-        "total": 3.24,
+        "total": 15.78,
         "plans": 0.0,
-        "equipment": 17.92
+        "equipment": 12.54
+      },
+      "saket": {
+        "lines": [
+          "401-207-7052"
+        ],
+        "total": -21.0,
+        "plans": 0.0,
+        "equipment": -21.0
+      },
+      "chiranjiwi": {
+        "lines": [
+          "401-338-8422"
+        ],
+        "total": 14.37,
+        "plans": 0.0,
+        "equipment": 14.37
+      },
+      "bikas": {
+        "lines": [
+          "617-955-9929"
+        ],
+        "total": 5.83,
+        "plans": 0.0,
+        "equipment": 5.83
+      },
+      "ritesh": {
+        "lines": [
+          "857-205-9815"
+        ],
+        "total": 0.0,
+        "plans": 0.0,
+        "equipment": 0.0
+      },
+      "mainali": {
+        "lines": [
+          "857-264-9862"
+        ],
+        "total": 6.0,
+        "plans": 0.0,
+        "equipment": 6.0
       }
     },
     "taxes": {
@@ -7832,11 +9059,135 @@
     },
     "account_line": {},
     "lines": {
+      "208-840-1299": {
+        "plans": 4.98,
+        "equipment": 21.04,
+        "services": 0.0,
+        "total": 26.02,
+        "included_in_plan": false,
+        "name": "Sanjay",
+        "group": "dari",
+        "lineName": "Sanjay",
+        "equipment_detail": [
+          {
+            "device": "iPhone 16 Pro - Natural Titanium - 128GB",
+            "net": 21.04,
+            "gross": 41.67,
+            "promo_credit": 20.63,
+            "promo_name": "R",
+            "installment_num": 3,
+            "installment_of": 24,
+            "balance": 916.65
+          },
+          {
+            "device": "Regulatory Programs & Telco",
+            "net": 3.99,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "State & Local Sales Tax",
+            "net": 0.28,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "TRS Surcharge",
+            "net": 0.16,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "State 911",
+            "net": 0.55,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          }
+        ]
+      },
+      "401-207-7052": {
+        "plans": 4.98,
+        "equipment": 21.04,
+        "services": 0.0,
+        "total": 26.02,
+        "included_in_plan": false,
+        "name": "Saket",
+        "group": "saket",
+        "lineName": "Saket iPhone",
+        "equipment_detail": [
+          {
+            "device": "iPhone 16 Pro - Desert Titanium - 128GB",
+            "net": 21.04,
+            "gross": 41.67,
+            "promo_credit": 20.63,
+            "promo_name": "R",
+            "installment_num": 3,
+            "installment_of": 24,
+            "balance": 916.65
+          },
+          {
+            "device": "Regulatory Programs & Telco",
+            "net": 3.99,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "State & Local Sales Tax",
+            "net": 0.28,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "TRS Surcharge",
+            "net": 0.16,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "State 911",
+            "net": 0.55,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          }
+        ]
+      },
       "401-338-8422": {
         "plans": 4.98,
         "equipment": 0.0,
         "services": 0.0,
-        "total": 0.75,
+        "total": 5.73,
         "included_in_plan": false,
         "name": "Chiranjiwi",
         "group": "chiranjiwi",
@@ -7893,16 +9244,398 @@
             "balance": null
           }
         ]
+      },
+      "617-955-9929": {
+        "plans": 4.98,
+        "equipment": 2.16,
+        "services": 0.0,
+        "total": 7.14,
+        "included_in_plan": false,
+        "name": "Bikas",
+        "group": "bikas",
+        "lineName": "Bikas",
+        "equipment_detail": [
+          {
+            "device": "razr - 2024",
+            "net": 2.16,
+            "gross": 23.0,
+            "promo_credit": 20.84,
+            "promo_name": "P",
+            "installment_num": 10,
+            "installment_of": 24,
+            "balance": 345.0
+          },
+          {
+            "device": "Regulatory Programs & Telco",
+            "net": 3.99,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "State & Local Sales Tax",
+            "net": 0.28,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "TRS Surcharge",
+            "net": 0.16,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "State 911",
+            "net": 0.55,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          }
+        ]
+      },
+      "857-205-9815": {
+        "plans": 4.98,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 4.98,
+        "included_in_plan": false,
+        "name": "Ritesh",
+        "group": "ritesh",
+        "lineName": "Ritesh",
+        "equipment_detail": [
+          {
+            "device": "Regulatory Programs & Telco",
+            "net": 3.99,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "State & Local Sales Tax",
+            "net": 0.28,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "TRS Surcharge",
+            "net": 0.16,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "State 911",
+            "net": 0.55,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          }
+        ]
+      },
+      "857-264-9862": {
+        "plans": 4.98,
+        "equipment": 13.96,
+        "services": 0.0,
+        "total": 18.94,
+        "included_in_plan": false,
+        "name": "Saroj/Mainali",
+        "group": "mainali",
+        "lineName": "Mainali iPhone",
+        "equipment_detail": [
+          {
+            "device": "iPhone 16 - Teal - 128GB",
+            "net": 13.96,
+            "gross": 34.59,
+            "promo_credit": 20.63,
+            "promo_name": "R",
+            "installment_num": 3,
+            "installment_of": 24,
+            "balance": 760.81
+          },
+          {
+            "device": "Regulatory Programs & Telco",
+            "net": 3.99,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "State & Local Sales Tax",
+            "net": 0.28,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "TRS Surcharge",
+            "net": 0.16,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "State 911",
+            "net": 0.55,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          }
+        ]
+      },
+      "407-416-5178": {
+        "plans": 4.98,
+        "equipment": 26.04,
+        "services": 0.0,
+        "total": 31.02,
+        "included_in_plan": false,
+        "name": "Manoj/Bajpayee",
+        "group": "bajpayee",
+        "lineName": "Bajpayee iPhone",
+        "equipment_detail": [
+          {
+            "device": "APL IPHONE 16 PRO MAX 256G NAT EXCH",
+            "net": 26.04,
+            "gross": 50.0,
+            "promo_credit": 23.96,
+            "promo_name": "R",
+            "installment_num": 3,
+            "installment_of": 24,
+            "balance": 1099.99
+          },
+          {
+            "device": "Regulatory Programs & Telco",
+            "net": 3.99,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "State & Local Sales Tax",
+            "net": 0.28,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "TRS Surcharge",
+            "net": 0.16,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "State 911",
+            "net": 0.55,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          }
+        ]
+      },
+      "252-350-3063": {
+        "plans": 55.18,
+        "equipment": 4.99,
+        "services": 0.0,
+        "total": 60.17,
+        "included_in_plan": false,
+        "name": "Sapana",
+        "group": "bajpayee",
+        "lineName": "Sapana iPhone",
+        "equipment_detail": [
+          {
+            "device": "iPhone 16 Pro Max - Desert Titanium - 256GB",
+            "net": 17.49,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 3,
+            "installment_of": 19,
+            "balance": 17.49
+          },
+          {
+            "device": "Federal Universal Service Fund",
+            "net": 0.09,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "Regulatory Programs & Telco",
+            "net": 3.99,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "State & Local Sales Tax",
+            "net": 0.39,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "TRS Surcharge",
+            "net": 0.16,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "State 911",
+            "net": 0.55,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          }
+        ]
+      },
+      "863-606-2309": {
+        "plans": 61.6,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 61.6,
+        "included_in_plan": false,
+        "name": "Home Internet",
+        "group": "saket",
+        "lineName": "Home Internet",
+        "equipment_detail": [
+          {
+            "device": "Regulatory Programs & Telco",
+            "net": 1.6,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          }
+        ]
       }
     },
     "group_totals": {
+      "dari": {
+        "lines": [
+          "208-840-1299"
+        ],
+        "total": 26.02,
+        "plans": 4.98,
+        "equipment": 21.04
+      },
+      "saket": {
+        "lines": [
+          "401-207-7052",
+          "863-606-2309"
+        ],
+        "total": 87.62,
+        "plans": 66.58,
+        "equipment": 21.04
+      },
       "chiranjiwi": {
         "lines": [
           "401-338-8422"
         ],
-        "total": 0.75,
+        "total": 5.73,
         "plans": 4.98,
         "equipment": 0.0
+      },
+      "bikas": {
+        "lines": [
+          "617-955-9929"
+        ],
+        "total": 7.14,
+        "plans": 4.98,
+        "equipment": 2.16
+      },
+      "ritesh": {
+        "lines": [
+          "857-205-9815"
+        ],
+        "total": 4.98,
+        "plans": 4.98,
+        "equipment": 0.0
+      },
+      "mainali": {
+        "lines": [
+          "857-264-9862"
+        ],
+        "total": 18.94,
+        "plans": 4.98,
+        "equipment": 13.96
+      },
+      "bajpayee": {
+        "lines": [
+          "407-416-5178",
+          "252-350-3063"
+        ],
+        "total": 91.19,
+        "plans": 60.16,
+        "equipment": 31.03
       }
     },
     "taxes": {
@@ -8057,6 +9790,60 @@
     },
     "account_line": {},
     "lines": {
+      "208-840-1299": {
+        "plans": 0.0,
+        "equipment": 25.04,
+        "services": 0.0,
+        "total": 25.04,
+        "included_in_plan": true,
+        "name": "Sanjay",
+        "group": "dari",
+        "lineName": "Sanjay",
+        "equipment_detail": [
+          {
+            "device": "iPhone 12 mini - Green - 64GB",
+            "net": 25.04,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 7,
+            "installment_of": 19,
+            "balance": 346.05
+          }
+        ]
+      },
+      "401-207-7052": {
+        "plans": 0.0,
+        "equipment": 9.42,
+        "services": 0.0,
+        "total": 9.42,
+        "included_in_plan": true,
+        "name": "Saket",
+        "group": "saket",
+        "lineName": "Saket iPhone",
+        "equipment_detail": [
+          {
+            "device": "iPhone 12 mini - White - 64GB",
+            "net": 9.42,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 7,
+            "installment_of": 17,
+            "balance": 291.05
+          }
+        ]
+      },
+      "401-338-8422": {
+        "plans": 0.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 0.0,
+        "included_in_plan": true,
+        "name": "Chiranjiwi",
+        "group": "chiranjiwi",
+        "lineName": "Chiranjiwi"
+      },
       "617-955-9929": {
         "plans": 0.0,
         "equipment": 0.0,
@@ -8078,14 +9865,97 @@
             "balance": null
           }
         ]
+      },
+      "857-205-9815": {
+        "plans": 0.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 0.0,
+        "included_in_plan": true,
+        "name": "Ritesh",
+        "group": "ritesh",
+        "lineName": "Ritesh"
+      },
+      "857-264-9862": {
+        "plans": 0.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 0.0,
+        "included_in_plan": true,
+        "name": "Saroj/Mainali",
+        "group": "mainali",
+        "lineName": "Mainali iPhone"
+      },
+      "701-415-5731": {
+        "plans": 0.0,
+        "equipment": 17.92,
+        "services": 0.0,
+        "total": 17.92,
+        "included_in_plan": true,
+        "name": "Dari-old",
+        "group": "dari",
+        "lineName": "Dari",
+        "equipment_detail": [
+          {
+            "device": "iPhone 12 mini - White - 64GB",
+            "net": 17.92,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 2,
+            "installment_of": 24,
+            "balance": 669.15
+          }
+        ]
       }
     },
     "group_totals": {
+      "dari": {
+        "lines": [
+          "208-840-1299",
+          "701-415-5731"
+        ],
+        "total": 42.96,
+        "plans": 0.0,
+        "equipment": 42.96
+      },
+      "saket": {
+        "lines": [
+          "401-207-7052"
+        ],
+        "total": 9.42,
+        "plans": 0.0,
+        "equipment": 9.42
+      },
+      "chiranjiwi": {
+        "lines": [
+          "401-338-8422"
+        ],
+        "total": 0.0,
+        "plans": 0.0,
+        "equipment": 0.0
+      },
       "bikas": {
         "lines": [
           "617-955-9929"
         ],
         "total": 20.0,
+        "plans": 0.0,
+        "equipment": 0.0
+      },
+      "ritesh": {
+        "lines": [
+          "857-205-9815"
+        ],
+        "total": 0.0,
+        "plans": 0.0,
+        "equipment": 0.0
+      },
+      "mainali": {
+        "lines": [
+          "857-264-9862"
+        ],
+        "total": 0.0,
         "plans": 0.0,
         "equipment": 0.0
       }
@@ -9337,23 +11207,113 @@
     },
     "account_line": {},
     "lines": {
+      "617-955-9929": {
+        "plans": 0.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 0.0,
+        "included_in_plan": true,
+        "name": "Bikas",
+        "group": "bikas",
+        "lineName": "Bikas"
+      },
+      "857-264-9862": {
+        "plans": 0.0,
+        "equipment": 0.0,
+        "services": 14.0,
+        "total": 14.0,
+        "included_in_plan": true,
+        "name": "Saroj/Mainali",
+        "group": "mainali",
+        "lineName": "Mainali iPhone"
+      },
+      "208-840-1299": {
+        "plans": 20.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 20.0,
+        "included_in_plan": false,
+        "name": "Sanjay",
+        "group": "dari",
+        "lineName": "Sanjay"
+      },
+      "401-207-7052": {
+        "plans": 20.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 20.0,
+        "included_in_plan": false,
+        "name": "Saket",
+        "group": "saket",
+        "lineName": "Saket iPhone"
+      },
       "401-338-8422": {
         "plans": 20.0,
         "equipment": 0.0,
         "services": 0.0,
-        "total": 5.17,
+        "total": 25.17,
         "included_in_plan": false,
         "name": "Chiranjiwi",
         "group": "chiranjiwi",
         "lineName": "Chiranjiwi"
+      },
+      "857-205-9815": {
+        "plans": 20.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 20.0,
+        "included_in_plan": false,
+        "name": "Ritesh",
+        "group": "ritesh",
+        "lineName": "Ritesh"
       }
     },
     "group_totals": {
+      "bikas": {
+        "lines": [
+          "617-955-9929"
+        ],
+        "total": 0.0,
+        "plans": 0.0,
+        "equipment": 0.0
+      },
+      "mainali": {
+        "lines": [
+          "857-264-9862"
+        ],
+        "total": 14.0,
+        "plans": 0.0,
+        "equipment": 0.0
+      },
+      "dari": {
+        "lines": [
+          "208-840-1299"
+        ],
+        "total": 20.0,
+        "plans": 20.0,
+        "equipment": 0.0
+      },
+      "saket": {
+        "lines": [
+          "401-207-7052"
+        ],
+        "total": 20.0,
+        "plans": 20.0,
+        "equipment": 0.0
+      },
       "chiranjiwi": {
         "lines": [
           "401-338-8422"
         ],
-        "total": 5.17,
+        "total": 25.17,
+        "plans": 20.0,
+        "equipment": 0.0
+      },
+      "ritesh": {
+        "lines": [
+          "857-205-9815"
+        ],
+        "total": 20.0,
         "plans": 20.0,
         "equipment": 0.0
       }
@@ -9376,11 +11336,75 @@
     },
     "account_line": {},
     "lines": {
+      "617-955-9929": {
+        "plans": 0.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 0.0,
+        "included_in_plan": true,
+        "name": "Bikas",
+        "group": "bikas",
+        "lineName": "Bikas"
+      },
+      "857-264-9862": {
+        "plans": 0.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 0.0,
+        "included_in_plan": true,
+        "name": "Saroj/Mainali",
+        "group": "mainali",
+        "lineName": "Mainali iPhone"
+      },
+      "208-840-1299": {
+        "plans": 20.0,
+        "equipment": 25.04,
+        "services": 0.0,
+        "total": 45.04,
+        "included_in_plan": false,
+        "name": "Sanjay",
+        "group": "dari",
+        "lineName": "Sanjay",
+        "equipment_detail": [
+          {
+            "device": "iPhone 12 mini - Green - 64GB",
+            "net": 25.04,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 4,
+            "installment_of": 19,
+            "balance": 437.31
+          }
+        ]
+      },
+      "401-207-7052": {
+        "plans": 20.0,
+        "equipment": 9.42,
+        "services": 0.0,
+        "total": 29.42,
+        "included_in_plan": false,
+        "name": "Saket",
+        "group": "saket",
+        "lineName": "Saket iPhone",
+        "equipment_detail": [
+          {
+            "device": "iPhone 12 mini - White - 64GB",
+            "net": 9.42,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 4,
+            "installment_of": 17,
+            "balance": 382.31
+          }
+        ]
+      },
       "401-338-8422": {
         "plans": 20.0,
         "equipment": 0.0,
         "services": 0.0,
-        "total": 5.0,
+        "total": 25.0,
         "included_in_plan": false,
         "name": "Chiranjiwi",
         "group": "chiranjiwi",
@@ -9397,14 +11421,64 @@
             "balance": null
           }
         ]
+      },
+      "857-205-9815": {
+        "plans": 20.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 20.0,
+        "included_in_plan": false,
+        "name": "Ritesh",
+        "group": "ritesh",
+        "lineName": "Ritesh"
       }
     },
     "group_totals": {
+      "bikas": {
+        "lines": [
+          "617-955-9929"
+        ],
+        "total": 0.0,
+        "plans": 0.0,
+        "equipment": 0.0
+      },
+      "mainali": {
+        "lines": [
+          "857-264-9862"
+        ],
+        "total": 0.0,
+        "plans": 0.0,
+        "equipment": 0.0
+      },
+      "dari": {
+        "lines": [
+          "208-840-1299"
+        ],
+        "total": 45.04,
+        "plans": 20.0,
+        "equipment": 25.04
+      },
+      "saket": {
+        "lines": [
+          "401-207-7052"
+        ],
+        "total": 29.42,
+        "plans": 20.0,
+        "equipment": 9.42
+      },
       "chiranjiwi": {
         "lines": [
           "401-338-8422"
         ],
-        "total": 5.0,
+        "total": 25.0,
+        "plans": 20.0,
+        "equipment": 0.0
+      },
+      "ritesh": {
+        "lines": [
+          "857-205-9815"
+        ],
+        "total": 20.0,
         "plans": 20.0,
         "equipment": 0.0
       }
@@ -10325,11 +12399,249 @@
     },
     "account_line": {},
     "lines": {
+      "208-840-1299": {
+        "plans": 5.51,
+        "equipment": 21.04,
+        "services": 0.0,
+        "total": 26.55,
+        "included_in_plan": false,
+        "name": "Sanjay",
+        "group": "dari",
+        "lineName": "Sanjay",
+        "equipment_detail": [
+          {
+            "device": "iPhone 16 Pro - Natural Titanium - 128GB",
+            "net": 21.04,
+            "gross": 41.67,
+            "promo_credit": 20.63,
+            "promo_name": "R",
+            "installment_num": 11,
+            "installment_of": 24,
+            "balance": 541.62
+          },
+          {
+            "device": "Regulatory Programs & Telco",
+            "net": 4.49,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "State & Local Sales Tax",
+            "net": 0.31,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "TRS Surcharge",
+            "net": 0.16,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "State 911",
+            "net": 0.55,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          }
+        ]
+      },
+      "401-207-7052": {
+        "plans": 5.51,
+        "equipment": 21.04,
+        "services": 0.0,
+        "total": 26.55,
+        "included_in_plan": false,
+        "name": "Saket",
+        "group": "saket",
+        "lineName": "Saket iPhone",
+        "equipment_detail": [
+          {
+            "device": "iPhone 16 Pro - Desert Titanium - 128GB",
+            "net": 21.04,
+            "gross": 41.67,
+            "promo_credit": 20.63,
+            "promo_name": "R",
+            "installment_num": 11,
+            "installment_of": 24,
+            "balance": 541.62
+          },
+          {
+            "device": "Regulatory Programs & Telco",
+            "net": 4.49,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "State & Local Sales Tax",
+            "net": 0.31,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "TRS Surcharge",
+            "net": 0.16,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "State 911",
+            "net": 0.55,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          }
+        ]
+      },
+      "401-338-8422": {
+        "plans": 5.51,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 5.51,
+        "included_in_plan": false,
+        "name": "Chiranjiwi",
+        "group": "chiranjiwi",
+        "lineName": "Chiranjiwi",
+        "equipment_detail": [
+          {
+            "device": "Regulatory Programs & Telco",
+            "net": 4.49,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "State & Local Sales Tax",
+            "net": 0.31,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "TRS Surcharge",
+            "net": 0.16,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "State 911",
+            "net": 0.55,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          }
+        ]
+      },
+      "617-955-9929": {
+        "plans": 5.51,
+        "equipment": 2.16,
+        "services": 0.0,
+        "total": 7.67,
+        "included_in_plan": false,
+        "name": "Bikas",
+        "group": "bikas",
+        "lineName": "Bikas",
+        "equipment_detail": [
+          {
+            "device": "razr - 2024",
+            "net": 2.16,
+            "gross": 23.0,
+            "promo_credit": 20.84,
+            "promo_name": "P",
+            "installment_num": 18,
+            "installment_of": 24,
+            "balance": 138.0
+          },
+          {
+            "device": "TRS Surcharge",
+            "net": 0.16,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "State 911",
+            "net": 0.55,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "Regulatory Programs & Telco",
+            "net": 4.49,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "State & Local Sales Tax",
+            "net": 0.31,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          }
+        ]
+      },
       "857-205-9815": {
         "plans": 5.51,
         "equipment": 0.0,
         "services": 0.0,
-        "total": 6.84,
+        "total": 12.35,
         "included_in_plan": false,
         "name": "Ritesh",
         "group": "ritesh",
@@ -10406,16 +12718,377 @@
             "balance": null
           }
         ]
+      },
+      "857-264-9862": {
+        "plans": 5.51,
+        "equipment": 13.96,
+        "services": 0.0,
+        "total": 19.47,
+        "included_in_plan": false,
+        "name": "Saroj/Mainali",
+        "group": "mainali",
+        "lineName": "Mainali iPhone",
+        "equipment_detail": [
+          {
+            "device": "iPhone 16 - Teal - 128GB",
+            "net": 13.96,
+            "gross": 34.59,
+            "promo_credit": 20.63,
+            "promo_name": "R",
+            "installment_num": 11,
+            "installment_of": 24,
+            "balance": 449.5
+          },
+          {
+            "device": "State & Local Sales Tax",
+            "net": 0.31,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "TRS Surcharge",
+            "net": 0.16,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "State 911",
+            "net": 0.55,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "Regulatory Programs & Telco",
+            "net": 4.49,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "to Boston/MA F 25 - Totals 487",
+            "net": 0.0,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          }
+        ]
+      },
+      "407-416-5178": {
+        "plans": 5.51,
+        "equipment": 26.04,
+        "services": 0.0,
+        "total": 31.55,
+        "included_in_plan": false,
+        "name": "Manoj/Bajpayee",
+        "group": "bajpayee",
+        "lineName": "Bajpayee iPhone",
+        "equipment_detail": [
+          {
+            "device": "APL IPHONE 16 PRO MAX 256G NAT EXCH",
+            "net": 26.04,
+            "gross": 50.0,
+            "promo_credit": 23.96,
+            "promo_name": "R",
+            "installment_num": 11,
+            "installment_of": 24,
+            "balance": 649.99
+          },
+          {
+            "device": "Regulatory Programs & Telco",
+            "net": 4.49,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "State & Local Sales Tax",
+            "net": 0.31,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "TRS Surcharge",
+            "net": 0.16,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "State 911",
+            "net": 0.55,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          }
+        ]
+      },
+      "252-350-3063": {
+        "plans": 50.7,
+        "equipment": -12.5,
+        "services": 0.0,
+        "total": 38.2,
+        "included_in_plan": false,
+        "name": "Sapana",
+        "group": "bajpayee",
+        "lineName": "Sapana iPhone",
+        "equipment_detail": [
+          {
+            "device": "P807 Apple iPhone Promo with Trade (ID240412)",
+            "net": -12.5,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "Federal Universal Service Fund",
+            "net": 0.09,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "Regulatory Programs & Telco",
+            "net": 4.49,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "State & Local Sales Tax",
+            "net": 0.41,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "TRS Surcharge",
+            "net": 0.16,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "State 911",
+            "net": 0.55,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          }
+        ]
+      },
+      "863-606-2309": {
+        "plans": 62.1,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 62.1,
+        "included_in_plan": false,
+        "name": "Home Internet",
+        "group": "saket",
+        "lineName": "Home Internet",
+        "equipment_detail": [
+          {
+            "device": "Regulatory Programs & Telco",
+            "net": 2.1,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          }
+        ]
+      },
+      "701-412-4006": {
+        "plans": 57.26,
+        "equipment": 33.54,
+        "services": 0.0,
+        "total": 90.8,
+        "included_in_plan": false,
+        "name": "Mahima",
+        "group": "dari",
+        "lineName": "701-412-4006",
+        "equipment_detail": [
+          {
+            "device": "iPhone 17 Pro - Cosmic Orange - 256GB",
+            "net": 33.54,
+            "gross": 45.84,
+            "promo_credit": 12.3,
+            "promo_name": "R",
+            "installment_num": 3,
+            "installment_of": 24,
+            "balance": 962.47
+          },
+          {
+            "device": "Federal Universal Service Fund",
+            "net": 0.1,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "State Gross Receipts Tax",
+            "net": 0.16,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "Regulatory Programs & Telco",
+            "net": 4.49,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "State & Local Sales Tax",
+            "net": 0.48,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "DEAF Surcharge",
+            "net": 0.03,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "County 911",
+            "net": 2.0,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          }
+        ]
       }
     },
     "group_totals": {
+      "dari": {
+        "lines": [
+          "208-840-1299",
+          "701-412-4006"
+        ],
+        "total": 117.35,
+        "plans": 62.77,
+        "equipment": 54.58
+      },
+      "saket": {
+        "lines": [
+          "401-207-7052",
+          "863-606-2309"
+        ],
+        "total": 88.65,
+        "plans": 67.61,
+        "equipment": 21.04
+      },
+      "chiranjiwi": {
+        "lines": [
+          "401-338-8422"
+        ],
+        "total": 5.51,
+        "plans": 5.51,
+        "equipment": 0.0
+      },
+      "bikas": {
+        "lines": [
+          "617-955-9929"
+        ],
+        "total": 7.67,
+        "plans": 5.51,
+        "equipment": 2.16
+      },
       "ritesh": {
         "lines": [
           "857-205-9815"
         ],
-        "total": 6.84,
+        "total": 12.35,
         "plans": 5.51,
         "equipment": 0.0
+      },
+      "mainali": {
+        "lines": [
+          "857-264-9862"
+        ],
+        "total": 19.47,
+        "plans": 5.51,
+        "equipment": 13.96
+      },
+      "bajpayee": {
+        "lines": [
+          "407-416-5178",
+          "252-350-3063"
+        ],
+        "total": 69.75,
+        "plans": 56.21,
+        "equipment": 13.54
       }
     },
     "taxes": {
@@ -10569,8 +13242,142 @@
       "total": 3.24
     },
     "account_line": {},
-    "lines": {},
-    "group_totals": {},
+    "lines": {
+      "208-840-1299": {
+        "plans": -19.34,
+        "equipment": 25.04,
+        "services": 0.0,
+        "total": 5.7,
+        "included_in_plan": false,
+        "name": "Sanjay",
+        "group": "dari",
+        "lineName": "Sanjay",
+        "equipment_detail": [
+          {
+            "device": "iPhone 12 mini - Green - 64GB",
+            "net": 25.04,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 6,
+            "installment_of": 19,
+            "balance": 376.47
+          }
+        ]
+      },
+      "401-207-7052": {
+        "plans": -19.34,
+        "equipment": 9.42,
+        "services": 0.0,
+        "total": -9.92,
+        "included_in_plan": false,
+        "name": "Saket",
+        "group": "saket",
+        "lineName": "Saket iPhone",
+        "equipment_detail": [
+          {
+            "device": "iPhone 12 mini - White - 64GB",
+            "net": 9.42,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 6,
+            "installment_of": 17,
+            "balance": 321.47
+          }
+        ]
+      },
+      "401-338-8422": {
+        "plans": -19.34,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": -19.34,
+        "included_in_plan": false,
+        "name": "Chiranjiwi",
+        "group": "chiranjiwi",
+        "lineName": "Chiranjiwi"
+      },
+      "617-955-9929": {
+        "plans": 0.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 0.0,
+        "included_in_plan": true,
+        "name": "Bikas",
+        "group": "bikas",
+        "lineName": "Bikas"
+      },
+      "857-205-9815": {
+        "plans": -19.34,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": -19.34,
+        "included_in_plan": false,
+        "name": "Ritesh",
+        "group": "ritesh",
+        "lineName": "Ritesh"
+      },
+      "857-264-9862": {
+        "plans": 0.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 0.0,
+        "included_in_plan": true,
+        "name": "Saroj/Mainali",
+        "group": "mainali",
+        "lineName": "Mainali iPhone"
+      }
+    },
+    "group_totals": {
+      "dari": {
+        "lines": [
+          "208-840-1299"
+        ],
+        "total": 5.7,
+        "plans": -19.34,
+        "equipment": 25.04
+      },
+      "saket": {
+        "lines": [
+          "401-207-7052"
+        ],
+        "total": -9.92,
+        "plans": -19.34,
+        "equipment": 9.42
+      },
+      "chiranjiwi": {
+        "lines": [
+          "401-338-8422"
+        ],
+        "total": -19.34,
+        "plans": -19.34,
+        "equipment": 0.0
+      },
+      "bikas": {
+        "lines": [
+          "617-955-9929"
+        ],
+        "total": 0.0,
+        "plans": 0.0,
+        "equipment": 0.0
+      },
+      "ritesh": {
+        "lines": [
+          "857-205-9815"
+        ],
+        "total": -19.34,
+        "plans": -19.34,
+        "equipment": 0.0
+      },
+      "mainali": {
+        "lines": [
+          "857-264-9862"
+        ],
+        "total": 0.0,
+        "plans": 0.0,
+        "equipment": 0.0
+      }
+    },
     "taxes": {
       "tmobile_fees": 0.24,
       "govt_fees": 0.0,
@@ -10589,11 +13396,131 @@
     },
     "account_line": {},
     "lines": {
+      "208-840-1299": {
+        "plans": 0.0,
+        "equipment": 25.04,
+        "services": 0.0,
+        "total": 25.04,
+        "included_in_plan": true,
+        "name": "Sanjay",
+        "group": "dari",
+        "lineName": "Sanjay",
+        "equipment_detail": [
+          {
+            "device": "iPhone 12 mini",
+            "net": 25.04,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 18,
+            "installment_of": 19,
+            "balance": 11.43
+          }
+        ]
+      },
+      "401-207-7052": {
+        "plans": 0.0,
+        "equipment": -21.0,
+        "services": 0.0,
+        "total": -21.0,
+        "included_in_plan": true,
+        "name": "Saket",
+        "group": "saket",
+        "lineName": "Saket iPhone",
+        "equipment_detail": [
+          {
+            "device": "T459 2020 Apple Trade P29",
+            "net": -21.0,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          }
+        ]
+      },
+      "401-338-8422": {
+        "plans": 0.0,
+        "equipment": 14.37,
+        "services": 0.0,
+        "total": 14.37,
+        "included_in_plan": true,
+        "name": "Chiranjiwi",
+        "group": "chiranjiwi",
+        "lineName": "Chiranjiwi",
+        "equipment_detail": [
+          {
+            "device": "iPhone 12 Pro",
+            "net": 14.37,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 10,
+            "installment_of": 23,
+            "balance": 508.29
+          }
+        ]
+      },
+      "617-955-9929": {
+        "plans": 0.0,
+        "equipment": 5.83,
+        "services": 0.0,
+        "total": 5.83,
+        "included_in_plan": true,
+        "name": "Bikas",
+        "group": "bikas",
+        "lineName": "Bikas",
+        "equipment_detail": [
+          {
+            "device": "iPhone 13",
+            "net": 5.83,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 6,
+            "installment_of": 30,
+            "balance": 639.97
+          }
+        ]
+      },
+      "857-205-9815": {
+        "plans": 0.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 0.0,
+        "included_in_plan": true,
+        "name": "Ritesh",
+        "group": "ritesh",
+        "lineName": "Ritesh"
+      },
+      "857-264-9862": {
+        "plans": 0.0,
+        "equipment": 6.0,
+        "services": 0.0,
+        "total": 6.0,
+        "included_in_plan": true,
+        "name": "Saroj/Mainali",
+        "group": "mainali",
+        "lineName": "Mainali iPhone",
+        "equipment_detail": [
+          {
+            "device": "iPhone 13",
+            "net": 6.0,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          }
+        ]
+      },
       "701-415-5731": {
         "plans": 0.0,
         "equipment": 17.92,
         "services": 0.0,
-        "total": 3.2,
+        "total": 21.12,
         "included_in_plan": true,
         "name": "Dari-old",
         "group": "dari",
@@ -10645,11 +13572,52 @@
     "group_totals": {
       "dari": {
         "lines": [
+          "208-840-1299",
           "701-415-5731"
         ],
-        "total": 3.2,
+        "total": 46.16,
         "plans": 0.0,
-        "equipment": 17.92
+        "equipment": 42.96
+      },
+      "saket": {
+        "lines": [
+          "401-207-7052"
+        ],
+        "total": -21.0,
+        "plans": 0.0,
+        "equipment": -21.0
+      },
+      "chiranjiwi": {
+        "lines": [
+          "401-338-8422"
+        ],
+        "total": 14.37,
+        "plans": 0.0,
+        "equipment": 14.37
+      },
+      "bikas": {
+        "lines": [
+          "617-955-9929"
+        ],
+        "total": 5.83,
+        "plans": 0.0,
+        "equipment": 5.83
+      },
+      "ritesh": {
+        "lines": [
+          "857-205-9815"
+        ],
+        "total": 0.0,
+        "plans": 0.0,
+        "equipment": 0.0
+      },
+      "mainali": {
+        "lines": [
+          "857-264-9862"
+        ],
+        "total": 6.0,
+        "plans": 0.0,
+        "equipment": 6.0
       }
     },
     "taxes": {
@@ -11683,11 +14651,177 @@
     },
     "account_line": {},
     "lines": {
+      "208-840-1299": {
+        "plans": 5.51,
+        "equipment": 21.04,
+        "services": 0.0,
+        "total": 26.55,
+        "included_in_plan": false,
+        "name": "Sanjay",
+        "group": "dari",
+        "lineName": "Sanjay",
+        "equipment_detail": [
+          {
+            "device": "iPhone 16 Pro",
+            "net": 21.04,
+            "gross": 41.67,
+            "promo_credit": 20.63,
+            "promo_name": "R",
+            "installment_num": 13,
+            "installment_of": 24,
+            "balance": 458.28
+          },
+          {
+            "device": "State & Local Sales Tax",
+            "net": 0.31,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "State TRS Surcharge",
+            "net": 0.16,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "State 911",
+            "net": 0.55,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "Regulatory Programs & Telco $4.49 (407) 416-5178 State 911",
+            "net": 0.55,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          }
+        ]
+      },
+      "401-207-7052": {
+        "plans": 5.51,
+        "equipment": 21.04,
+        "services": 0.0,
+        "total": 26.55,
+        "included_in_plan": false,
+        "name": "Saket",
+        "group": "saket",
+        "lineName": "Saket iPhone",
+        "equipment_detail": [
+          {
+            "device": "iPhone 16 Pro",
+            "net": 21.04,
+            "gross": 41.67,
+            "promo_credit": 20.63,
+            "promo_name": "R",
+            "installment_num": 13,
+            "installment_of": 24,
+            "balance": 458.28
+          },
+          {
+            "device": "State TRS Surcharge",
+            "net": 0.16,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "State 911",
+            "net": 0.55,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "Regulatory Programs & Telco $4.49 (857) 205-9815 State & Local Sales Tax",
+            "net": 0.31,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          }
+        ]
+      },
+      "401-338-8422": {
+        "plans": 5.51,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 5.51,
+        "included_in_plan": false,
+        "name": "Chiranjiwi",
+        "group": "chiranjiwi",
+        "lineName": "Chiranjiwi",
+        "equipment_detail": [
+          {
+            "device": "State & Local Sales Tax",
+            "net": 0.31,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "State TRS Surcharge",
+            "net": 0.16,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "State 911",
+            "net": 0.55,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "Regulatory Programs & Telco $4.49 (857) 205-9815 State 911",
+            "net": 0.55,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          }
+        ]
+      },
       "617-955-9929": {
         "plans": 5.51,
         "equipment": 2.16,
         "services": 0.0,
-        "total": 0.29,
+        "total": 7.96,
         "included_in_plan": false,
         "name": "Bikas",
         "group": "bikas",
@@ -11754,16 +14888,349 @@
             "balance": null
           }
         ]
+      },
+      "857-205-9815": {
+        "plans": 5.51,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 5.51,
+        "included_in_plan": false,
+        "name": "Ritesh",
+        "group": "ritesh",
+        "lineName": "Ritesh",
+        "equipment_detail": [
+          {
+            "device": "State TRS Surcharge",
+            "net": 0.16,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "Regulatory Programs & Telco",
+            "net": 4.49,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          }
+        ]
+      },
+      "857-264-9862": {
+        "plans": 5.51,
+        "equipment": 13.96,
+        "services": 0.0,
+        "total": 19.47,
+        "included_in_plan": false,
+        "name": "Saroj/Mainali",
+        "group": "mainali",
+        "lineName": "Mainali iPhone",
+        "equipment_detail": [
+          {
+            "device": "iPhone 16",
+            "net": 13.96,
+            "gross": 34.59,
+            "promo_credit": 20.63,
+            "promo_name": "R",
+            "installment_num": 13,
+            "installment_of": 24,
+            "balance": 380.32
+          },
+          {
+            "device": "State & Local Sales Tax",
+            "net": 0.31,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "State 911",
+            "net": 0.55,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "Regulatory Programs & Telco $4.49 (617) 955-9929 State & Local Sales Tax",
+            "net": 0.02,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          }
+        ]
+      },
+      "407-416-5178": {
+        "plans": 5.51,
+        "equipment": 26.04,
+        "services": 0.0,
+        "total": 31.55,
+        "included_in_plan": false,
+        "name": "Manoj/Bajpayee",
+        "group": "bajpayee",
+        "lineName": "Bajpayee iPhone",
+        "equipment_detail": [
+          {
+            "device": "APL IPHONE 16 PRO MAX 256G NAT EXCH",
+            "net": 26.04,
+            "gross": 50.0,
+            "promo_credit": 23.96,
+            "promo_name": "R",
+            "installment_num": 13,
+            "installment_of": 24,
+            "balance": 549.99
+          },
+          {
+            "device": "State & Local Sales Tax",
+            "net": 0.31,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "Regulatory Programs & Telco $4.49 (857) 264-9862 State TRS Surcharge",
+            "net": 0.16,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          }
+        ]
+      },
+      "252-350-3063": {
+        "plans": 50.69,
+        "equipment": -25.0,
+        "services": 0.0,
+        "total": 25.69,
+        "included_in_plan": false,
+        "name": "Sapana",
+        "group": "bajpayee",
+        "lineName": "Sapana iPhone",
+        "equipment_detail": [
+          {
+            "device": "P807 Apple iPhone Promo with Trade (ID240412)",
+            "net": -12.5,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 12,
+            "installment_of": 19,
+            "balance": null
+          },
+          {
+            "device": "State & Local Sales Tax",
+            "net": 0.41,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "Federal Universal Service Fund $0.08 (407) 416-5178 State TRS Surcharge",
+            "net": 0.16,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "Regulatory Programs & Telco $4.49 (617) 955-9929 State TRS Surcharge",
+            "net": 0.16,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          }
+        ]
+      },
+      "863-606-2309": {
+        "plans": 62.1,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 62.1,
+        "included_in_plan": false,
+        "name": "Home Internet",
+        "group": "saket",
+        "lineName": "Home Internet",
+        "equipment_detail": [
+          {
+            "device": "Regulatory Programs & Telco",
+            "net": 2.1,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          }
+        ]
+      },
+      "701-412-4006": {
+        "plans": 57.24,
+        "equipment": 33.54,
+        "services": 0.0,
+        "total": 90.78,
+        "included_in_plan": false,
+        "name": "Mahima",
+        "group": "dari",
+        "lineName": "701-412-4006",
+        "equipment_detail": [
+          {
+            "device": "iPhone 17 Pro",
+            "net": 33.54,
+            "gross": 45.84,
+            "promo_credit": 12.3,
+            "promo_name": "R",
+            "installment_num": 5,
+            "installment_of": 24,
+            "balance": 870.79
+          },
+          {
+            "device": "Federal Universal Service Fund $0.09 (252) 350-3063 State TRS Surcharge",
+            "net": 0.16,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "State Gross Receipts Tax $0.16 (252) 350-3063 State 911",
+            "net": 0.55,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "Regulatory Programs & Telco $4.49 (401) 207-7052 State & Local Sales Tax",
+            "net": 0.31,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "State & Local Sales Tax",
+            "net": 0.47,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "DEAF Surcharge",
+            "net": 0.03,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "County 911",
+            "net": 2.0,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          }
+        ]
       }
     },
     "group_totals": {
+      "dari": {
+        "lines": [
+          "208-840-1299",
+          "701-412-4006"
+        ],
+        "total": 117.33,
+        "plans": 62.75,
+        "equipment": 54.58
+      },
+      "saket": {
+        "lines": [
+          "401-207-7052",
+          "863-606-2309"
+        ],
+        "total": 88.65,
+        "plans": 67.61,
+        "equipment": 21.04
+      },
+      "chiranjiwi": {
+        "lines": [
+          "401-338-8422"
+        ],
+        "total": 5.51,
+        "plans": 5.51,
+        "equipment": 0.0
+      },
       "bikas": {
         "lines": [
           "617-955-9929"
         ],
-        "total": 0.29,
+        "total": 7.96,
         "plans": 5.51,
         "equipment": 2.16
+      },
+      "ritesh": {
+        "lines": [
+          "857-205-9815"
+        ],
+        "total": 5.51,
+        "plans": 5.51,
+        "equipment": 0.0
+      },
+      "mainali": {
+        "lines": [
+          "857-264-9862"
+        ],
+        "total": 19.47,
+        "plans": 5.51,
+        "equipment": 13.96
+      },
+      "bajpayee": {
+        "lines": [
+          "407-416-5178",
+          "252-350-3063"
+        ],
+        "total": 57.24,
+        "plans": 56.2,
+        "equipment": 1.04
       }
     },
     "taxes": {
@@ -11793,6 +15260,56 @@
         "name": "Bikas",
         "group": "bikas",
         "lineName": "Bikas"
+      },
+      "857-264-9862": {
+        "plans": 0.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 0.0,
+        "included_in_plan": true,
+        "name": "Saroj/Mainali",
+        "group": "mainali",
+        "lineName": "Mainali iPhone"
+      },
+      "208-840-1299": {
+        "plans": 20.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 20.0,
+        "included_in_plan": false,
+        "name": "Sanjay",
+        "group": "dari",
+        "lineName": "Sanjay"
+      },
+      "401-207-7052": {
+        "plans": 20.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 20.0,
+        "included_in_plan": false,
+        "name": "Saket",
+        "group": "saket",
+        "lineName": "Saket iPhone"
+      },
+      "401-338-8422": {
+        "plans": 20.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 20.0,
+        "included_in_plan": false,
+        "name": "Chiranjiwi",
+        "group": "chiranjiwi",
+        "lineName": "Chiranjiwi"
+      },
+      "857-205-9815": {
+        "plans": 20.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 20.0,
+        "included_in_plan": false,
+        "name": "Ritesh",
+        "group": "ritesh",
+        "lineName": "Ritesh"
       }
     },
     "group_totals": {
@@ -11802,6 +15319,46 @@
         ],
         "total": 18.0,
         "plans": 0.0,
+        "equipment": 0.0
+      },
+      "mainali": {
+        "lines": [
+          "857-264-9862"
+        ],
+        "total": 0.0,
+        "plans": 0.0,
+        "equipment": 0.0
+      },
+      "dari": {
+        "lines": [
+          "208-840-1299"
+        ],
+        "total": 20.0,
+        "plans": 20.0,
+        "equipment": 0.0
+      },
+      "saket": {
+        "lines": [
+          "401-207-7052"
+        ],
+        "total": 20.0,
+        "plans": 20.0,
+        "equipment": 0.0
+      },
+      "chiranjiwi": {
+        "lines": [
+          "401-338-8422"
+        ],
+        "total": 20.0,
+        "plans": 20.0,
+        "equipment": 0.0
+      },
+      "ritesh": {
+        "lines": [
+          "857-205-9815"
+        ],
+        "total": 20.0,
+        "plans": 20.0,
         "equipment": 0.0
       }
     },
@@ -12025,7 +15582,7 @@
         "plans": 0.0,
         "equipment": 15.99,
         "services": 0.0,
-        "total": 5.0,
+        "total": 20.99,
         "included_in_plan": true,
         "name": "Sanjay",
         "group": "dari",
@@ -12053,6 +15610,72 @@
           }
         ]
       },
+      "401-207-7052": {
+        "plans": 0.0,
+        "equipment": 0.26,
+        "services": 0.0,
+        "total": 0.26,
+        "included_in_plan": true,
+        "name": "Saket",
+        "group": "saket",
+        "lineName": "Saket iPhone",
+        "equipment_detail": [
+          {
+            "device": "T459 2020 Apple Trade P29",
+            "net": -20.99,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 3,
+            "installment_of": 24,
+            "balance": 962.47
+          }
+        ]
+      },
+      "401-338-8422": {
+        "plans": 0.0,
+        "equipment": 14.37,
+        "services": 0.0,
+        "total": 14.37,
+        "included_in_plan": true,
+        "name": "Chiranjiwi",
+        "group": "chiranjiwi",
+        "lineName": "Chiranjiwi",
+        "equipment_detail": [
+          {
+            "device": "iPhone 12 Pro",
+            "net": 14.37,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 16,
+            "installment_of": 23,
+            "balance": 258.27
+          }
+        ]
+      },
+      "617-955-9929": {
+        "plans": 0.0,
+        "equipment": 5.83,
+        "services": 0.0,
+        "total": 5.83,
+        "included_in_plan": true,
+        "name": "Bikas",
+        "group": "bikas",
+        "lineName": "Bikas",
+        "equipment_detail": [
+          {
+            "device": "iPhone 13",
+            "net": 5.83,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 12,
+            "installment_of": 30,
+            "balance": 479.95
+          }
+        ]
+      },
       "857-205-9815": {
         "plans": 0.0,
         "equipment": 0.0,
@@ -12075,11 +15698,33 @@
           }
         ]
       },
+      "857-264-9862": {
+        "plans": 0.0,
+        "equipment": 6.0,
+        "services": 0.0,
+        "total": 6.0,
+        "included_in_plan": true,
+        "name": "Saroj/Mainali",
+        "group": "mainali",
+        "lineName": "Mainali iPhone",
+        "equipment_detail": [
+          {
+            "device": "iPhone 13",
+            "net": 6.0,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 12,
+            "installment_of": 30,
+            "balance": 479.95
+          }
+        ]
+      },
       "701-415-5731": {
         "plans": 0.0,
         "equipment": 17.92,
         "services": 0.0,
-        "total": 3.22,
+        "total": 21.14,
         "included_in_plan": true,
         "name": "Dari-old",
         "group": "dari",
@@ -12126,6 +15771,15 @@
             "balance": null
           }
         ]
+      },
+      "863-212-5403": {
+        "plans": 80.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 80.0,
+        "included_in_plan": false,
+        "name": "Unknown (863-212-5403)",
+        "group": "unknown"
       }
     },
     "group_totals": {
@@ -12134,9 +15788,33 @@
           "208-840-1299",
           "701-415-5731"
         ],
-        "total": 8.22,
+        "total": 42.13,
         "plans": 0.0,
         "equipment": 33.91
+      },
+      "saket": {
+        "lines": [
+          "401-207-7052"
+        ],
+        "total": 0.26,
+        "plans": 0.0,
+        "equipment": 0.26
+      },
+      "chiranjiwi": {
+        "lines": [
+          "401-338-8422"
+        ],
+        "total": 14.37,
+        "plans": 0.0,
+        "equipment": 14.37
+      },
+      "bikas": {
+        "lines": [
+          "617-955-9929"
+        ],
+        "total": 5.83,
+        "plans": 0.0,
+        "equipment": 5.83
       },
       "ritesh": {
         "lines": [
@@ -12144,6 +15822,22 @@
         ],
         "total": 6.0,
         "plans": 0.0,
+        "equipment": 0.0
+      },
+      "mainali": {
+        "lines": [
+          "857-264-9862"
+        ],
+        "total": 6.0,
+        "plans": 0.0,
+        "equipment": 6.0
+      },
+      "unknown": {
+        "lines": [
+          "863-212-5403"
+        ],
+        "total": 80.0,
+        "plans": 80.0,
         "equipment": 0.0
       }
     },
@@ -12165,6 +15859,50 @@
     },
     "account_line": {},
     "lines": {
+      "208-840-1299": {
+        "plans": 0.0,
+        "equipment": 21.25,
+        "services": 0.0,
+        "total": 21.25,
+        "included_in_plan": true,
+        "name": "Sanjay",
+        "group": "dari",
+        "lineName": "Sanjay",
+        "equipment_detail": [
+          {
+            "device": "iPhone 14 Pro Max",
+            "net": 21.25,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 15,
+            "installment_of": 24,
+            "balance": 458.23
+          }
+        ]
+      },
+      "401-207-7052": {
+        "plans": 0.0,
+        "equipment": 21.25,
+        "services": 0.0,
+        "total": 21.25,
+        "included_in_plan": true,
+        "name": "Saket",
+        "group": "saket",
+        "lineName": "Saket iPhone",
+        "equipment_detail": [
+          {
+            "device": "iPhone 14 Pro Max",
+            "net": 21.25,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 15,
+            "installment_of": 24,
+            "balance": 458.23
+          }
+        ]
+      },
       "401-338-8422": {
         "plans": 0.0,
         "equipment": 0.0,
@@ -12191,7 +15929,7 @@
         "plans": 0.0,
         "equipment": 6.0,
         "services": 0.0,
-        "total": 0.57,
+        "total": 6.57,
         "included_in_plan": true,
         "name": "Bikas",
         "group": "bikas",
@@ -12238,9 +15976,97 @@
             "balance": null
           }
         ]
+      },
+      "857-205-9815": {
+        "plans": 0.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 0.0,
+        "included_in_plan": true,
+        "name": "Ritesh",
+        "group": "ritesh",
+        "lineName": "Ritesh"
+      },
+      "857-264-9862": {
+        "plans": 0.0,
+        "equipment": 6.0,
+        "services": 0.0,
+        "total": 6.0,
+        "included_in_plan": true,
+        "name": "Saroj/Mainali",
+        "group": "mainali",
+        "lineName": "Mainali iPhone",
+        "equipment_detail": [
+          {
+            "device": "iPhone 13",
+            "net": 6.0,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 24,
+            "installment_of": 30,
+            "balance": 186.58
+          }
+        ]
+      },
+      "701-415-5731": {
+        "plans": 0.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 0.0,
+        "included_in_plan": true,
+        "name": "Dari-old",
+        "group": "dari",
+        "lineName": "Dari"
+      },
+      "863-212-5403": {
+        "plans": 55.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 55.0,
+        "included_in_plan": false,
+        "name": "Unknown (863-212-5403)",
+        "group": "unknown"
+      },
+      "252-350-3063": {
+        "plans": 35.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 35.0,
+        "included_in_plan": false,
+        "name": "Sapana",
+        "group": "bajpayee",
+        "lineName": "Sapana iPhone"
+      },
+      "407-416-5178": {
+        "plans": 30.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 30.0,
+        "included_in_plan": false,
+        "name": "Manoj/Bajpayee",
+        "group": "bajpayee",
+        "lineName": "Bajpayee iPhone"
       }
     },
     "group_totals": {
+      "dari": {
+        "lines": [
+          "208-840-1299",
+          "701-415-5731"
+        ],
+        "total": 21.25,
+        "plans": 0.0,
+        "equipment": 21.25
+      },
+      "saket": {
+        "lines": [
+          "401-207-7052"
+        ],
+        "total": 21.25,
+        "plans": 0.0,
+        "equipment": 21.25
+      },
       "chiranjiwi": {
         "lines": [
           "401-338-8422"
@@ -12253,9 +16079,42 @@
         "lines": [
           "617-955-9929"
         ],
-        "total": 0.57,
+        "total": 6.57,
         "plans": 0.0,
         "equipment": 6.0
+      },
+      "ritesh": {
+        "lines": [
+          "857-205-9815"
+        ],
+        "total": 0.0,
+        "plans": 0.0,
+        "equipment": 0.0
+      },
+      "mainali": {
+        "lines": [
+          "857-264-9862"
+        ],
+        "total": 6.0,
+        "plans": 0.0,
+        "equipment": 6.0
+      },
+      "unknown": {
+        "lines": [
+          "863-212-5403"
+        ],
+        "total": 55.0,
+        "plans": 55.0,
+        "equipment": 0.0
+      },
+      "bajpayee": {
+        "lines": [
+          "252-350-3063",
+          "407-416-5178"
+        ],
+        "total": 65.0,
+        "plans": 65.0,
+        "equipment": 0.0
       }
     },
     "taxes": {
@@ -13355,8 +17214,201 @@
       "services": 24.98,
       "total": -12.99
     },
-    "lines": {},
-    "group_totals": {},
+    "lines": {
+      "208-840-1299": {
+        "plans": 0.0,
+        "equipment": 15.87,
+        "services": 0.0,
+        "total": 15.87,
+        "included_in_plan": true,
+        "name": "Sanjay",
+        "group": "dari",
+        "lineName": "Sanjay",
+        "equipment_detail": [
+          {
+            "device": "T393 2020 Apple Trade P16",
+            "net": -5.38,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 2,
+            "installment_of": 24,
+            "balance": 1008.31
+          }
+        ]
+      },
+      "401-207-7052": {
+        "plans": 0.0,
+        "equipment": 0.25,
+        "services": 0.0,
+        "total": 0.25,
+        "included_in_plan": true,
+        "name": "Saket",
+        "group": "saket",
+        "lineName": "Saket iPhone",
+        "equipment_detail": [
+          {
+            "device": "T459 2020 Apple Trade P29",
+            "net": -21.0,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 2,
+            "installment_of": 24,
+            "balance": 1008.31
+          }
+        ]
+      },
+      "401-338-8422": {
+        "plans": 0.0,
+        "equipment": 14.37,
+        "services": 0.0,
+        "total": 14.37,
+        "included_in_plan": true,
+        "name": "Chiranjiwi",
+        "group": "chiranjiwi",
+        "lineName": "Chiranjiwi",
+        "equipment_detail": [
+          {
+            "device": "iPhone 12 Pro",
+            "net": 14.37,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 15,
+            "installment_of": 23,
+            "balance": 299.94
+          }
+        ]
+      },
+      "617-955-9929": {
+        "plans": 0.0,
+        "equipment": 5.83,
+        "services": 0.0,
+        "total": 5.83,
+        "included_in_plan": true,
+        "name": "Bikas",
+        "group": "bikas",
+        "lineName": "Bikas",
+        "equipment_detail": [
+          {
+            "device": "iPhone 13",
+            "net": 5.83,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 11,
+            "installment_of": 30,
+            "balance": 506.62
+          }
+        ]
+      },
+      "857-205-9815": {
+        "plans": 0.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 0.0,
+        "included_in_plan": true,
+        "name": "Ritesh",
+        "group": "ritesh",
+        "lineName": "Ritesh"
+      },
+      "857-264-9862": {
+        "plans": 0.0,
+        "equipment": 6.0,
+        "services": 0.0,
+        "total": 6.0,
+        "included_in_plan": true,
+        "name": "Saroj/Mainali",
+        "group": "mainali",
+        "lineName": "Mainali iPhone",
+        "equipment_detail": [
+          {
+            "device": "iPhone 13",
+            "net": 6.0,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 11,
+            "installment_of": 30,
+            "balance": 506.62
+          }
+        ]
+      },
+      "701-415-5731": {
+        "plans": 0.0,
+        "equipment": 17.92,
+        "services": 0.0,
+        "total": 17.92,
+        "included_in_plan": true,
+        "name": "Dari-old",
+        "group": "dari",
+        "lineName": "Dari",
+        "equipment_detail": [
+          {
+            "device": "iPhone 12 mini",
+            "net": 17.92,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 18,
+            "installment_of": 24,
+            "balance": 182.43
+          }
+        ]
+      }
+    },
+    "group_totals": {
+      "dari": {
+        "lines": [
+          "208-840-1299",
+          "701-415-5731"
+        ],
+        "total": 33.79,
+        "plans": 0.0,
+        "equipment": 33.79
+      },
+      "saket": {
+        "lines": [
+          "401-207-7052"
+        ],
+        "total": 0.25,
+        "plans": 0.0,
+        "equipment": 0.25
+      },
+      "chiranjiwi": {
+        "lines": [
+          "401-338-8422"
+        ],
+        "total": 14.37,
+        "plans": 0.0,
+        "equipment": 14.37
+      },
+      "bikas": {
+        "lines": [
+          "617-955-9929"
+        ],
+        "total": 5.83,
+        "plans": 0.0,
+        "equipment": 5.83
+      },
+      "ritesh": {
+        "lines": [
+          "857-205-9815"
+        ],
+        "total": 0.0,
+        "plans": 0.0,
+        "equipment": 0.0
+      },
+      "mainali": {
+        "lines": [
+          "857-264-9862"
+        ],
+        "total": 6.0,
+        "plans": 0.0,
+        "equipment": 6.0
+      }
+    },
     "taxes": {
       "tmobile_fees": 0.0,
       "govt_fees": 0.0,
@@ -14496,11 +18548,107 @@
     },
     "account_line": {},
     "lines": {
+      "208-840-1299": {
+        "plans": 0.0,
+        "equipment": 25.04,
+        "services": 0.0,
+        "total": 25.04,
+        "included_in_plan": true,
+        "name": "Sanjay",
+        "group": "dari",
+        "lineName": "Sanjay",
+        "equipment_detail": [
+          {
+            "device": "iPhone 12 mini - Green - 64GB",
+            "net": 25.04,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 10,
+            "installment_of": 19,
+            "balance": 254.79
+          }
+        ]
+      },
+      "401-207-7052": {
+        "plans": 0.0,
+        "equipment": 9.42,
+        "services": 0.0,
+        "total": 9.42,
+        "included_in_plan": true,
+        "name": "Saket",
+        "group": "saket",
+        "lineName": "Saket iPhone",
+        "equipment_detail": [
+          {
+            "device": "iPhone 12 mini - White - 64GB",
+            "net": 9.42,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 10,
+            "installment_of": 17,
+            "balance": 199.79
+          }
+        ]
+      },
+      "401-338-8422": {
+        "plans": 0.0,
+        "equipment": 14.37,
+        "services": 0.0,
+        "total": 14.37,
+        "included_in_plan": true,
+        "name": "Chiranjiwi",
+        "group": "chiranjiwi",
+        "lineName": "Chiranjiwi",
+        "equipment_detail": [
+          {
+            "device": "iPhone 12 Pro",
+            "net": 14.37,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 2,
+            "installment_of": 23,
+            "balance": 841.65
+          }
+        ]
+      },
+      "617-955-9929": {
+        "plans": 0.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 0.0,
+        "included_in_plan": true,
+        "name": "Bikas",
+        "group": "bikas",
+        "lineName": "Bikas"
+      },
+      "857-205-9815": {
+        "plans": 0.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 0.0,
+        "included_in_plan": true,
+        "name": "Ritesh",
+        "group": "ritesh",
+        "lineName": "Ritesh"
+      },
+      "857-264-9862": {
+        "plans": 0.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 0.0,
+        "included_in_plan": true,
+        "name": "Saroj/Mainali",
+        "group": "mainali",
+        "lineName": "Mainali iPhone"
+      },
       "701-415-5731": {
         "plans": 0.0,
         "equipment": 17.92,
         "services": 0.0,
-        "total": 3.24,
+        "total": 21.16,
         "included_in_plan": true,
         "name": "Dari-old",
         "group": "dari",
@@ -14552,11 +18700,52 @@
     "group_totals": {
       "dari": {
         "lines": [
+          "208-840-1299",
           "701-415-5731"
         ],
-        "total": 3.24,
+        "total": 46.2,
         "plans": 0.0,
-        "equipment": 17.92
+        "equipment": 42.96
+      },
+      "saket": {
+        "lines": [
+          "401-207-7052"
+        ],
+        "total": 9.42,
+        "plans": 0.0,
+        "equipment": 9.42
+      },
+      "chiranjiwi": {
+        "lines": [
+          "401-338-8422"
+        ],
+        "total": 14.37,
+        "plans": 0.0,
+        "equipment": 14.37
+      },
+      "bikas": {
+        "lines": [
+          "617-955-9929"
+        ],
+        "total": 0.0,
+        "plans": 0.0,
+        "equipment": 0.0
+      },
+      "ritesh": {
+        "lines": [
+          "857-205-9815"
+        ],
+        "total": 0.0,
+        "plans": 0.0,
+        "equipment": 0.0
+      },
+      "mainali": {
+        "lines": [
+          "857-264-9862"
+        ],
+        "total": 0.0,
+        "plans": 0.0,
+        "equipment": 0.0
       }
     },
     "taxes": {
@@ -14577,11 +18766,131 @@
     },
     "account_line": {},
     "lines": {
+      "208-840-1299": {
+        "plans": 0.0,
+        "equipment": 15.87,
+        "services": 0.0,
+        "total": 15.87,
+        "included_in_plan": true,
+        "name": "Sanjay",
+        "group": "dari",
+        "lineName": "Sanjay",
+        "equipment_detail": [
+          {
+            "device": "T393 2020 Apple Trade P16",
+            "net": -5.38,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 1,
+            "installment_of": 24,
+            "balance": 1054.15
+          }
+        ]
+      },
+      "401-207-7052": {
+        "plans": 0.0,
+        "equipment": 0.25,
+        "services": 0.0,
+        "total": 0.25,
+        "included_in_plan": true,
+        "name": "Saket",
+        "group": "saket",
+        "lineName": "Saket iPhone",
+        "equipment_detail": [
+          {
+            "device": "T459 2020 Apple Trade P29",
+            "net": -21.0,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 1,
+            "installment_of": 24,
+            "balance": 1054.15
+          }
+        ]
+      },
+      "401-338-8422": {
+        "plans": 0.0,
+        "equipment": 14.37,
+        "services": 0.0,
+        "total": 14.37,
+        "included_in_plan": true,
+        "name": "Chiranjiwi",
+        "group": "chiranjiwi",
+        "lineName": "Chiranjiwi",
+        "equipment_detail": [
+          {
+            "device": "iPhone 12 Pro",
+            "net": 14.37,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 14,
+            "installment_of": 23,
+            "balance": 341.61
+          }
+        ]
+      },
+      "617-955-9929": {
+        "plans": 0.0,
+        "equipment": 5.83,
+        "services": 0.0,
+        "total": 5.83,
+        "included_in_plan": true,
+        "name": "Bikas",
+        "group": "bikas",
+        "lineName": "Bikas",
+        "equipment_detail": [
+          {
+            "device": "iPhone 13",
+            "net": 5.83,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 10,
+            "installment_of": 30,
+            "balance": 533.29
+          }
+        ]
+      },
+      "857-205-9815": {
+        "plans": 0.0,
+        "equipment": 0.0,
+        "services": 0.0,
+        "total": 0.0,
+        "included_in_plan": true,
+        "name": "Ritesh",
+        "group": "ritesh",
+        "lineName": "Ritesh"
+      },
+      "857-264-9862": {
+        "plans": 0.0,
+        "equipment": 6.0,
+        "services": 0.0,
+        "total": 6.0,
+        "included_in_plan": true,
+        "name": "Saroj/Mainali",
+        "group": "mainali",
+        "lineName": "Mainali iPhone",
+        "equipment_detail": [
+          {
+            "device": "iPhone 13",
+            "net": 6.0,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 10,
+            "installment_of": 30,
+            "balance": 533.29
+          }
+        ]
+      },
       "701-415-5731": {
         "plans": 0.0,
         "equipment": 17.92,
         "services": 0.0,
-        "total": 3.24,
+        "total": 21.16,
         "included_in_plan": true,
         "name": "Dari-old",
         "group": "dari",
@@ -14633,11 +18942,52 @@
     "group_totals": {
       "dari": {
         "lines": [
+          "208-840-1299",
           "701-415-5731"
         ],
-        "total": 3.24,
+        "total": 37.03,
         "plans": 0.0,
-        "equipment": 17.92
+        "equipment": 33.79
+      },
+      "saket": {
+        "lines": [
+          "401-207-7052"
+        ],
+        "total": 0.25,
+        "plans": 0.0,
+        "equipment": 0.25
+      },
+      "chiranjiwi": {
+        "lines": [
+          "401-338-8422"
+        ],
+        "total": 14.37,
+        "plans": 0.0,
+        "equipment": 14.37
+      },
+      "bikas": {
+        "lines": [
+          "617-955-9929"
+        ],
+        "total": 5.83,
+        "plans": 0.0,
+        "equipment": 5.83
+      },
+      "ritesh": {
+        "lines": [
+          "857-205-9815"
+        ],
+        "total": 0.0,
+        "plans": 0.0,
+        "equipment": 0.0
+      },
+      "mainali": {
+        "lines": [
+          "857-264-9862"
+        ],
+        "total": 6.0,
+        "plans": 0.0,
+        "equipment": 6.0
       }
     },
     "taxes": {
