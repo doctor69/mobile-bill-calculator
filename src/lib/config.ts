@@ -130,27 +130,27 @@ export const DEFAULT_CONFIG: AppConfig = {
     },
     {
       accountGroup: 'saket',
-      description: 'Sapana credit — Saket share (5/21 × $37.50 = $8.93/mo)',
-      totalCredit: 214.29,        // $8.93 × 24 months
-      monthlyCredit: 8.93,
+      description: 'Sapana credit — Saket share (5/21 × $37.50 = $8.95/mo)',
+      totalCredit: 214.80,        // $8.95 × 24 months
+      monthlyCredit: 8.95,
       startDate: '2024-01',
       endDate: '2025-12',
       appliedTo: ['Sapana iPhone'],
     },
     {
       accountGroup: 'dari',
-      description: 'Sapana credit — Dari share (5/21 × $37.50 = $8.93/mo)',
-      totalCredit: 214.29,
-      monthlyCredit: 8.93,
+      description: 'Sapana credit — Dari share (5/21 × $37.50 = $8.95/mo)',
+      totalCredit: 214.80,        // $8.95 × 24 months
+      monthlyCredit: 8.95,
       startDate: '2024-01',
       endDate: '2025-12',
       appliedTo: ['Sapana iPhone'],
     },
     {
       accountGroup: 'mainali',
-      description: 'Sapana credit — Mainali share (4/21 × $37.50 = $7.14/mo)',
-      totalCredit: 171.43,        // $7.14 × 24 months
-      monthlyCredit: 7.14,
+      description: 'Sapana credit — Mainali share (4/21 × $37.50 = $7.10/mo)',
+      totalCredit: 170.40,        // $7.10 × 24 months
+      monthlyCredit: 7.10,
       startDate: '2024-01',
       endDate: '2025-12',
       appliedTo: ['Sapana iPhone'],
