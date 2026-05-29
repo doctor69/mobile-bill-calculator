@@ -10,6 +10,8 @@ import BillResults from './BillResults';
 import HistoryTable from './HistoryTable';
 import CreditConfig from './CreditConfig';
 import Dashboard from './Dashboard';
+import PinDialog from './PinDialog';
+import { isGistEnabled, loadFromGist, saveToGist } from '../lib/gistStorage';
 
 type Tab = 'dashboard' | 'upload' | 'history' | 'credits';
 
@@ -47,17 +49,37 @@ export default function App() {
   });
   const [savedRecords, setSavedRecords] = useState<MonthRecord[]>([]);
   const [saveStatus, setSaveStatus] = useState<'idle' | 'saved' | 'error'>('idle');
+  const [gistLoading, setGistLoading] = useState(false);
+  const [pinDialog, setPinDialog] = useState<'closed' | 'save' | 'migrate'>('closed');
+  const [pinSaving, setPinSaving] = useState(false);
+  const [pinError, setPinError] = useState<string | null>(null);
+  const [gistSaveStatus, setGistSaveStatus] = useState<'idle' | 'saving' | 'saved' | 'error'>('idle');
 
   useEffect(() => {
     const stored = loadAllRecords();
-    // HISTORY is the canonical source of truth for historical months.
-    // localStorage is only kept for months NOT covered by HISTORY (e.g. a freshly uploaded PDF).
     const historyMonths = new Set(HISTORY.map((h) => h.month));
-    const merged = [
+
+    // Show local data immediately while Gist loads
+    const localMerged = [
       ...HISTORY,
       ...stored.filter((s) => !historyMonths.has(s.month)),
     ].sort((a, b) => b.month.localeCompare(a.month));
-    setSavedRecords(merged);
+    setSavedRecords(localMerged);
+
+    if (!isGistEnabled()) return;
+    setGistLoading(true);
+    loadFromGist().then((gistRecords) => {
+      setGistLoading(false);
+      if (!gistRecords.length) return;
+      // Gist is the source of truth — it overrides HISTORY and localStorage
+      const gistMonths = new Set(gistRecords.map((r) => r.month));
+      const merged = [
+        ...gistRecords,
+        ...HISTORY.filter((r) => !gistMonths.has(r.month)),
+        ...stored.filter((r) => !gistMonths.has(r.month) && !historyMonths.has(r.month)),
+      ].sort((a, b) => b.month.localeCompare(a.month));
+      setSavedRecords(merged);
+    });
   }, []);
 
   async function handleFileUpload(file: File) {
@@ -151,6 +173,51 @@ export default function App() {
     setTab('upload');
   }
 
+  async function handlePinConfirm(pin: string) {
+    setPinSaving(true);
+    setPinError(null);
+
+    if (pinDialog === 'save') {
+      const currentRecord: MonthRecord = {
+        month,
+        totalBill,
+        personShares,
+        verified,
+        verifiedTotal: personShares.reduce((s, p) => s + getPersonTotal(p), 0),
+        notes: parsedBill?.rawText ? undefined : 'Manual entry',
+        savedAt: new Date().toISOString().slice(0, 10),
+      };
+      // Upsert current month into the full records list
+      const updated = savedRecords.some((r) => r.month === month)
+        ? savedRecords.map((r) => (r.month === month ? currentRecord : r))
+        : [currentRecord, ...savedRecords].sort((a, b) => b.month.localeCompare(a.month));
+
+      const result = await saveToGist(updated, pin);
+      if (result === 'ok') {
+        setSavedRecords(updated);
+        handleSave();
+        setPinDialog('closed');
+        setGistSaveStatus('saved');
+        setTimeout(() => setGistSaveStatus('idle'), 3000);
+      } else if (result === 'wrong_pin') {
+        setPinError('Incorrect PIN. Try again.');
+      } else {
+        setPinError('Save failed. Check your connection.');
+      }
+    } else if (pinDialog === 'migrate') {
+      const result = await saveToGist(savedRecords, pin);
+      if (result === 'ok') {
+        setPinDialog('closed');
+      } else if (result === 'wrong_pin') {
+        setPinError('Incorrect PIN. Try again.');
+      } else {
+        setPinError('Migration failed. Check your connection.');
+      }
+    }
+
+    setPinSaving(false);
+  }
+
   const diff = personShares.length ? getVerificationDiff(personShares, totalBill) : 0;
   const verified = Math.abs(diff) < 0.02;
 
@@ -237,6 +304,12 @@ export default function App() {
                 onSharesChange={handleSharesChange}
                 onSave={handleSave}
                 saveStatus={saveStatus}
+                gistEnabled={isGistEnabled()}
+                gistSaveStatus={gistSaveStatus}
+                onGistSave={() => {
+                  setPinError(null);
+                  setPinDialog('save');
+                }}
               />
             )}
           </div>
@@ -250,9 +323,47 @@ export default function App() {
         )}
 
         {tab === 'credits' && (
-          <CreditConfig config={DEFAULT_CONFIG} />
+          <>
+            <CreditConfig config={DEFAULT_CONFIG} />
+            {isGistEnabled() && (
+              <div className="mt-6 bg-white rounded-xl border border-gray-200 p-4">
+                <h3 className="text-sm font-semibold text-gray-700 mb-1">Gist Storage</h3>
+                <p className="text-xs text-gray-500 mb-3">
+                  Move all history into the Gist so it becomes the single source of truth across devices.
+                </p>
+                <button
+                  onClick={() => { setPinError(null); setPinDialog('migrate'); }}
+                  className="px-4 py-2 text-sm font-medium bg-gray-700 hover:bg-gray-900 text-white rounded-lg"
+                >
+                  ☁ Migrate All History to Gist
+                </button>
+              </div>
+            )}
+          </>
         )}
       </main>
+
+      {gistLoading && (
+        <div className="fixed bottom-4 right-4 bg-gray-800 text-white text-xs px-3 py-2 rounded-lg shadow-lg">
+          Loading from Gist…
+        </div>
+      )}
+
+      {pinDialog !== 'closed' && (
+        <PinDialog
+          title={pinDialog === 'migrate' ? 'Migrate History to Gist' : 'Sync to Gist'}
+          description={
+            pinDialog === 'migrate'
+              ? 'This will write all records to the Gist as the permanent store. Enter your PIN to confirm.'
+              : "Enter the shared PIN to persist this month's record."
+          }
+          confirmLabel={pinDialog === 'migrate' ? 'Migrate' : 'Sync'}
+          onConfirm={handlePinConfirm}
+          onCancel={() => setPinDialog('closed')}
+          saving={pinSaving}
+          error={pinError}
+        />
+      )}
     </div>
   );
 }

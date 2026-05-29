@@ -25,6 +25,10 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
+        env:
+          PUBLIC_GIST_ID: ${{ secrets.GIST_ID }}
+          PUBLIC_GITHUB_PAT: ${{ secrets.GIST_PAT }}
+          PUBLIC_SAVE_PIN: ${{ secrets.SAVE_PIN }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
