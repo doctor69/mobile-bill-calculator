@@ -5,6 +5,7 @@ import { calculateBillSplit, getPersonTotal, getVerificationDiff } from '../lib/
 import { extractTextFromPDF, parseTMobileBillText, detectMonth } from '../lib/parser';
 import { saveRecord, loadRecord, loadAllRecords } from '../lib/storage';
 import { HISTORY } from '../lib/historyData';
+import { enrichPersonShares } from '../lib/lineItemsData';
 import BillUploader from './BillUploader';
 import BillResults from './BillResults';
 import HistoryTable from './HistoryTable';
@@ -59,9 +60,15 @@ export default function App() {
     const stored = loadAllRecords();
     const historyMonths = new Set(HISTORY.map((h) => h.month));
 
+    // Enrich HISTORY records with per-line itemized breakdown from PDF data
+    const enrichedHistory = HISTORY.map((r) => ({
+      ...r,
+      personShares: enrichPersonShares(r.month, r.personShares),
+    }));
+
     // Show local data immediately while Gist loads
     const localMerged = [
-      ...HISTORY,
+      ...enrichedHistory,
       ...stored.filter((s) => !historyMonths.has(s.month)),
     ].sort((a, b) => b.month.localeCompare(a.month));
     setSavedRecords(localMerged);
@@ -75,7 +82,7 @@ export default function App() {
       const gistMonths = new Set(gistRecords.map((r) => r.month));
       const merged = [
         ...gistRecords,
-        ...HISTORY.filter((r) => !gistMonths.has(r.month)),
+        ...enrichedHistory.filter((r) => !gistMonths.has(r.month)),
         ...stored.filter((r) => !gistMonths.has(r.month) && !historyMonths.has(r.month)),
       ].sort((a, b) => b.month.localeCompare(a.month));
       setSavedRecords(merged);

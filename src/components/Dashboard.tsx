@@ -1,5 +1,5 @@
 import { useState, useMemo, useEffect } from 'react';
-import type { MonthRecord, PersonShare } from '../lib/types';
+import type { MonthRecord, PersonShare, PersonShareLineItem } from '../lib/types';
 import { getPersonTotal } from '../lib/calculator';
 import { TOTAL_PAID } from '../lib/paymentsData';
 
@@ -26,6 +26,43 @@ const EMOJI: Record<string, string> = {
 
 function formatMonth(m: string) {
   return new Date(m + '-02').toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+}
+
+const LINE_ITEM_COLORS: Record<PersonShareLineItem['kind'], string> = {
+  plan:          'text-blue-600',
+  equipment:     'text-indigo-600',
+  shared:        'text-gray-600',
+  credit:        'text-green-600',
+  promo_credit:  'text-emerald-600',
+  tax:           'text-gray-400',
+};
+
+const LINE_ITEM_PREFIX: Record<PersonShareLineItem['kind'], string> = {
+  plan:          '+',
+  equipment:     '+',
+  shared:        '+',
+  credit:        '−',
+  promo_credit:  '−',
+  tax:           '+',
+};
+
+function LineItemRow({ item }: { item: PersonShareLineItem }) {
+  const color = LINE_ITEM_COLORS[item.kind] ?? 'text-gray-600';
+  const prefix = LINE_ITEM_PREFIX[item.kind] ?? '+';
+  const isCredit = item.kind === 'credit' || item.kind === 'promo_credit';
+  return (
+    <div className="flex items-start justify-between gap-2 text-xs">
+      <div className="flex-1 min-w-0">
+        <div className="text-gray-600 truncate">{item.label}</div>
+        {item.sublabel && (
+          <div className="text-[10px] text-gray-400 leading-tight mt-0.5 break-words">{item.sublabel}</div>
+        )}
+      </div>
+      <span className={`font-mono flex-shrink-0 ${color}`}>
+        {prefix}${Math.abs(item.amount).toFixed(2)}
+      </span>
+    </div>
+  );
 }
 
 function PersonCard({ person, maxAmount }: { person: PersonShare; maxAmount: number }) {
@@ -79,14 +116,31 @@ function PersonCard({ person, maxAmount }: { person: PersonShare; maxAmount: num
             </div>
           ) : (
             <>
-              <div className="flex justify-between text-xs">
-                <span className="text-gray-500">Line Charges</span>
-                <span className="font-mono text-gray-700">+${person.lineCharges.toFixed(2)}</span>
-              </div>
-              <div className="flex justify-between text-xs">
-                <span className="text-gray-500">Shared Costs</span>
-                <span className="font-mono text-gray-700">+${person.sharedCostShare.toFixed(2)}</span>
-              </div>
+              {/* Per-line itemized breakdown if available */}
+              {person.lineItems && person.lineItems.length > 0 ? (
+                <div className="space-y-1">
+                  {person.lineItems.map((item, idx) => (
+                    <LineItemRow key={idx} item={item} />
+                  ))}
+                  <div className="flex justify-between text-xs text-gray-400 pt-1 border-t border-black/5">
+                    <span>Subtotal</span>
+                    <span className="font-mono">${(person.lineCharges + person.sharedCostShare).toFixed(2)}</span>
+                  </div>
+                </div>
+              ) : (
+                <>
+                  <div className="flex justify-between text-xs">
+                    <span className="text-gray-500">Line Charges</span>
+                    <span className="font-mono text-gray-700">+${person.lineCharges.toFixed(2)}</span>
+                  </div>
+                  {person.sharedCostShare > 0 && (
+                    <div className="flex justify-between text-xs">
+                      <span className="text-gray-500">Shared Costs</span>
+                      <span className="font-mono text-gray-700">+${person.sharedCostShare.toFixed(2)}</span>
+                    </div>
+                  )}
+                </>
+              )}
               {person.credits > 0 && (
                 <div className="flex justify-between text-xs">
                   <span className="text-gray-500">Credits Applied</span>
