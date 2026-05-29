@@ -37,6 +37,36 @@ const TAB_SHORT: Record<Tab, string> = {
   credits:   'Credits',
 };
 
+/**
+ * Apply creditConfigs from DEFAULT_CONFIG to historyData person shares.
+ * Updates `credits`, `total`, and `balance` so the displayed total reflects
+ * the Sapana/Bajpayee billing correction (Jan 2024 – Dec 2025).
+ * The correction rows are surfaced via the existing credits/billing-adj display
+ * in Dashboard.tsx (person.credits > 0 or < 0).
+ */
+function applyCreditAdjustments(month: string, shares: PersonShare[]): PersonShare[] {
+  const { creditConfigs } = DEFAULT_CONFIG;
+
+  // Compute net monthly credit per group for this month
+  const active: Record<string, number> = {};
+  for (const c of creditConfigs) {
+    if (month < c.startDate || month > c.endDate) continue;
+    active[c.accountGroup] = (active[c.accountGroup] ?? 0) + c.monthlyCredit;
+  }
+
+  return shares.map(share => {
+    const net = active[share.accountGroup];
+    if (net === undefined) return share;
+    const r = (n: number) => Math.round(n * 100) / 100;
+    return {
+      ...share,
+      credits: r(share.credits + net),
+      total:   r(share.total   - net),
+      balance: r(share.balance - net),
+    };
+  });
+}
+
 export default function App() {
   const [tab, setTab] = useState<Tab>('dashboard');
   const [parsing, setParsing] = useState(false);
@@ -60,10 +90,13 @@ export default function App() {
     const stored = loadAllRecords();
     const historyMonths = new Set(HISTORY.map((h) => h.month));
 
-    // Enrich HISTORY records with per-line itemized breakdown from PDF data
+    // Enrich HISTORY records: per-line PDF breakdown + Sapana/Bajpayee credit correction
     const enrichedHistory = HISTORY.map((r) => ({
       ...r,
-      personShares: enrichPersonShares(r.month, r.personShares),
+      personShares: applyCreditAdjustments(
+        r.month,
+        enrichPersonShares(r.month, r.personShares),
+      ),
     }));
 
     // Show local data immediately while Gist loads
