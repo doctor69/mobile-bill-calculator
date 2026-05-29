@@ -111,12 +111,21 @@ export default function App() {
     loadFromGist().then((gistRecords) => {
       setGistLoading(false);
       if (!gistRecords.length) return;
-      // Gist is the source of truth — it overrides HISTORY and localStorage
-      const gistMonths = new Set(gistRecords.map((r) => r.month));
+
+      // HISTORY months: always use enrichedHistory (fresh creditConfigs + lineItems).
+      // Gist-only months (freshly parsed PDFs not yet in historyData.ts): enrich
+      // lineItems but skip credit adjustments (those lines aren't in creditConfigs).
+      const gistOnlyRecords = gistRecords.filter((r) => !historyMonths.has(r.month));
+      const enrichedGistOnly = gistOnlyRecords.map((r) => ({
+        ...r,
+        personShares: enrichPersonShares(r.month, r.personShares),
+      }));
+      const gistOnlyMonths = new Set(enrichedGistOnly.map((r) => r.month));
+
       const merged = [
-        ...gistRecords,
-        ...enrichedHistory.filter((r) => !gistMonths.has(r.month)),
-        ...stored.filter((r) => !gistMonths.has(r.month) && !historyMonths.has(r.month)),
+        ...enrichedHistory,   // all HISTORY months — always fresh
+        ...enrichedGistOnly,  // new PDF months saved to Gist
+        ...stored.filter((r) => !gistOnlyMonths.has(r.month) && !historyMonths.has(r.month)),
       ].sort((a, b) => b.month.localeCompare(a.month));
       setSavedRecords(merged);
     });
