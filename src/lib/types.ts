@@ -17,6 +17,18 @@ export interface SharedCosts {
   other: number;
 }
 
+/** One itemized row inside the tap-to-expand card breakdown */
+export interface PersonShareLineItem {
+  /** Display label, e.g. "Sanjay (208-840-1299)" or "Home Internet (863-606-2309)" */
+  label: string;
+  /** Secondary detail, e.g. "iPhone 16 Pro — $41.67 installment − $20.63 R120 trade = $21.04" */
+  sublabel?: string;
+  /** Dollar amount for this line */
+  amount: number;
+  /** Type of charge for color-coding */
+  kind: 'plan' | 'equipment' | 'shared' | 'credit' | 'promo_credit' | 'tax';
+}
+
 export interface PersonShare {
   name: string;
   accountGroup: string;
@@ -31,6 +43,8 @@ export interface PersonShare {
   balance: number;
   manualOverride?: number;
   notes?: string;
+  /** Optional per-line itemized breakdown for tap-to-expand detail view */
+  lineItems?: PersonShareLineItem[];
 }
 
 export interface CreditConfig {

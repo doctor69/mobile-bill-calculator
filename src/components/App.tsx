@@ -5,6 +5,7 @@ import { calculateBillSplit, getPersonTotal, getVerificationDiff } from '../lib/
 import { extractTextFromPDF, parseTMobileBillText, detectMonth } from '../lib/parser';
 import { saveRecord, loadRecord, loadAllRecords } from '../lib/storage';
 import { HISTORY } from '../lib/historyData';
+import { enrichPersonShares } from '../lib/lineItemsData';
 import BillUploader from './BillUploader';
 import BillResults from './BillResults';
 import HistoryTable from './HistoryTable';
@@ -36,6 +37,36 @@ const TAB_SHORT: Record<Tab, string> = {
   credits:   'Credits',
 };
 
+/**
+ * Apply creditConfigs from DEFAULT_CONFIG to historyData person shares.
+ * Updates `credits`, `total`, and `balance` so the displayed total reflects
+ * the Sapana/Bajpayee billing correction (Jan 2024 – Dec 2025).
+ * The correction rows are surfaced via the existing credits/billing-adj display
+ * in Dashboard.tsx (person.credits > 0 or < 0).
+ */
+function applyCreditAdjustments(month: string, shares: PersonShare[]): PersonShare[] {
+  const { creditConfigs } = DEFAULT_CONFIG;
+
+  // Compute net monthly credit per group for this month
+  const active: Record<string, number> = {};
+  for (const c of creditConfigs) {
+    if (month < c.startDate || month > c.endDate) continue;
+    active[c.accountGroup] = (active[c.accountGroup] ?? 0) + c.monthlyCredit;
+  }
+
+  return shares.map(share => {
+    const net = active[share.accountGroup];
+    if (net === undefined) return share;
+    const r = (n: number) => Math.round(n * 100) / 100;
+    return {
+      ...share,
+      credits: r(share.credits + net),
+      total:   r(share.total   - net),
+      balance: r(share.balance - net),
+    };
+  });
+}
+
 export default function App() {
   const [tab, setTab] = useState<Tab>('dashboard');
   const [parsing, setParsing] = useState(false);
@@ -59,9 +90,18 @@ export default function App() {
     const stored = loadAllRecords();
     const historyMonths = new Set(HISTORY.map((h) => h.month));
 
+    // Enrich HISTORY records: per-line PDF breakdown + Sapana/Bajpayee credit correction
+    const enrichedHistory = HISTORY.map((r) => ({
+      ...r,
+      personShares: applyCreditAdjustments(
+        r.month,
+        enrichPersonShares(r.month, r.personShares),
+      ),
+    }));
+
     // Show local data immediately while Gist loads
     const localMerged = [
-      ...HISTORY,
+      ...enrichedHistory,
       ...stored.filter((s) => !historyMonths.has(s.month)),
     ].sort((a, b) => b.month.localeCompare(a.month));
     setSavedRecords(localMerged);
@@ -71,12 +111,21 @@ export default function App() {
     loadFromGist().then((gistRecords) => {
       setGistLoading(false);
       if (!gistRecords.length) return;
-      // Gist is the source of truth — it overrides HISTORY and localStorage
-      const gistMonths = new Set(gistRecords.map((r) => r.month));
+
+      // HISTORY months: always use enrichedHistory (fresh creditConfigs + lineItems).
+      // Gist-only months (freshly parsed PDFs not yet in historyData.ts): enrich
+      // lineItems but skip credit adjustments (those lines aren't in creditConfigs).
+      const gistOnlyRecords = gistRecords.filter((r) => !historyMonths.has(r.month));
+      const enrichedGistOnly = gistOnlyRecords.map((r) => ({
+        ...r,
+        personShares: enrichPersonShares(r.month, r.personShares),
+      }));
+      const gistOnlyMonths = new Set(enrichedGistOnly.map((r) => r.month));
+
       const merged = [
-        ...gistRecords,
-        ...HISTORY.filter((r) => !gistMonths.has(r.month)),
-        ...stored.filter((r) => !gistMonths.has(r.month) && !historyMonths.has(r.month)),
+        ...enrichedHistory,   // all HISTORY months — always fresh
+        ...enrichedGistOnly,  // new PDF months saved to Gist
+        ...stored.filter((r) => !gistOnlyMonths.has(r.month) && !historyMonths.has(r.month)),
       ].sort((a, b) => b.month.localeCompare(a.month));
       setSavedRecords(merged);
     });
