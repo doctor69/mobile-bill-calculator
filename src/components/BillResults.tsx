@@ -12,6 +12,9 @@ interface Props {
   onSharesChange: (shares: PersonShare[]) => void;
   onSave: () => void;
   saveStatus: 'idle' | 'saved' | 'error';
+  onGistSave?: () => void;
+  gistSaveStatus?: 'idle' | 'saving' | 'saved' | 'error';
+  gistEnabled?: boolean;
 }
 
 const GROUP_COLORS: Record<string, string> = {
@@ -41,6 +44,9 @@ export default function BillResults({
   onSharesChange,
   onSave,
   saveStatus,
+  onGistSave,
+  gistSaveStatus = 'idle',
+  gistEnabled = false,
 }: Props) {
   const [editingIdx, setEditingIdx] = useState<number | null>(null);
 
@@ -102,6 +108,21 @@ export default function BillResults({
           >
             {saveStatus === 'saved' ? '✓ Saved' : saveStatus === 'error' ? 'Error' : '💾 Save'}
           </button>
+          {gistEnabled && verified && onGistSave && (
+            <button
+              onClick={onGistSave}
+              disabled={gistSaveStatus === 'saving'}
+              className={`px-4 py-1.5 rounded-lg text-sm font-medium transition-colors ${
+                gistSaveStatus === 'saved'
+                  ? 'bg-green-500 text-white'
+                  : gistSaveStatus === 'error'
+                  ? 'bg-red-500 text-white'
+                  : 'bg-gray-700 hover:bg-gray-900 text-white disabled:opacity-50'
+              }`}
+            >
+              {gistSaveStatus === 'saved' ? '✓ Synced' : gistSaveStatus === 'error' ? 'Sync Error' : gistSaveStatus === 'saving' ? 'Syncing…' : '☁ Sync'}
+            </button>
+          )}
         </div>
       </div>
 
