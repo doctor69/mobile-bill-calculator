@@ -6,6 +6,7 @@ import { extractTextFromPDF, parseTMobileBillText, detectMonth } from '../lib/pa
 import { saveRecord, loadRecord, loadAllRecords } from '../lib/storage';
 import { HISTORY } from '../lib/historyData';
 import { enrichPersonShares } from '../lib/lineItemsData';
+import { parseBillLineItems } from '../lib/billLineItemParser';
 import BillUploader from './BillUploader';
 import BillResults from './BillResults';
 import HistoryTable from './HistoryTable';
@@ -155,7 +156,28 @@ export default function App() {
       }
 
       const shares = calculateBillSplit(bill, DEFAULT_CONFIG, prevBalances);
-      setPersonShares(shares);
+
+      // Generate per-phone line items live from the PDF text so tap-to-expand
+      // works immediately for new months without needing a redeploy.
+      const groupLineData = parseBillLineItems(text);
+      const sharesWithItems = shares.map((share) => {
+        const gd = groupLineData[share.accountGroup];
+        if (!gd || gd.items.length === 0) return share;
+        const accountShare = Math.round(
+          (share.lineCharges + share.sharedCostShare - gd.phone_sum) * 100,
+        ) / 100;
+        const lineItems = [...gd.items];
+        if (accountShare > 0.5) {
+          lineItems.push({
+            label:    'Base plan share',
+            sublabel: 'Shared account line allocation',
+            amount:   accountShare,
+            kind:     'plan',
+          });
+        }
+        return { ...share, lineItems };
+      });
+      setPersonShares(sharesWithItems);
       setTab('upload');
     } catch (err) {
       setParseError(err instanceof Error ? err.message : 'Failed to parse PDF');

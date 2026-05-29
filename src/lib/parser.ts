@@ -129,13 +129,29 @@ export async function extractTextFromPDF(file: File): Promise<string> {
   for (let i = 1; i <= pdf.numPages; i++) {
     const page = await pdf.getPage(i);
     const content = await page.getTextContent();
-    const pageText = content.items
-      .map((item: unknown) => {
-        const i = item as { str?: string };
-        return i.str ?? '';
-      })
-      .join(' ');
-    textParts.push(pageText);
+
+    // Reconstruct layout: group text items by Y coordinate so each visual
+    // row of the bill becomes one text line (needed for bill-summary regex parsing).
+    type TextItem = { str?: string; transform?: number[] };
+    const rowMap = new Map<number, { x: number; str: string }[]>();
+
+    for (const raw of content.items) {
+      const item = raw as TextItem;
+      if (!item.str?.trim() || !item.transform) continue;
+      // transform = [sx, shy, shx, sy, tx, ty] — tx=x, ty=y
+      const y = Math.round(item.transform[5]);  // round to nearest int to group near-same-row items
+      if (!rowMap.has(y)) rowMap.set(y, []);
+      rowMap.get(y)!.push({ x: item.transform[4], str: item.str });
+    }
+
+    // Sort rows top→bottom (descending y in PDF coords), items left→right within each row
+    const pageLines = [...rowMap.entries()]
+      .sort((a, b) => b[0] - a[0])
+      .map(([, items]) =>
+        items.sort((a, b) => a.x - b.x).map(it => it.str).join(' '),
+      );
+
+    textParts.push(pageLines.join('\n'));
   }
 
   return textParts.join('\n');
