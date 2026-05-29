@@ -12,8 +12,7 @@ export const DEFAULT_CONFIG: AppConfig = {
       name: 'dari',
       displayName: 'Dari / Sanjay / Mahima',
       color: '#10b981',
-      lines: ['Sanjay', 'Dari iPhone', 'Dari', 'Dari 2nd iPhone', 'Dari SO iPhone', 'Dari SO',
-              '701-412-4006'],
+      lines: ['Sanjay', 'Dari iPhone', 'Dari', 'Dari 2nd iPhone', 'Dari SO iPhone', 'Dari SO', '701-412-4006'],
     },
     {
       name: 'bajpayee',
@@ -141,6 +140,7 @@ export const DEFAULT_CONFIG: AppConfig = {
     'Dari 2nd iPhone': 'dari',
     'Dari SO iPhone': 'dari',
     'Dari SO': 'dari',
+    'NewLine': 'saket',
     '701-412-4006': 'dari',
     // Bajpayee family
     'Bajpayee': 'bajpayee',
