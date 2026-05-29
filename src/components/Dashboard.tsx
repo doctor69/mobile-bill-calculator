@@ -32,9 +32,15 @@ function PersonCard({ person, maxAmount }: { person: PersonShare; maxAmount: num
   const total = getPersonTotal(person);
   const pct = maxAmount > 0 ? (total / maxAmount) * 100 : 0;
   const g = GROUP_ACCENT[person.accountGroup] ?? GROUP_ACCENT.saket;
+  const [expanded, setExpanded] = useState(false);
+
+  const hasBreakdown = person.lineCharges > 0 || person.sharedCostShare > 0 || person.credits !== 0;
 
   return (
-    <div className={`rounded-2xl border-2 ${g.bg} ${g.border} p-5 flex flex-col gap-3 shadow-sm hover:shadow-md transition-shadow`}>
+    <div
+      className={`rounded-2xl border-2 ${g.bg} ${g.border} p-5 flex flex-col gap-3 shadow-sm hover:shadow-md transition-shadow ${hasBreakdown ? 'cursor-pointer select-none' : ''}`}
+      onClick={() => hasBreakdown && setExpanded(!expanded)}
+    >
       <div className="flex items-start justify-between">
         <div className="flex items-center gap-2">
           <span className={`w-3 h-3 rounded-full flex-shrink-0 mt-0.5 ${g.dot}`} />
@@ -49,6 +55,9 @@ function PersonCard({ person, maxAmount }: { person: PersonShare; maxAmount: num
           <div className="text-2xl font-bold text-gray-900 leading-none">
             ${total.toFixed(2)}
           </div>
+          {hasBreakdown && (
+            <div className="text-[10px] text-gray-400 mt-0.5">{expanded ? 'tap to collapse' : 'tap for details'}</div>
+          )}
         </div>
       </div>
 
@@ -59,6 +68,67 @@ function PersonCard({ person, maxAmount }: { person: PersonShare; maxAmount: num
           style={{ width: `${Math.min(pct, 100)}%` }}
         />
       </div>
+
+      {/* Breakdown */}
+      {expanded && (
+        <div className="border-t border-black/10 pt-3 space-y-1.5">
+          {person.manualOverride !== undefined ? (
+            <div className="flex justify-between text-xs">
+              <span className="text-gray-500">Manual Override</span>
+              <span className="font-mono font-semibold text-orange-600">${person.manualOverride.toFixed(2)}</span>
+            </div>
+          ) : (
+            <>
+              <div className="flex justify-between text-xs">
+                <span className="text-gray-500">Line Charges</span>
+                <span className="font-mono text-gray-700">+${person.lineCharges.toFixed(2)}</span>
+              </div>
+              <div className="flex justify-between text-xs">
+                <span className="text-gray-500">Shared Costs</span>
+                <span className="font-mono text-gray-700">+${person.sharedCostShare.toFixed(2)}</span>
+              </div>
+              {person.credits > 0 && (
+                <div className="flex justify-between text-xs">
+                  <span className="text-gray-500">Credits Applied</span>
+                  <span className="font-mono text-green-600">−${person.credits.toFixed(2)}</span>
+                </div>
+              )}
+              {person.credits < 0 && (
+                <div className="flex justify-between text-xs">
+                  <span className="text-gray-500">Billing Adj. (Sapana)</span>
+                  <span className="font-mono text-amber-600">+${Math.abs(person.credits).toFixed(2)}</span>
+                </div>
+              )}
+              {person.previousDue !== 0 && (
+                <div className="flex justify-between text-xs">
+                  <span className="text-gray-500">Carried Balance</span>
+                  <span className={`font-mono ${person.previousDue > 0 ? 'text-red-500' : 'text-green-600'}`}>
+                    {person.previousDue > 0 ? '+' : '−'}${Math.abs(person.previousDue).toFixed(2)}
+                  </span>
+                </div>
+              )}
+            </>
+          )}
+          <div className="flex justify-between text-xs pt-1.5 border-t border-black/10 font-semibold">
+            <span className="text-gray-700">Total This Month</span>
+            <span className="text-gray-900">${total.toFixed(2)}</span>
+          </div>
+          {person.paid > 0 && (
+            <>
+              <div className="flex justify-between text-xs">
+                <span className="text-gray-500">Paid</span>
+                <span className="font-mono text-green-600">−${person.paid.toFixed(2)}</span>
+              </div>
+              <div className="flex justify-between text-xs font-semibold">
+                <span className="text-gray-700">Remaining</span>
+                <span className={`${(total - person.paid) > 0.01 ? 'text-red-600' : 'text-green-600'}`}>
+                  ${Math.max(0, total - person.paid).toFixed(2)}
+                </span>
+              </div>
+            </>
+          )}
+        </div>
+      )}
 
       {/* Notes */}
       {person.notes && (
