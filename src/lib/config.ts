@@ -140,7 +140,6 @@ export const DEFAULT_CONFIG: AppConfig = {
     'Dari 2nd iPhone': 'dari',
     'Dari SO iPhone': 'dari',
     'Dari SO': 'dari',
-    'NewLine': 'saket',
     '701-412-4006': 'dari',
     // Bajpayee family
     'Bajpayee': 'bajpayee',
