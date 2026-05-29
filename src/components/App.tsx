@@ -20,6 +20,20 @@ const TAB_LABELS: Record<Tab, string> = {
   credits:   '⚙️ Credits',
 };
 
+const TAB_ICONS: Record<Tab, string> = {
+  dashboard: '🏠',
+  upload:    '📄',
+  history:   '📋',
+  credits:   '⚙️',
+};
+
+const TAB_SHORT: Record<Tab, string> = {
+  dashboard: 'Overview',
+  upload:    'Calculator',
+  history:   'History',
+  credits:   'Credits',
+};
+
 export default function App() {
   const [tab, setTab] = useState<Tab>('dashboard');
   const [parsing, setParsing] = useState(false);
@@ -144,11 +158,11 @@ export default function App() {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
       {/* Header */}
       <header className="bg-[#e20074] shadow-lg">
-        <div className="max-w-6xl mx-auto px-4 py-4">
+        {/* Logo + title row (+ desktop nav inline) */}
+        <div className="max-w-6xl mx-auto px-4 py-3">
           <div className="flex items-center justify-between">
-            {/* Logo + title */}
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 bg-white rounded-xl flex items-center justify-center shadow-sm">
+              <div className="w-9 h-9 bg-white rounded-xl flex items-center justify-center shadow-sm flex-shrink-0">
                 <span className="text-[#e20074] font-black text-base leading-none">T</span>
               </div>
               <div>
@@ -157,8 +171,8 @@ export default function App() {
               </div>
             </div>
 
-            {/* Nav */}
-            <nav className="flex gap-1">
+            {/* Desktop nav — hidden on mobile */}
+            <nav className="hidden sm:flex gap-1">
               {(['dashboard', 'upload', 'history', 'credits'] as Tab[]).map((t) => (
                 <button
                   key={t}
@@ -175,6 +189,24 @@ export default function App() {
             </nav>
           </div>
         </div>
+
+        {/* Mobile nav — full-width tab bar, hidden on sm+ */}
+        <nav className="sm:hidden flex border-t border-pink-600/50">
+          {(['dashboard', 'upload', 'history', 'credits'] as Tab[]).map((t) => (
+            <button
+              key={t}
+              onClick={() => setTab(t)}
+              className={`flex-1 py-2 flex flex-col items-center gap-0.5 transition-all ${
+                tab === t
+                  ? 'bg-white/20 text-white'
+                  : 'text-pink-200 hover:bg-white/10'
+              }`}
+            >
+              <span className="text-lg leading-none">{TAB_ICONS[t]}</span>
+              <span className="text-[10px] font-medium">{TAB_SHORT[t]}</span>
+            </button>
+          ))}
+        </nav>
       </header>
 
       <main className="max-w-6xl mx-auto px-4 py-6">
