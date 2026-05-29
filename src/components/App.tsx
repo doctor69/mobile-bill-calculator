@@ -36,10 +36,12 @@ export default function App() {
 
   useEffect(() => {
     const stored = loadAllRecords();
-    const storedMonths = new Set(stored.map((r) => r.month));
+    // HISTORY is the canonical source of truth for historical months.
+    // localStorage is only kept for months NOT covered by HISTORY (e.g. a freshly uploaded PDF).
+    const historyMonths = new Set(HISTORY.map((h) => h.month));
     const merged = [
-      ...stored,
-      ...HISTORY.filter((h) => !storedMonths.has(h.month)),
+      ...HISTORY,
+      ...stored.filter((s) => !historyMonths.has(s.month)),
     ].sort((a, b) => b.month.localeCompare(a.month));
     setSavedRecords(merged);
   }, []);

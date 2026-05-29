@@ -1,23 +1,27 @@
 import { useState, useMemo, useEffect } from 'react';
 import type { MonthRecord, PersonShare } from '../lib/types';
 import { getPersonTotal } from '../lib/calculator';
+import { TOTAL_PAID } from '../lib/paymentsData';
 
 interface Props {
   records: MonthRecord[];
 }
 
-const GROUP_ACCENT: Record<string, { bg: string; border: string; text: string; dot: string; bar: string }> = {
-  dari:       { bg: 'bg-emerald-50',  border: 'border-emerald-200', text: 'text-emerald-700', dot: 'bg-emerald-500', bar: 'bg-emerald-400' },
-  saket:      { bg: 'bg-blue-50',     border: 'border-blue-200',    text: 'text-blue-700',    dot: 'bg-blue-500',    bar: 'bg-blue-400'    },
-  bajpayee:   { bg: 'bg-amber-50',    border: 'border-amber-200',   text: 'text-amber-700',   dot: 'bg-amber-500',   bar: 'bg-amber-400'   },
-  mainali:    { bg: 'bg-violet-50',   border: 'border-violet-200',  text: 'text-violet-700',  dot: 'bg-violet-500',  bar: 'bg-violet-400'  },
-  saroj:      { bg: 'bg-red-50',      border: 'border-red-200',     text: 'text-red-700',     dot: 'bg-red-500',     bar: 'bg-red-400'     },
-  chiranjiwi: { bg: 'bg-pink-50',     border: 'border-pink-200',    text: 'text-pink-700',    dot: 'bg-pink-500',    bar: 'bg-pink-400'    },
-  newline:    { bg: 'bg-slate-50',    border: 'border-slate-200',   text: 'text-slate-700',   dot: 'bg-slate-500',   bar: 'bg-slate-400'   },
+const GROUP_ACCENT: Record<string, { bg: string; border: string; text: string; dot: string; bar: string; balanceBg: string }> = {
+  dari:       { bg: 'bg-emerald-50',  border: 'border-emerald-200', text: 'text-emerald-700', dot: 'bg-emerald-500', bar: 'bg-emerald-400', balanceBg: 'bg-emerald-500' },
+  saket:      { bg: 'bg-blue-50',     border: 'border-blue-200',    text: 'text-blue-700',    dot: 'bg-blue-500',    bar: 'bg-blue-400',    balanceBg: 'bg-blue-500'    },
+  bajpayee:   { bg: 'bg-amber-50',    border: 'border-amber-200',   text: 'text-amber-700',   dot: 'bg-amber-500',   bar: 'bg-amber-400',   balanceBg: 'bg-amber-500'   },
+  mainali:    { bg: 'bg-violet-50',   border: 'border-violet-200',  text: 'text-violet-700',  dot: 'bg-violet-500',  bar: 'bg-violet-400',  balanceBg: 'bg-violet-500'  },
+  bikas:      { bg: 'bg-cyan-50',     border: 'border-cyan-200',    text: 'text-cyan-700',    dot: 'bg-cyan-500',    bar: 'bg-cyan-400',    balanceBg: 'bg-cyan-500'    },
+  ritesh:     { bg: 'bg-red-50',      border: 'border-red-200',     text: 'text-red-700',     dot: 'bg-red-500',     bar: 'bg-red-400',     balanceBg: 'bg-red-500'     },
+  saroj:      { bg: 'bg-violet-50',   border: 'border-violet-200',  text: 'text-violet-700',  dot: 'bg-violet-500',  bar: 'bg-violet-400',  balanceBg: 'bg-violet-500'  },
+  chiranjiwi: { bg: 'bg-pink-50',     border: 'border-pink-200',    text: 'text-pink-700',    dot: 'bg-pink-500',    bar: 'bg-pink-400',    balanceBg: 'bg-pink-500'    },
+  newline:    { bg: 'bg-emerald-50',  border: 'border-emerald-200', text: 'text-emerald-700', dot: 'bg-emerald-500', bar: 'bg-emerald-400', balanceBg: 'bg-emerald-500' },
 };
 
 const EMOJI: Record<string, string> = {
-  dari: '🟢', saket: '🔵', bajpayee: '🟡', mainali: '🟣', saroj: '🔴', chiranjiwi: '🩷', newline: '⚫',
+  dari: '🟢', saket: '🔵', bajpayee: '🟡', mainali: '🟣', bikas: '🩵',
+  ritesh: '🔴', saroj: '🟣', chiranjiwi: '🩷', newline: '🟢',
 };
 
 function formatMonth(m: string) {
@@ -108,7 +112,10 @@ export default function Dashboard({ records }: Props) {
 
   return (
     <div className="space-y-6">
-      {/* Month navigation bar */}
+      {/* ── BALANCE OVERVIEW (Left to Pay) ── */}
+      <BalanceSection records={sorted} />
+
+      {/* ── MONTH NAVIGATION ── */}
       <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-4">
         <div className="flex items-center justify-between gap-4">
           <button
@@ -143,7 +150,7 @@ export default function Dashboard({ records }: Props) {
         </div>
       </div>
 
-      {/* Bill summary stats */}
+      {/* ── BILL SUMMARY STATS ── */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
         <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-4 text-center">
           <div className="text-xs text-gray-400 font-medium uppercase tracking-wide mb-1">Total Bill</div>
@@ -177,7 +184,7 @@ export default function Dashboard({ records }: Props) {
         </div>
       )}
 
-      {/* Person cards grid */}
+      {/* ── THIS MONTH'S BREAKDOWN ── */}
       <div>
         <h2 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-3">
           Who Owes What — {formatMonth(record.month)}
@@ -189,21 +196,330 @@ export default function Dashboard({ records }: Props) {
         </div>
       </div>
 
-      {/* Trend chart: sparkline of last 6 months per person */}
+      {/* ── TREND CHART ── */}
       <TrendSection records={sorted.slice(0, 6).reverse()} />
+
+      {/* ── ALL-TIME CUMULATIVE ── */}
+      <CumulativeSection records={sorted} />
     </div>
   );
 }
 
+// ── Balance / Left-to-Pay Section ────────────────────────────────────────────
+
+interface BalanceData {
+  accountGroup: string;
+  name: string;
+  monthsSaket: number;   // months where Saket paid T-Mobile
+  monthsSanjay: number;  // months where Sanjay paid T-Mobile
+  owedSaket: number;     // charges in Saket-paid months (excl. saket group itself)
+  owedSanjay: number;    // charges in Sanjay-paid months (excl. dari group itself)
+  paid: number;          // total paid to Saket (from Excel)
+  balSaket: number;      // still owed to Saket
+  balSanjay: number;     // still owed to Sanjay
+}
+
+function BalanceSection({ records }: { records: MonthRecord[] }) {
+  // Bucket every group's charges by who paid T-Mobile that month
+  const bySaket  = new Map<string, { name: string; total: number; months: number }>();
+  const bySanjay = new Map<string, { name: string; total: number; months: number }>();
+
+  for (const record of records) {
+    const isSanjay = record.paidBy === 'Sanjay';
+    const target = isSanjay ? bySanjay : bySaket;
+    for (const ps of record.personShares) {
+      const amt = getPersonTotal(ps);
+      const g   = ps.accountGroup;
+      const ex  = target.get(g);
+      if (ex) { ex.total += amt; ex.months += 1; }
+      else      target.set(g, { name: ps.name, total: amt, months: 1 });
+    }
+  }
+
+  const allGroups = new Set([...bySaket.keys(), ...bySanjay.keys()]);
+  if (allGroups.size === 0) return null;
+
+  const rows: BalanceData[] = Array.from(allGroups).map((group) => {
+    const sd = bySaket.get(group);
+    const jd = bySanjay.get(group);
+    const paid = TOTAL_PAID[group] ?? 0;
+
+    // Saket doesn't owe himself; Dari/Sanjay doesn't owe Sanjay
+    const owedSaket  = group === 'saket' ? 0 : (sd?.total ?? 0);
+    const owedSanjay = group === 'dari'  ? 0 : (jd?.total ?? 0);
+
+    // Payments made (all to Saket historically); any overpayment offsets Sanjay balance
+    const balSaket   = Math.max(0, owedSaket - paid);
+    const overpay    = Math.max(0, paid - owedSaket);
+    const balSanjay  = Math.max(0, owedSanjay - overpay);
+
+    return {
+      accountGroup: group,
+      name: sd?.name ?? jd?.name ?? group,
+      monthsSaket:  sd?.months ?? 0,
+      monthsSanjay: jd?.months ?? 0,
+      owedSaket,
+      owedSanjay,
+      paid,
+      balSaket,
+      balSanjay,
+    };
+  }).sort((a, b) => (b.balSaket + b.balSanjay) - (a.balSaket + a.balSanjay));
+
+  // Aggregate totals
+  const totalReceivableSaket  = rows.reduce((s, r) => s + r.balSaket,  0);
+  const totalReceivableSanjay = rows.reduce((s, r) => s + r.balSanjay, 0);
+  const totalOwedAll          = rows.reduce((s, r) => s + r.owedSaket + r.owedSanjay, 0);
+  const totalPaidAll          = rows.reduce((s, r) => s + r.paid, 0);
+
+  return (
+    <div className="space-y-4">
+
+      {/* ── TOP SUMMARY STRIP ── */}
+      <div className="bg-gradient-to-r from-gray-900 to-gray-700 rounded-2xl px-5 py-4">
+        <div className="flex items-center justify-between mb-3">
+          <div>
+            <h3 className="text-white font-bold text-base">💰 Balance Overview</h3>
+            <p className="text-gray-400 text-xs mt-0.5">Split by who paid T-Mobile · pre-Jul 2025 vs Jul 2025+</p>
+          </div>
+          <div className="text-right">
+            <div className="text-2xl font-black text-white">
+              ${(totalReceivableSaket + totalReceivableSanjay).toFixed(2)}
+            </div>
+            <div className="text-xs text-gray-400">total outstanding</div>
+          </div>
+        </div>
+        <div className="grid grid-cols-4 gap-2">
+          <div className="bg-white/10 rounded-xl px-3 py-2 text-center">
+            <div className="text-xs text-gray-400">All-time Owed</div>
+            <div className="text-sm font-bold text-white">${totalOwedAll.toFixed(0)}</div>
+          </div>
+          <div className="bg-white/10 rounded-xl px-3 py-2 text-center">
+            <div className="text-xs text-gray-400">Paid (Excel)</div>
+            <div className="text-sm font-bold text-green-400">${totalPaidAll.toFixed(0)}</div>
+          </div>
+          <div className="bg-blue-500/20 rounded-xl px-3 py-2 text-center border border-blue-500/30">
+            <div className="text-xs text-blue-300">→ Saket</div>
+            <div className="text-sm font-bold text-white">${totalReceivableSaket.toFixed(0)}</div>
+          </div>
+          <div className="bg-emerald-500/20 rounded-xl px-3 py-2 text-center border border-emerald-500/30">
+            <div className="text-xs text-emerald-300">→ Sanjay</div>
+            <div className="text-sm font-bold text-white">${totalReceivableSanjay.toFixed(0)}</div>
+          </div>
+        </div>
+      </div>
+
+      {/* ── PER-GROUP ROWS ── */}
+      <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+        {/* Column headers */}
+        <div className="grid grid-cols-[1fr_auto_auto] gap-x-4 px-5 py-2.5 bg-gray-50 border-b border-gray-100 text-xs font-semibold text-gray-400 uppercase tracking-wide">
+          <span>Group</span>
+          <span className="text-right text-blue-500">← Saket (pre Jul'25)</span>
+          <span className="text-right text-emerald-600">← Sanjay (Jul'25+)</span>
+        </div>
+
+        <div className="divide-y divide-gray-50">
+          {rows.map((row) => {
+            const g = GROUP_ACCENT[row.accountGroup] ?? GROUP_ACCENT.saket;
+            const isSaketSettled  = row.balSaket  < 0.01;
+            const isSanjaySettled = row.balSanjay < 0.01;
+            const saketPaidPct  = row.owedSaket  > 0 ? Math.min(100, (row.paid / row.owedSaket) * 100) : 100;
+            const sanjayPaidPct = row.owedSanjay > 0 ? 0 : 100; // no Sanjay payments tracked yet
+
+            return (
+              <div key={row.accountGroup} className="px-5 py-4">
+                {/* Name + totals row */}
+                <div className="grid grid-cols-[1fr_auto_auto] gap-x-4 items-start mb-2">
+                  <div className="flex items-center gap-2">
+                    <span className={`w-2.5 h-2.5 rounded-full flex-shrink-0 mt-0.5 ${g.dot}`} />
+                    <div>
+                      <div className={`text-sm font-semibold ${g.text}`}>{row.name}</div>
+                      <div className="text-xs text-gray-400 mt-0.5">
+                        {row.monthsSaket > 0 && <span>{row.monthsSaket} mo w/ Saket</span>}
+                        {row.monthsSaket > 0 && row.monthsSanjay > 0 && <span className="mx-1">·</span>}
+                        {row.monthsSanjay > 0 && <span>{row.monthsSanjay} mo w/ Sanjay</span>}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Saket balance */}
+                  <div className="text-right min-w-[90px]">
+                    {row.accountGroup === 'saket' ? (
+                      <span className="text-xs text-gray-300 italic">payer</span>
+                    ) : isSaketSettled ? (
+                      <span className="text-xs font-semibold text-green-600 bg-green-50 border border-green-200 rounded-full px-2 py-0.5">✓</span>
+                    ) : (
+                      <div>
+                        <div className="text-sm font-black text-blue-700">${row.balSaket.toFixed(2)}</div>
+                        <div className="text-xs text-gray-400">of ${row.owedSaket.toFixed(0)} owed</div>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Sanjay balance */}
+                  <div className="text-right min-w-[90px]">
+                    {row.accountGroup === 'dari' ? (
+                      <span className="text-xs text-gray-300 italic">payer</span>
+                    ) : isSanjaySettled && row.owedSanjay < 0.01 ? (
+                      <span className="text-xs text-gray-300">—</span>
+                    ) : isSanjaySettled ? (
+                      <span className="text-xs font-semibold text-green-600 bg-green-50 border border-green-200 rounded-full px-2 py-0.5">✓</span>
+                    ) : (
+                      <div>
+                        <div className="text-sm font-black text-emerald-700">${row.balSanjay.toFixed(2)}</div>
+                        <div className="text-xs text-gray-400">of ${row.owedSanjay.toFixed(0)} owed</div>
+                      </div>
+                    )}
+                  </div>
+                </div>
+
+                {/* Progress bars */}
+                <div className="grid grid-cols-2 gap-2 mt-1">
+                  {/* Saket bar */}
+                  {row.accountGroup !== 'saket' && row.owedSaket > 0 && (
+                    <div>
+                      <div className="text-xs text-gray-400 mb-1">
+                        Paid ${Math.min(row.paid, row.owedSaket).toFixed(0)} / ${row.owedSaket.toFixed(0)}
+                        <span className="ml-1 text-gray-300">({saketPaidPct.toFixed(0)}%)</span>
+                      </div>
+                      <div className="w-full bg-gray-100 rounded-full h-1.5 overflow-hidden flex">
+                        <div className="h-full bg-green-400 rounded-l-full" style={{ width: `${saketPaidPct}%` }} />
+                        {saketPaidPct < 100 && (
+                          <div className="h-full bg-blue-300" style={{ width: `${100 - saketPaidPct}%` }} />
+                        )}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Sanjay bar */}
+                  {row.accountGroup !== 'dari' && row.owedSanjay > 0 && (
+                    <div>
+                      <div className="text-xs text-gray-400 mb-1">
+                        No payments tracked yet
+                      </div>
+                      <div className="w-full bg-gray-100 rounded-full h-1.5 overflow-hidden">
+                        <div className="h-full bg-emerald-300" style={{ width: `100%` }} />
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Footer */}
+        <div className="px-5 py-3 bg-gray-50 border-t border-gray-100">
+          <p className="text-xs text-gray-400">
+            Paid amounts from <span className="font-medium text-gray-600">T-Mobile.xlsx</span> "Paid" rows (all counted toward Saket's period).
+            Sanjay period: Jul 2025 – present, no separate payments tracked yet.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ── Cumulative Section ────────────────────────────────────────────────────────
+
+interface CumulativeRow {
+  accountGroup: string;
+  name: string;
+  months: number;
+  total: number;
+  firstMonth: string;
+  lastMonth: string;
+}
+
+function CumulativeSection({ records }: { records: MonthRecord[] }) {
+  const byGroup = new Map<string, CumulativeRow>();
+
+  for (const record of records) {
+    for (const ps of record.personShares) {
+      const amount = getPersonTotal(ps);
+      const existing = byGroup.get(ps.accountGroup);
+      if (existing) {
+        existing.total += amount;
+        existing.months += 1;
+        if (record.month < existing.firstMonth) existing.firstMonth = record.month;
+        if (record.month > existing.lastMonth) existing.lastMonth = record.month;
+      } else {
+        byGroup.set(ps.accountGroup, {
+          accountGroup: ps.accountGroup,
+          name: ps.name,
+          months: 1,
+          total: amount,
+          firstMonth: record.month,
+          lastMonth: record.month,
+        });
+      }
+    }
+  }
+
+  if (byGroup.size === 0) return null;
+
+  const rows = Array.from(byGroup.values()).sort((a, b) => b.total - a.total);
+  const grandTotal = rows.reduce((s, r) => s + r.total, 0);
+
+  return (
+    <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5">
+      <div className="flex items-center justify-between mb-4">
+        <h3 className="text-sm font-semibold text-gray-700">
+          All-Time Cumulative Totals
+        </h3>
+        <span className="text-xs text-gray-400">
+          {records.length} months •{' '}
+          {formatMonth(records[records.length - 1]?.month ?? '')} – {formatMonth(records[0]?.month ?? '')}
+        </span>
+      </div>
+
+      <div className="space-y-2">
+        {rows.map((row) => {
+          const g = GROUP_ACCENT[row.accountGroup] ?? GROUP_ACCENT.saket;
+          const pct = grandTotal > 0 ? (row.total / grandTotal) * 100 : 0;
+          const avgPerMonth = row.months > 0 ? row.total / row.months : 0;
+
+          return (
+            <div key={row.accountGroup} className={`rounded-xl border ${g.border} ${g.bg} px-4 py-3`}>
+              <div className="flex items-center justify-between gap-2 mb-1.5">
+                <div className="flex items-center gap-2">
+                  <span className={`w-2.5 h-2.5 rounded-full flex-shrink-0 ${g.dot}`} />
+                  <span className={`text-sm font-semibold ${g.text}`}>{row.name}</span>
+                  <span className="text-xs text-gray-400">{row.months} mo</span>
+                </div>
+                <div className="text-right">
+                  <span className="text-base font-bold text-gray-900">${row.total.toFixed(2)}</span>
+                  <span className="text-xs text-gray-400 ml-2">~${avgPerMonth.toFixed(0)}/mo</span>
+                </div>
+              </div>
+              <div className="w-full bg-white/70 rounded-full h-1.5 overflow-hidden">
+                <div
+                  className={`h-full rounded-full transition-all ${g.bar}`}
+                  style={{ width: `${Math.min(pct, 100)}%` }}
+                />
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
+      <div className="mt-3 pt-3 border-t border-gray-100 flex items-center justify-between">
+        <span className="text-sm font-semibold text-gray-600">Grand Total</span>
+        <span className="text-lg font-bold text-gray-900">${grandTotal.toFixed(2)}</span>
+      </div>
+    </div>
+  );
+}
+
+// ── Trend Section ─────────────────────────────────────────────────────────────
+
 function TrendSection({ records }: { records: MonthRecord[] }) {
   if (records.length < 2) return null;
 
-  // Collect unique groups across all records
   const groups = Array.from(
     new Set(records.flatMap((r) => r.personShares.map((p) => p.accountGroup)))
   );
 
-  // Pick first record's personShares to get display names
   const nameMap: Record<string, string> = {};
   records.forEach((r) =>
     r.personShares.forEach((p) => { nameMap[p.accountGroup] = p.name; })
