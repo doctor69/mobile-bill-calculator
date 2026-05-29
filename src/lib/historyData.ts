@@ -1277,7 +1277,7 @@ export const HISTORY: MonthRecord[] = [
     paidBy: 'Sanjay',
     notes: 'Jan 2026 – Mahima (701)412-4006 added Jan 19; HomeInternet $62.10 under Saket',
     personShares: [
-      { name: "Dari / Sanjay", accountGroup: 'dari', lines: ["Sanjay", "NewLine", "701-412-4006"], lineCharges: 211.73, sharedCostShare: 0, credits: 0, extras: 0, previousDue: 0, total: 211.73, paid: 0, balance: 211.73, notes: "Mahima: Partial month + iPhone 17 Pro EIP $33.54/mo" },
+      { name: "Dari / Sanjay", accountGroup: 'dari', lines: ["Sanjay", "701-412-4006"], lineCharges: 211.73, sharedCostShare: 0, credits: 0, extras: 0, previousDue: 0, total: 211.73, paid: 0, balance: 211.73, notes: "Mahima: Partial month + iPhone 17 Pro EIP $33.54/mo" },
       { name: "Saket (Me)", accountGroup: 'saket', lines: ["Saket", "Home Internet"], lineCharges: 128.61, sharedCostShare: 0, credits: 0, extras: 0, previousDue: 0, total: 128.61, paid: 0, balance: 128.61 },
       { name: "Mainali (Saroj)", accountGroup: 'mainali', lines: ["Saroj"], lineCharges: 59.43, sharedCostShare: 0, credits: 0, extras: 0, previousDue: 0, total: 59.43, paid: 0, balance: 59.43 },
       { name: "Bikas (Damna)", accountGroup: 'bikas', lines: ["Bikas"], lineCharges: 47.63, sharedCostShare: 0, credits: 0, extras: 0, previousDue: 0, total: 47.63, paid: 0, balance: 47.63 },
@@ -1295,7 +1295,7 @@ export const HISTORY: MonthRecord[] = [
     paidBy: 'Sanjay',
     notes: 'Feb 2026 – HomeInternet $62.10 under Saket',
     personShares: [
-      { name: "Dari / Sanjay", accountGroup: 'dari', lines: ["Sanjay", "NewLine", "701-412-4006"], lineCharges: 202.74, sharedCostShare: 0, credits: 0, extras: 0, previousDue: 0, total: 202.74, paid: 0, balance: 202.74, notes: "Mahima: iPhone 17 Pro EIP $33.54/mo" },
+      { name: "Dari / Sanjay", accountGroup: 'dari', lines: ["Sanjay", "701-412-4006"], lineCharges: 202.74, sharedCostShare: 0, credits: 0, extras: 0, previousDue: 0, total: 202.74, paid: 0, balance: 202.74, notes: "Mahima: iPhone 17 Pro EIP $33.54/mo" },
       { name: "Saket (Me)", accountGroup: 'saket', lines: ["Saket", "Home Internet"], lineCharges: 128.61, sharedCostShare: 0, credits: 0, extras: 0, previousDue: 0, total: 128.61, paid: 0, balance: 128.61 },
       { name: "Mainali (Saroj)", accountGroup: 'mainali', lines: ["Saroj"], lineCharges: 59.43, sharedCostShare: 0, credits: 0, extras: 0, previousDue: 0, total: 59.43, paid: 0, balance: 59.43 },
       { name: "Bikas (Damna)", accountGroup: 'bikas', lines: ["Bikas"], lineCharges: 47.63, sharedCostShare: 0, credits: 0, extras: 0, previousDue: 0, total: 47.63, paid: 0, balance: 47.63 },
@@ -1313,7 +1313,7 @@ export const HISTORY: MonthRecord[] = [
     paidBy: 'Sanjay',
     notes: 'Mar 2026 – Ritesh extra equipment $6.84',
     personShares: [
-      { name: "Dari / Sanjay", accountGroup: 'dari', lines: ["Sanjay", "NewLine", "701-412-4006"], lineCharges: 197.27, sharedCostShare: 0, credits: 0, extras: 0, previousDue: 0, total: 197.27, paid: 0, balance: 197.27, notes: "Mahima: iPhone 17 Pro EIP $33.54/mo" },
+      { name: "Dari / Sanjay", accountGroup: 'dari', lines: ["Sanjay", "701-412-4006"], lineCharges: 197.27, sharedCostShare: 0, credits: 0, extras: 0, previousDue: 0, total: 197.27, paid: 0, balance: 197.27, notes: "Mahima: iPhone 17 Pro EIP $33.54/mo" },
       { name: "Saket (Me)", accountGroup: 'saket', lines: ["Saket", "Home Internet"], lineCharges: 128.61, sharedCostShare: 0, credits: 0, extras: 0, previousDue: 0, total: 128.61, paid: 0, balance: 128.61 },
       { name: "Mainali (Saroj)", accountGroup: 'mainali', lines: ["Saroj"], lineCharges: 59.43, sharedCostShare: 0, credits: 0, extras: 0, previousDue: 0, total: 59.43, paid: 0, balance: 59.43 },
       { name: "Bikas (Damna)", accountGroup: 'bikas', lines: ["Bikas"], lineCharges: 47.63, sharedCostShare: 0, credits: 0, extras: 0, previousDue: 0, total: 47.63, paid: 0, balance: 47.63 },
@@ -1331,7 +1331,7 @@ export const HISTORY: MonthRecord[] = [
     paidBy: 'Sanjay',
     notes: 'Apr 2026 – Sapana $50.69 higher (promo credit may not apply)',
     personShares: [
-      { name: "Dari / Sanjay", accountGroup: 'dari', lines: ["Sanjay", "NewLine", "701-412-4006"], lineCharges: 197.23, sharedCostShare: 0, credits: 0, extras: 0, previousDue: 0, total: 197.23, paid: 0, balance: 197.23, notes: "Mahima: iPhone 17 Pro EIP $33.54/mo" },
+      { name: "Dari / Sanjay", accountGroup: 'dari', lines: ["Sanjay", "701-412-4006"], lineCharges: 197.23, sharedCostShare: 0, credits: 0, extras: 0, previousDue: 0, total: 197.23, paid: 0, balance: 197.23, notes: "Mahima: iPhone 17 Pro EIP $33.54/mo" },
       { name: "Saket (Me)", accountGroup: 'saket', lines: ["Saket", "Home Internet"], lineCharges: 128.6, sharedCostShare: 0, credits: 0, extras: 0, previousDue: 0, total: 128.6, paid: 0, balance: 128.6 },
       { name: "Mainali (Saroj)", accountGroup: 'mainali', lines: ["Saroj"], lineCharges: 59.42, sharedCostShare: 0, credits: 0, extras: 0, previousDue: 0, total: 59.42, paid: 0, balance: 59.42 },
       { name: "Bikas (Damna)", accountGroup: 'bikas', lines: ["Bikas"], lineCharges: 47.62, sharedCostShare: 0, credits: 0, extras: 0, previousDue: 0, total: 47.62, paid: 0, balance: 47.62 },
@@ -1349,7 +1349,7 @@ export const HISTORY: MonthRecord[] = [
     paidBy: 'Sanjay',
     notes: 'May 2026 – Sapana $25.69 lower',
     personShares: [
-      { name: "Dari / Sanjay", accountGroup: 'dari', lines: ["Sanjay", "NewLine", "701-412-4006"], lineCharges: 197.23, sharedCostShare: 0, credits: 0, extras: 0, previousDue: 0, total: 197.23, paid: 0, balance: 197.23, notes: "Mahima: iPhone 17 Pro EIP $33.54/mo" },
+      { name: "Dari / Sanjay", accountGroup: 'dari', lines: ["Sanjay", "701-412-4006"], lineCharges: 197.23, sharedCostShare: 0, credits: 0, extras: 0, previousDue: 0, total: 197.23, paid: 0, balance: 197.23, notes: "Mahima: iPhone 17 Pro EIP $33.54/mo" },
       { name: "Saket (Me)", accountGroup: 'saket', lines: ["Saket", "Home Internet"], lineCharges: 128.6, sharedCostShare: 0, credits: 0, extras: 0, previousDue: 0, total: 128.6, paid: 0, balance: 128.6 },
       { name: "Mainali (Saroj)", accountGroup: 'mainali', lines: ["Saroj"], lineCharges: 59.42, sharedCostShare: 0, credits: 0, extras: 0, previousDue: 0, total: 59.42, paid: 0, balance: 59.42 },
       { name: "Bikas (Damna)", accountGroup: 'bikas', lines: ["Bikas"], lineCharges: 47.91, sharedCostShare: 0, credits: 0, extras: 0, previousDue: 0, total: 47.91, paid: 0, balance: 47.91 },

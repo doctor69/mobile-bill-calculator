@@ -6,14 +6,14 @@ export const DEFAULT_CONFIG: AppConfig = {
       name: 'saket',
       displayName: 'Saket (Me)',
       color: '#3b82f6',
-      lines: ['Saket', 'Saket iPhone', 'Dadha Router', 'Home Internet', 'Dada iPhone'],
+      lines: ['Saket', 'Saket iPhone', 'Dadha Router', 'Home Internet', 'Dada iPhone', 'NewLine'],
     },
     {
       name: 'dari',
       displayName: 'Dari / Sanjay / Mahima',
       color: '#10b981',
       lines: ['Sanjay', 'Dari iPhone', 'Dari', 'Dari 2nd iPhone', 'Dari SO iPhone', 'Dari SO',
-              'NewLine', '701-412-4006'],
+              '701-412-4006'],
     },
     {
       name: 'bajpayee',
@@ -128,19 +128,19 @@ export const DEFAULT_CONFIG: AppConfig = {
   ],
 
   lineOwnership: {
-    // Saket's group – includes Home Internet router
+    // Saket's group – includes Home Internet router and NewLine
     'Saket': 'saket',
     'Saket iPhone': 'saket',
     'Dadha Router': 'saket',
     'Home Internet': 'saket',
-    // Dari / Sanjay / Mahima
+    'NewLine': 'saket',
+    // Dari / Sanjay / Mahima (701-412-4006 stays under Dari)
     'Sanjay': 'dari',
     'Dari iPhone': 'dari',
     'Dari': 'dari',
     'Dari 2nd iPhone': 'dari',
     'Dari SO iPhone': 'dari',
     'Dari SO': 'dari',
-    'NewLine': 'dari',
     '701-412-4006': 'dari',
     // Bajpayee family
     'Bajpayee': 'bajpayee',
