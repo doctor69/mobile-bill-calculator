@@ -178,7 +178,19 @@
         "included_in_plan": false,
         "name": "Sanjay",
         "group": "dari",
-        "lineName": "Sanjay"
+        "lineName": "Sanjay",
+        "equipment_detail": [
+          {
+            "device": "iPhone 12 mini - Green - 64GB",
+            "net": 25.04,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 5,
+            "installment_of": 19,
+            "balance": 406.89
+          }
+        ]
       },
       "401-207-7052": {
         "plans": 20.0,
@@ -188,7 +200,19 @@
         "included_in_plan": false,
         "name": "Saket",
         "group": "saket",
-        "lineName": "Saket iPhone"
+        "lineName": "Saket iPhone",
+        "equipment_detail": [
+          {
+            "device": "iPhone 12 mini - White - 64GB",
+            "net": 9.42,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 5,
+            "installment_of": 17,
+            "balance": 351.89
+          }
+        ]
       },
       "401-338-8422": {
         "plans": 20.0,
@@ -743,7 +767,19 @@
         "included_in_plan": true,
         "name": "Sanjay",
         "group": "dari",
-        "lineName": "Sanjay"
+        "lineName": "Sanjay",
+        "equipment_detail": [
+          {
+            "device": "iPhone 14 Pro Max",
+            "net": 21.25,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 20,
+            "installment_of": 24,
+            "balance": 229.03
+          }
+        ]
       },
       "401-207-7052": {
         "plans": 0.0,
@@ -817,7 +853,19 @@
         "included_in_plan": true,
         "name": "Saroj/Mainali",
         "group": "mainali",
-        "lineName": "Mainali iPhone"
+        "lineName": "Mainali iPhone",
+        "equipment_detail": [
+          {
+            "device": "iPhone 13",
+            "net": 6.0,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 29,
+            "installment_of": 30,
+            "balance": 53.23
+          }
+        ]
       },
       "701-415-5731": {
         "plans": 0.0,
@@ -1904,7 +1952,19 @@
         "included_in_plan": true,
         "name": "Chiranjiwi",
         "group": "chiranjiwi",
-        "lineName": "Chiranjiwi"
+        "lineName": "Chiranjiwi",
+        "equipment_detail": [
+          {
+            "device": "iPhone 12 Pro",
+            "net": 14.37,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 13,
+            "installment_of": 23,
+            "balance": 383.28
+          }
+        ]
       },
       "617-955-9929": {
         "plans": 0.0,
@@ -1968,7 +2028,19 @@
         "included_in_plan": true,
         "name": "Dari-old",
         "group": "dari",
-        "lineName": "Dari"
+        "lineName": "Dari",
+        "equipment_detail": [
+          {
+            "device": "iPhone 12 mini",
+            "net": 17.92,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 16,
+            "installment_of": 24,
+            "balance": 243.27
+          }
+        ]
       }
     },
     "group_totals": {
@@ -3113,7 +3185,19 @@
         "included_in_plan": false,
         "name": "Sanjay",
         "group": "dari",
-        "lineName": "Sanjay"
+        "lineName": "Sanjay",
+        "equipment_detail": [
+          {
+            "device": "iPhone 12 mini - Green - 64GB",
+            "net": 25.04,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 1,
+            "installment_of": 24,
+            "balance": 699.57
+          }
+        ]
       },
       "401-207-7052": {
         "plans": 20.0,
@@ -3624,6 +3708,16 @@
             "installment_num": 25,
             "installment_of": 30,
             "balance": 159.91
+          },
+          {
+            "device": "Incoming F 31 - Totals 721",
+            "net": 0.0,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
           }
         ]
       },
@@ -3766,6 +3860,16 @@
           {
             "device": "Talk: 1 mins",
             "net": 0.25,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "State & Local Sales Tax",
+            "net": 0.02,
             "gross": null,
             "promo_credit": null,
             "promo_name": null,
@@ -4501,6 +4605,16 @@
         "lineName": "Sanjay",
         "equipment_detail": [
           {
+            "device": "iPhone 12 mini - Green - 64GB",
+            "net": 25.04,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 3,
+            "installment_of": 19,
+            "balance": 467.73
+          },
+          {
             "device": "Talk: 6 mins",
             "net": 30.0,
             "gross": null,
@@ -4574,6 +4688,16 @@
           {
             "device": "State Gross Receipts Tax",
             "net": 0.16,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "Federal Universal Service Fund",
+            "net": 0.25,
             "gross": null,
             "promo_credit": null,
             "promo_name": null,
@@ -5128,7 +5252,19 @@
         "included_in_plan": true,
         "name": "Bikas",
         "group": "bikas",
-        "lineName": "Bikas"
+        "lineName": "Bikas",
+        "equipment_detail": [
+          {
+            "device": "razr - 2024",
+            "net": 2.16,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 5,
+            "installment_of": 24,
+            "balance": 460.0
+          }
+        ]
       },
       "857-205-9815": {
         "plans": 0.0,
@@ -5168,7 +5304,19 @@
         "included_in_plan": false,
         "name": "Sapana",
         "group": "bajpayee",
-        "lineName": "Sapana iPhone"
+        "lineName": "Sapana iPhone",
+        "equipment_detail": [
+          {
+            "device": "iPhone 16 Pro Max - Desert Titanium - 256GB",
+            "net": 37.5,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 2,
+            "installment_of": 24,
+            "balance": 1149.99
+          }
+        ]
       },
       "863-449-8681": {
         "plans": 55.0,
@@ -5404,6 +5552,16 @@
         "lineName": "Saket iPhone",
         "equipment_detail": [
           {
+            "device": "iPhone 12 mini - White - 64GB",
+            "net": 9.42,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 2,
+            "installment_of": 17,
+            "balance": 443.15
+          },
+          {
             "device": "Equipment Protection Credit",
             "net": -1.2,
             "gross": null,
@@ -5523,7 +5681,19 @@
         "included_in_plan": true,
         "name": "Bikas",
         "group": "bikas",
-        "lineName": "Bikas"
+        "lineName": "Bikas",
+        "equipment_detail": [
+          {
+            "device": "iPhone 13",
+            "net": 5.83,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 2,
+            "installment_of": 30,
+            "balance": 746.65
+          }
+        ]
       },
       "857-205-9815": {
         "plans": 0.0,
@@ -5662,7 +5832,19 @@
         "included_in_plan": true,
         "name": "Sanjay",
         "group": "dari",
-        "lineName": "Sanjay"
+        "lineName": "Sanjay",
+        "equipment_detail": [
+          {
+            "device": "iPhone 14 Pro Max",
+            "net": 21.25,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 5,
+            "installment_of": 24,
+            "balance": 870.79
+          }
+        ]
       },
       "401-207-7052": {
         "plans": 0.0,
@@ -5716,7 +5898,19 @@
         "included_in_plan": true,
         "name": "Bikas",
         "group": "bikas",
-        "lineName": "Bikas"
+        "lineName": "Bikas",
+        "equipment_detail": [
+          {
+            "device": "iPhone 13",
+            "net": 5.83,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 14,
+            "installment_of": 30,
+            "balance": 426.61
+          }
+        ]
       },
       "857-205-9815": {
         "plans": 0.0,
@@ -5736,7 +5930,19 @@
         "included_in_plan": true,
         "name": "Saroj/Mainali",
         "group": "mainali",
-        "lineName": "Mainali iPhone"
+        "lineName": "Mainali iPhone",
+        "equipment_detail": [
+          {
+            "device": "iPhone 13",
+            "net": 6.0,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 14,
+            "installment_of": 30,
+            "balance": 426.61
+          }
+        ]
       },
       "701-415-5731": {
         "plans": 0.0,
@@ -6129,7 +6335,19 @@
         "included_in_plan": true,
         "name": "Bikas",
         "group": "bikas",
-        "lineName": "Bikas"
+        "lineName": "Bikas",
+        "equipment_detail": [
+          {
+            "device": "razr - 2024",
+            "net": 2.16,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 4,
+            "installment_of": 24,
+            "balance": 483.0
+          }
+        ]
       },
       "857-205-9815": {
         "plans": 0.0,
@@ -6169,7 +6387,19 @@
         "included_in_plan": false,
         "name": "Sapana",
         "group": "bajpayee",
-        "lineName": "Sapana iPhone"
+        "lineName": "Sapana iPhone",
+        "equipment_detail": [
+          {
+            "device": "iPhone 16 Pro Max - Desert Titanium - 256GB",
+            "net": 37.5,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 1,
+            "installment_of": 24,
+            "balance": 1199.99
+          }
+        ]
       },
       "863-449-8681": {
         "plans": 55.0,
@@ -7111,6 +7341,16 @@
             "installment_num": null,
             "installment_of": null,
             "balance": null
+          },
+          {
+            "device": "Federal Universal Service Fund",
+            "net": 0.16,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
           }
         ]
       }
@@ -7156,7 +7396,19 @@
         "included_in_plan": true,
         "name": "Sanjay",
         "group": "dari",
-        "lineName": "Sanjay"
+        "lineName": "Sanjay",
+        "equipment_detail": [
+          {
+            "device": "iPhone 14 Pro Max",
+            "net": 21.25,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 11,
+            "installment_of": 24,
+            "balance": 641.59
+          }
+        ]
       },
       "401-207-7052": {
         "plans": 0.0,
@@ -7210,7 +7462,19 @@
         "included_in_plan": true,
         "name": "Bikas",
         "group": "bikas",
-        "lineName": "Bikas"
+        "lineName": "Bikas",
+        "equipment_detail": [
+          {
+            "device": "iPhone 13",
+            "net": 6.0,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 20,
+            "installment_of": 30,
+            "balance": 293.26
+          }
+        ]
       },
       "857-205-9815": {
         "plans": 0.0,
@@ -7857,7 +8121,19 @@
         "included_in_plan": true,
         "name": "Sanjay",
         "group": "dari",
-        "lineName": "Sanjay"
+        "lineName": "Sanjay",
+        "equipment_detail": [
+          {
+            "device": "iPhone 12 mini",
+            "net": 11.43,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 19,
+            "installment_of": 24,
+            "balance": 0.0
+          }
+        ]
       },
       "401-207-7052": {
         "plans": 0.0,
@@ -7965,7 +8241,19 @@
         "included_in_plan": true,
         "name": "Dari-old",
         "group": "dari",
-        "lineName": "Dari"
+        "lineName": "Dari",
+        "equipment_detail": [
+          {
+            "device": "iPhone 12 mini",
+            "net": 17.92,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 14,
+            "installment_of": 24,
+            "balance": 304.11
+          }
+        ]
       }
     },
     "group_totals": {
@@ -8272,7 +8560,19 @@
         "included_in_plan": true,
         "name": "Sanjay",
         "group": "dari",
-        "lineName": "Sanjay"
+        "lineName": "Sanjay",
+        "equipment_detail": [
+          {
+            "device": "iPhone 14 Pro Max",
+            "net": 21.25,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 22,
+            "installment_of": 24,
+            "balance": 137.35
+          }
+        ]
       },
       "401-207-7052": {
         "plans": 0.0,
@@ -9206,7 +9506,29 @@
         "included_in_plan": true,
         "name": "Bikas",
         "group": "bikas",
-        "lineName": "Bikas"
+        "lineName": "Bikas",
+        "equipment_detail": [
+          {
+            "device": "iPhone 13",
+            "net": 5.83,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 4,
+            "installment_of": 30,
+            "balance": 693.31
+          },
+          {
+            "device": "to Cambridge/MA F 1 - Totals 1,633",
+            "net": 0.0,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          }
+        ]
       },
       "857-205-9815": {
         "plans": 0.0,
@@ -9367,7 +9689,19 @@
         "included_in_plan": true,
         "name": "Saket",
         "group": "saket",
-        "lineName": "Saket iPhone"
+        "lineName": "Saket iPhone",
+        "equipment_detail": [
+          {
+            "device": "iPhone 14 Pro Max",
+            "net": 21.25,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 7,
+            "installment_of": 24,
+            "balance": 824.95
+          }
+        ]
       },
       "401-338-8422": {
         "plans": 0.0,
@@ -9377,7 +9711,19 @@
         "included_in_plan": true,
         "name": "Chiranjiwi",
         "group": "chiranjiwi",
-        "lineName": "Chiranjiwi"
+        "lineName": "Chiranjiwi",
+        "equipment_detail": [
+          {
+            "device": "iPhone 12 Pro",
+            "net": 14.37,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 20,
+            "installment_of": 23,
+            "balance": 133.26
+          }
+        ]
       },
       "617-955-9929": {
         "plans": 0.0,
@@ -9824,7 +10170,19 @@
         "included_in_plan": true,
         "name": "Bikas",
         "group": "bikas",
-        "lineName": "Bikas"
+        "lineName": "Bikas",
+        "equipment_detail": [
+          {
+            "device": "razr - 2024",
+            "net": 2.16,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 6,
+            "installment_of": 24,
+            "balance": 437.0
+          }
+        ]
       },
       "857-205-9815": {
         "plans": 0.0,
@@ -9864,7 +10222,19 @@
         "included_in_plan": false,
         "name": "Sapana",
         "group": "bajpayee",
-        "lineName": "Sapana iPhone"
+        "lineName": "Sapana iPhone",
+        "equipment_detail": [
+          {
+            "device": "iPhone 16 Pro Max - Desert Titanium - 256GB",
+            "net": 37.5,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 3,
+            "installment_of": 24,
+            "balance": 1099.99
+          }
+        ]
       },
       "863-449-8681": {
         "plans": 55.0,
@@ -10258,6 +10628,16 @@
             "installment_num": null,
             "installment_of": null,
             "balance": null
+          },
+          {
+            "device": "Federal Universal Service Fund",
+            "net": 0.12,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
           }
         ]
       }
@@ -10325,7 +10705,19 @@
         "included_in_plan": true,
         "name": "Saket",
         "group": "saket",
-        "lineName": "Saket iPhone"
+        "lineName": "Saket iPhone",
+        "equipment_detail": [
+          {
+            "device": "iPhone 14 Pro Max",
+            "net": 21.25,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 9,
+            "installment_of": 24,
+            "balance": 733.27
+          }
+        ]
       },
       "401-338-8422": {
         "plans": 0.0,
@@ -10335,7 +10727,19 @@
         "included_in_plan": true,
         "name": "Chiranjiwi",
         "group": "chiranjiwi",
-        "lineName": "Chiranjiwi"
+        "lineName": "Chiranjiwi",
+        "equipment_detail": [
+          {
+            "device": "iPhone 12 Pro",
+            "net": 14.37,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 22,
+            "installment_of": 23,
+            "balance": 49.92
+          }
+        ]
       },
       "617-955-9929": {
         "plans": 0.0,
@@ -10501,7 +10905,19 @@
         "included_in_plan": true,
         "name": "Sanjay",
         "group": "dari",
-        "lineName": "Sanjay"
+        "lineName": "Sanjay",
+        "equipment_detail": [
+          {
+            "device": "iPhone 14 Pro Max",
+            "net": 21.25,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 21,
+            "installment_of": 24,
+            "balance": 183.19
+          }
+        ]
       },
       "401-207-7052": {
         "plans": 0.0,
@@ -11516,7 +11932,19 @@
         "included_in_plan": true,
         "name": "Dari-old",
         "group": "dari",
-        "lineName": "Dari"
+        "lineName": "Dari",
+        "equipment_detail": [
+          {
+            "device": "iPhone 12 mini - White - 64GB",
+            "net": 17.92,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 7,
+            "installment_of": 24,
+            "balance": 517.05
+          }
+        ]
       }
     },
     "group_totals": {
@@ -11680,6 +12108,16 @@
           {
             "device": "State Gross Receipts Tax",
             "net": 0.08,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": null,
+            "installment_of": null,
+            "balance": null
+          },
+          {
+            "device": "Federal Universal Service Fund",
+            "net": 0.14,
             "gross": null,
             "promo_credit": null,
             "promo_name": null,
@@ -12829,7 +13267,19 @@
         "included_in_plan": true,
         "name": "Dari-old",
         "group": "dari",
-        "lineName": "Dari"
+        "lineName": "Dari",
+        "equipment_detail": [
+          {
+            "device": "iPhone 12 mini - White - 64GB",
+            "net": 17.92,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 6,
+            "installment_of": 24,
+            "balance": 547.47
+          }
+        ]
       }
     },
     "group_totals": {
@@ -13207,7 +13657,19 @@
         "included_in_plan": true,
         "name": "Bikas",
         "group": "bikas",
-        "lineName": "Bikas"
+        "lineName": "Bikas",
+        "equipment_detail": [
+          {
+            "device": "razr - 2024",
+            "net": 2.16,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 1,
+            "installment_of": 24,
+            "balance": 552.0
+          }
+        ]
       },
       "857-205-9815": {
         "plans": 0.0,
@@ -14045,6 +14507,16 @@
         "lineName": "Dari",
         "equipment_detail": [
           {
+            "device": "iPhone 12 mini - White - 64GB",
+            "net": 17.92,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 5,
+            "installment_of": 24,
+            "balance": 577.89
+          },
+          {
             "device": "Talk: 1 mins",
             "net": 3.0,
             "gross": null,
@@ -14199,7 +14671,19 @@
         "included_in_plan": true,
         "name": "Sanjay",
         "group": "dari",
-        "lineName": "Sanjay"
+        "lineName": "Sanjay",
+        "equipment_detail": [
+          {
+            "device": "iPhone 14 Pro Max",
+            "net": 21.25,
+            "gross": null,
+            "promo_credit": null,
+            "promo_name": null,
+            "installment_num": 13,
+            "installment_of": 24,
+            "balance": 549.91
+          }
+        ]
       },
       "401-207-7052": {
         "plans": 0.0,
