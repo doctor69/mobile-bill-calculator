@@ -47,68 +47,31 @@ export const DEFAULT_CONFIG: AppConfig = {
     },
   ],
 
-  // ── iPhone trade-in credits (from Monthly Bill Targets table) ─────────────
-  // Each group got their own trade-in credit from T-Mobile, 24 months (Jul 2024 – Jun 2026).
-  // Amounts: Bajpayee $1,200 · Dari $1,000 · Mainali $830 · Saket $1,000
-  // Ratio column (7:5:4:5) in the table shows relative shares, not line counts.
+  // ── iPhone trade-in credits — NOT in creditConfigs (would double-count) ────
+  // T-Mobile bills show NET equipment costs (installment minus trade-in already deducted).
+  // parser.ts extracts those net amounts directly. Adding creditConfigs here would
+  // double-subtract the trade-in and undercharge everyone.
   //
-  // ── Sapana line billing correction (T-Mobile error, 24 months) ─────────────
+  // Actual credits per PDF analysis (reference only):
+  //   Saket  (401-207-7052) iPhone 16 Pro: $20.63/mo R120, May 2025–Apr 2027
+  //   Sanjay (208-840-1299) iPhone 16 Pro: $20.63/mo R120, May 2025–Apr 2027
+  //   Saroj  (857-264-9862) iPhone 16:     $20.63/mo R116, May 2025–Apr 2027
+  //   Manoj  (407-416-5178) iPhone:        $23.96/mo R120, May 2025–Apr 2027
+  //   Bikas  (617-955-9929) razr 2024:     $20.84/mo P896, Oct 2024–Sep 2026
+  //   Sapana (252-350-3063) iPhone 16:     $12.50/mo P807, Jan 2025–Dec 2026
+  //   Mahima (701-412-4006) iPhone 17 Pro: $12.30/mo R451, Jan 2026–Dec 2027
+  //
+  // ── Sapana line billing correction (T-Mobile error, Jan 2024 – Dec 2025) ────
   // Sapana's line should cost $50/mo gross, with $12.50 T-Mobile credit → net $37.50 to Bajpayee.
   // Due to a T-Mobile billing error, Sapana's line shows only credits (no charge), while
   // $37.50 of credits that belonged to Saket/Dari/Bajpayee/Mainali were misapplied there.
   // Fix: charge Bajpayee $37.50/mo AND distribute the $37.50 back by ratio 7:5:4:5 (total 21):
   //   Bajpayee (7/21): +$12.50 credit  →  net for Bajpayee: −$37.50 + $12.50 = −$25.00/mo
-  //   Saket    (5/21): +$8.93 credit
-  //   Dari     (5/21): +$8.93 credit
-  //   Mainali  (4/21): +$7.14 credit
-  //   Total credits = $12.50 + $8.93 + $8.93 + $7.14 = $37.50 ✓
+  //   Saket    (5/21): +$8.95 credit
+  //   Dari     (5/21): +$8.95 credit
+  //   Mainali  (4/21): +$7.10 credit
+  //   Total credits = $12.50 + $8.95 + $8.95 + $7.10 = $37.50 ✓
   creditConfigs: [
-    // ── iPhone trade-in credits ──
-    {
-      accountGroup: 'saket',
-      description: 'Saket iPhone trade-in credit (24 mo)',
-      totalCredit: 1000,
-      monthlyCredit: 41.67,
-      startDate: '2024-07',
-      endDate: '2026-06',
-      appliedTo: ['Saket'],
-    },
-    {
-      accountGroup: 'dari',
-      description: 'Dari/Sanjay iPhone trade-in credit (24 mo)',
-      totalCredit: 1000,
-      monthlyCredit: 41.67,
-      startDate: '2024-07',
-      endDate: '2026-06',
-      appliedTo: ['Sanjay', 'Dari iPhone'],
-    },
-    {
-      accountGroup: 'bajpayee',
-      description: 'Bajpayee iPhone trade-in credit (24 mo)',
-      totalCredit: 1200,
-      monthlyCredit: 50.00,
-      startDate: '2024-07',
-      endDate: '2026-06',
-      appliedTo: ['Bajpayee iPhone'],
-    },
-    {
-      accountGroup: 'mainali',
-      description: 'Mainali iPhone trade-in credit (24 mo)',
-      totalCredit: 830,
-      monthlyCredit: 34.58,
-      startDate: '2024-07',
-      endDate: '2026-06',
-      appliedTo: ['Mainali iPhone'],
-    },
-    {
-      accountGroup: 'bikas',
-      description: 'Bikas iPhone trade-in credit (24 mo)',
-      totalCredit: 315,
-      monthlyCredit: 13.13,
-      startDate: '2024-07',
-      endDate: '2026-06',
-      appliedTo: ['Bikas iPhone'],
-    },
     // ── Sapana line billing correction (T-Mobile error, Jan 2024 – Dec 2025) ──
     {
       accountGroup: 'bajpayee',

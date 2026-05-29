@@ -4,13 +4,16 @@ interface Props {
   config: AppConfig;
 }
 
-// iPhone trade-in credits — separate per group, 24 months Jul 2024–Jun 2026
+// iPhone trade-in credits — from PDF analysis (already baked into T-Mobile bill net amounts)
+// These are NOT applied as creditConfigs because the parser extracts net equipment costs directly.
 const IPHONE_CREDITS = [
-  { account: 'Bajpayee',   totalCredit: 1200, monthlyCredit: 50.00, months: 24 },
-  { account: 'Dari',       totalCredit: 1000, monthlyCredit: 41.67, months: 24 },
-  { account: 'Mainali',    totalCredit:  830, monthlyCredit: 34.58, months: 24 },
-  { account: 'Saket (Me)', totalCredit: 1000, monthlyCredit: 41.67, months: 24 },
-  { account: 'Bikas',      totalCredit:  315, monthlyCredit: 13.13, months: 24 },
+  { account: 'Saket (Me)',    line: '401-207-7052', device: 'iPhone 16 Pro', creditPerMo: 20.63, start: '2025-05', months: 24 },
+  { account: 'Dari / Sanjay', line: '208-840-1299', device: 'iPhone 16 Pro', creditPerMo: 20.63, start: '2025-05', months: 24 },
+  { account: 'Mainali',       line: '857-264-9862', device: 'iPhone 16',     creditPerMo: 20.63, start: '2025-05', months: 24 },
+  { account: 'Bajpayee (Manoj)', line: '407-416-5178', device: 'iPhone',     creditPerMo: 23.96, start: '2025-05', months: 24 },
+  { account: 'Bikas',         line: '617-955-9929', device: 'razr 2024',     creditPerMo: 20.84, start: '2024-10', months: 24 },
+  { account: 'Sapana (Bajpayee)', line: '252-350-3063', device: 'iPhone 16', creditPerMo: 12.50, start: '2025-01', months: 24 },
+  { account: 'Mahima (Dari)', line: '701-412-4006', device: 'iPhone 17 Pro', creditPerMo: 12.30, start: '2026-01', months: 24 },
 ];
 
 // Sapana billing correction — charge Bajpayee $37.50/mo, then distribute back by ratio 7:5:4:5
@@ -34,45 +37,41 @@ export default function CreditConfig({ config }: Props) {
 
         <div className="p-6 space-y-6">
 
-          {/* ── Section 1: iPhone Trade-In Credits ── */}
+          {/* ── Section 1: iPhone Trade-In Credits (reference) ── */}
           <div>
-            <h3 className="text-sm font-semibold text-gray-700 mb-2">
-              1 · iPhone Trade-In Credits
-              <span className="ml-2 text-xs font-normal text-gray-400">Jul 2024 – Jun 2026 · 24 months · per group</span>
+            <h3 className="text-sm font-semibold text-gray-700 mb-1">
+              1 · iPhone Device Trade-In Credits
+              <span className="ml-2 text-xs font-normal text-gray-400">reference only — already baked into T-Mobile bill net amounts</span>
             </h3>
+            <p className="text-xs text-gray-500 mb-3">
+              T-Mobile shows NET equipment costs (installment minus trade-in). The app reads those net amounts directly.
+              These credits are <strong>not</strong> applied separately — doing so would double-count them.
+            </p>
             <div className="border border-gray-200 rounded-lg overflow-hidden">
               <table className="w-full text-sm">
                 <thead>
                   <tr className="bg-gray-50 border-b border-gray-100">
                     <th className="px-4 py-2 text-left   text-gray-500 font-medium text-xs">Account</th>
-                    <th className="px-4 py-2 text-right  text-gray-500 font-medium text-xs">Total Credit</th>
-                    <th className="px-4 py-2 text-right  text-gray-500 font-medium text-xs">Months</th>
+                    <th className="px-4 py-2 text-left   text-gray-500 font-medium text-xs">Device</th>
                     <th className="px-4 py-2 text-right  text-gray-500 font-medium text-xs">Credit / mo</th>
+                    <th className="px-4 py-2 text-right  text-gray-500 font-medium text-xs">Start</th>
+                    <th className="px-4 py-2 text-right  text-gray-500 font-medium text-xs">End (24 mo)</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-100">
                   {IPHONE_CREDITS.map((row) => (
                     <tr key={row.account}>
                       <td className="px-4 py-2 font-medium">{row.account}</td>
-                      <td className="px-4 py-2 text-right font-mono text-green-600">
-                        ${row.totalCredit.toLocaleString()}
-                      </td>
-                      <td className="px-4 py-2 text-right font-mono text-gray-500">{row.months}</td>
+                      <td className="px-4 py-2 text-gray-600">{row.device}</td>
                       <td className="px-4 py-2 text-right font-mono text-emerald-600">
-                        ${row.monthlyCredit.toFixed(2)}/mo
+                        ${row.creditPerMo.toFixed(2)}/mo
+                      </td>
+                      <td className="px-4 py-2 text-right font-mono text-gray-500">{row.start}</td>
+                      <td className="px-4 py-2 text-right font-mono text-gray-500">
+                        {endDate(row.start, row.months)}
                       </td>
                     </tr>
                   ))}
-                  <tr className="bg-gray-50 font-semibold text-xs text-gray-600">
-                    <td className="px-4 py-2">Total</td>
-                    <td className="px-4 py-2 text-right font-mono text-green-600">
-                      ${IPHONE_CREDITS.reduce((s, r) => s + r.totalCredit, 0).toLocaleString()}
-                    </td>
-                    <td className="px-4 py-2" />
-                    <td className="px-4 py-2 text-right font-mono text-emerald-600">
-                      ${IPHONE_CREDITS.reduce((s, r) => s + r.monthlyCredit, 0).toFixed(2)}/mo
-                    </td>
-                  </tr>
                 </tbody>
               </table>
             </div>
