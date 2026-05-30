@@ -29,6 +29,7 @@ jobs:
           PUBLIC_GIST_ID: ${{ secrets.GIST_ID }}
           PUBLIC_GITHUB_PAT: ${{ secrets.GIST_PAT }}
           PUBLIC_SAVE_PIN: ${{ secrets.SAVE_PIN }}
+          PUBLIC_GROUP_PINS: ${{ secrets.GROUP_PINS }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
