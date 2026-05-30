@@ -392,8 +392,12 @@ function BalanceSection({ records, payments, onPayClick }: BalanceSectionProps) 
     const owedSaket  = group === 'saket' ? 0 : (sd?.total ?? 0);
     const owedSanjay = group === 'dari'  ? 0 : (jd?.total ?? 0);
 
-    // Paid to Saket = historical Excel data + live recorded payments
-    const paidSaket  = (TOTAL_PAID[group] ?? 0) + (liveToSaket.get(group) ?? 0);
+    // Only count Excel TOTAL_PAID when the group actually owes Saket.
+    // If owedSaket = 0 (e.g. saket group is the payer), TOTAL_PAID would be a phantom
+    // payment that inflates "Paid" without reducing any balance — breaking the accounting.
+    const paidSaket  = owedSaket > 0
+      ? (TOTAL_PAID[group] ?? 0) + (liveToSaket.get(group) ?? 0)
+      : (liveToSaket.get(group) ?? 0);
     const paidSanjay = liveToSanjay.get(group) ?? 0;
 
     const balSaket  = Math.max(0, owedSaket  - paidSaket);
@@ -442,7 +446,7 @@ function BalanceSection({ records, payments, onPayClick }: BalanceSectionProps) 
             <div className="text-sm font-bold text-white">${totalOwedAll.toFixed(0)}</div>
           </div>
           <div className="bg-white/10 rounded-xl px-3 py-2 text-center">
-            <div className="text-xs text-gray-400">Paid (Excel)</div>
+            <div className="text-xs text-gray-400">Total Paid</div>
             <div className="text-sm font-bold text-green-400">${totalPaidAll.toFixed(0)}</div>
           </div>
           <div className="bg-blue-500/20 rounded-xl px-3 py-2 text-center border border-blue-500/30">
@@ -500,7 +504,7 @@ function BalanceSection({ records, payments, onPayClick }: BalanceSectionProps) 
                     ) : (
                       <div>
                         <div className="text-sm font-black text-blue-700">${row.balSaket.toFixed(2)}</div>
-                        <div className="text-xs text-gray-400">of ${row.owedSaket.toFixed(0)} owed</div>
+                        <div className="text-xs text-gray-400">of ${row.owedSaket.toFixed(2)} owed</div>
                       </div>
                     )}
                   </div>
@@ -516,7 +520,7 @@ function BalanceSection({ records, payments, onPayClick }: BalanceSectionProps) 
                     ) : (
                       <div>
                         <div className="text-sm font-black text-emerald-700">${row.balSanjay.toFixed(2)}</div>
-                        <div className="text-xs text-gray-400">of ${row.owedSanjay.toFixed(0)} owed</div>
+                        <div className="text-xs text-gray-400">of ${row.owedSanjay.toFixed(2)} owed</div>
                       </div>
                     )}
                   </div>
@@ -530,6 +534,7 @@ function BalanceSection({ records, payments, onPayClick }: BalanceSectionProps) 
                         Paid ${Math.min(row.paidSaket, row.owedSaket).toFixed(0)} / ${row.owedSaket.toFixed(0)}
                         <span className="ml-1 text-gray-300">({saketPaidPct.toFixed(0)}%)</span>
                       </div>
+                      {/* green = paid, blue = still owed to Saket */}
                       <div className="w-full bg-gray-100 rounded-full h-1.5 overflow-hidden flex">
                         <div className="h-full bg-green-400 rounded-l-full" style={{ width: `${saketPaidPct}%` }} />
                         {saketPaidPct < 100 && (
@@ -544,10 +549,11 @@ function BalanceSection({ records, payments, onPayClick }: BalanceSectionProps) 
                         Paid ${Math.min(row.paidSanjay, row.owedSanjay).toFixed(0)} / ${row.owedSanjay.toFixed(0)}
                         <span className="ml-1 text-gray-300">({sanjayPaidPct.toFixed(0)}%)</span>
                       </div>
-                      <div className="w-full bg-gray-100 rounded-full h-1.5 overflow-hidden flex">
+                      {/* green = paid, amber = still owed to Sanjay (distinct from green-paid) */}
+                      <div className="w-full bg-amber-100 rounded-full h-1.5 overflow-hidden flex">
                         <div className="h-full bg-green-400 rounded-l-full" style={{ width: `${sanjayPaidPct}%` }} />
                         {sanjayPaidPct < 100 && (
-                          <div className="h-full bg-emerald-300" style={{ width: `${100 - sanjayPaidPct}%` }} />
+                          <div className="h-full bg-amber-300" style={{ width: `${100 - sanjayPaidPct}%` }} />
                         )}
                       </div>
                     </div>
