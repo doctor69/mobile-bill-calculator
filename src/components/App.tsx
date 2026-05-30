@@ -14,7 +14,7 @@ import CreditConfig from './CreditConfig';
 import Dashboard from './Dashboard';
 import PinDialog from './PinDialog';
 import PaymentModal from './PaymentModal';
-import { isGistEnabled, loadFromGist, saveToGist } from '../lib/gistStorage';
+import { isGistEnabled, loadFromGist, saveToGist, savePaymentToGist, hasGroupPin } from '../lib/gistStorage';
 
 type Tab = 'dashboard' | 'upload' | 'history' | 'credits';
 
@@ -296,7 +296,11 @@ export default function App() {
         ...pendingPayDraft,
       };
       const updatedPayments = [...payments, newPayment];
-      const result = await saveToGist({ records: savedRecords, payments: updatedPayments }, pin);
+      const result = await savePaymentToGist(
+        { records: savedRecords, payments: updatedPayments },
+        pendingPayDraft.fromGroup,
+        pin,
+      );
       if (result === 'ok') {
         setPayments(updatedPayments);
         setPendingPayDraft(null);
@@ -478,10 +482,17 @@ export default function App() {
           }
           description={
             pinDialog === 'migrate'
-              ? 'This will write all records to the Gist as the permanent store. Enter your PIN to confirm.'
+              ? 'This will write all records to the Gist as the permanent store. Enter your master PIN to confirm.'
               : pinDialog === 'payment'
-              ? `Enter the shared PIN to record this payment of $${pendingPayDraft?.amount.toFixed(2) ?? '0.00'} to ${pendingPayDraft?.toPayee === 'saket' ? 'Saket' : 'Sanjay'}.`
-              : "Enter the shared PIN to persist this month's record."
+              ? (() => {
+                  const group = pendingPayDraft?.fromGroup ?? '';
+                  const amt = pendingPayDraft?.amount.toFixed(2) ?? '0.00';
+                  const payee = pendingPayDraft?.toPayee === 'saket' ? 'Saket' : 'Sanjay';
+                  return hasGroupPin(group)
+                    ? `Enter your group PIN (or master PIN) to record this $${amt} payment to ${payee}.`
+                    : `Enter the master PIN to record this $${amt} payment to ${payee}.`;
+                })()
+              : "Enter the master PIN to persist this month's record."
           }
           confirmLabel={pinDialog === 'migrate' ? 'Migrate' : pinDialog === 'payment' ? 'Record Payment' : 'Sync'}
           onConfirm={handlePinConfirm}
