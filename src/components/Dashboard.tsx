@@ -1,10 +1,13 @@
 import { useState, useMemo, useEffect } from 'react';
-import type { MonthRecord, PersonShare, PersonShareLineItem } from '../lib/types';
+import type { MonthRecord, PersonShare, PersonShareLineItem, Payment, PayClickData } from '../lib/types';
 import { getPersonTotal } from '../lib/calculator';
 import { TOTAL_PAID } from '../lib/paymentsData';
+import { isGistEnabled } from '../lib/gistStorage';
 
 interface Props {
   records: MonthRecord[];
+  payments: Payment[];
+  onPayClick: (data: PayClickData) => void;
 }
 
 const GROUP_ACCENT: Record<string, { bg: string; border: string; text: string; dot: string; bar: string; balanceBg: string }> = {
@@ -194,7 +197,7 @@ function PersonCard({ person, maxAmount }: { person: PersonShare; maxAmount: num
   );
 }
 
-export default function Dashboard({ records }: Props) {
+export default function Dashboard({ records, payments, onPayClick }: Props) {
   const sorted = useMemo(
     () => [...records].sort((a, b) => b.month.localeCompare(a.month)),
     [records]
@@ -236,7 +239,7 @@ export default function Dashboard({ records }: Props) {
   return (
     <div className="space-y-6">
       {/* ── BALANCE OVERVIEW (Left to Pay) ── */}
-      <BalanceSection records={sorted} />
+      <BalanceSection records={sorted} payments={payments} onPayClick={onPayClick} />
 
       {/* ── MONTH NAVIGATION ── */}
       <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-4">
@@ -333,16 +336,25 @@ export default function Dashboard({ records }: Props) {
 interface BalanceData {
   accountGroup: string;
   name: string;
-  monthsSaket: number;   // months where Saket paid T-Mobile
-  monthsSanjay: number;  // months where Sanjay paid T-Mobile
-  owedSaket: number;     // charges in Saket-paid months (excl. saket group itself)
-  owedSanjay: number;    // charges in Sanjay-paid months (excl. dari group itself)
-  paid: number;          // total paid to Saket (from Excel)
-  balSaket: number;      // still owed to Saket
-  balSanjay: number;     // still owed to Sanjay
+  monthsSaket: number;
+  monthsSanjay: number;
+  owedSaket: number;
+  owedSanjay: number;
+  paidSaket: number;
+  paidSanjay: number;
+  balSaket: number;
+  balSanjay: number;
 }
 
-function BalanceSection({ records }: { records: MonthRecord[] }) {
+interface BalanceSectionProps {
+  records: MonthRecord[];
+  payments: Payment[];
+  onPayClick: (data: PayClickData) => void;
+}
+
+function BalanceSection({ records, payments, onPayClick }: BalanceSectionProps) {
+  const canPay = isGistEnabled();
+
   // Bucket every group's charges by who paid T-Mobile that month
   const bySaket  = new Map<string, { name: string; total: number; months: number }>();
   const bySanjay = new Map<string, { name: string; total: number; months: number }>();
@@ -362,19 +374,30 @@ function BalanceSection({ records }: { records: MonthRecord[] }) {
   const allGroups = new Set([...bySaket.keys(), ...bySanjay.keys()]);
   if (allGroups.size === 0) return null;
 
+  // Sum live payments by group + payee
+  const liveToSaket  = new Map<string, number>();
+  const liveToSanjay = new Map<string, number>();
+  for (const p of payments) {
+    if (p.toPayee === 'saket') {
+      liveToSaket.set(p.fromGroup, (liveToSaket.get(p.fromGroup) ?? 0) + p.amount);
+    } else {
+      liveToSanjay.set(p.fromGroup, (liveToSanjay.get(p.fromGroup) ?? 0) + p.amount);
+    }
+  }
+
   const rows: BalanceData[] = Array.from(allGroups).map((group) => {
     const sd = bySaket.get(group);
     const jd = bySanjay.get(group);
-    const paid = TOTAL_PAID[group] ?? 0;
 
-    // Saket doesn't owe himself; Dari/Sanjay doesn't owe Sanjay
     const owedSaket  = group === 'saket' ? 0 : (sd?.total ?? 0);
     const owedSanjay = group === 'dari'  ? 0 : (jd?.total ?? 0);
 
-    // Payments made (all to Saket historically); any overpayment offsets Sanjay balance
-    const balSaket   = Math.max(0, owedSaket - paid);
-    const overpay    = Math.max(0, paid - owedSaket);
-    const balSanjay  = Math.max(0, owedSanjay - overpay);
+    // Paid to Saket = historical Excel data + live recorded payments
+    const paidSaket  = (TOTAL_PAID[group] ?? 0) + (liveToSaket.get(group) ?? 0);
+    const paidSanjay = liveToSanjay.get(group) ?? 0;
+
+    const balSaket  = Math.max(0, owedSaket  - paidSaket);
+    const balSanjay = Math.max(0, owedSanjay - paidSanjay);
 
     return {
       accountGroup: group,
@@ -383,7 +406,8 @@ function BalanceSection({ records }: { records: MonthRecord[] }) {
       monthsSanjay: jd?.months ?? 0,
       owedSaket,
       owedSanjay,
-      paid,
+      paidSaket,
+      paidSanjay,
       balSaket,
       balSanjay,
     };
@@ -393,7 +417,7 @@ function BalanceSection({ records }: { records: MonthRecord[] }) {
   const totalReceivableSaket  = rows.reduce((s, r) => s + r.balSaket,  0);
   const totalReceivableSanjay = rows.reduce((s, r) => s + r.balSanjay, 0);
   const totalOwedAll          = rows.reduce((s, r) => s + r.owedSaket + r.owedSanjay, 0);
-  const totalPaidAll          = rows.reduce((s, r) => s + r.paid, 0);
+  const totalPaidAll          = rows.reduce((s, r) => s + r.paidSaket + r.paidSanjay, 0);
 
   return (
     <div className="space-y-4">
@@ -446,8 +470,10 @@ function BalanceSection({ records }: { records: MonthRecord[] }) {
             const g = GROUP_ACCENT[row.accountGroup] ?? GROUP_ACCENT.saket;
             const isSaketSettled  = row.balSaket  < 0.01;
             const isSanjaySettled = row.balSanjay < 0.01;
-            const saketPaidPct  = row.owedSaket  > 0 ? Math.min(100, (row.paid / row.owedSaket) * 100) : 100;
-            const sanjayPaidPct = row.owedSanjay > 0 ? 0 : 100; // no Sanjay payments tracked yet
+            const saketPaidPct  = row.owedSaket  > 0 ? Math.min(100, (row.paidSaket  / row.owedSaket)  * 100) : 100;
+            const sanjayPaidPct = row.owedSanjay > 0 ? Math.min(100, (row.paidSanjay / row.owedSanjay) * 100) : 100;
+            const hasBalance = row.balSaket > 0.01 || row.balSanjay > 0.01;
+            const isPayerOnly = row.accountGroup === 'saket' || (row.accountGroup === 'dari' && row.owedSaket < 0.01);
 
             return (
               <div key={row.accountGroup} className="px-5 py-4">
@@ -498,11 +524,10 @@ function BalanceSection({ records }: { records: MonthRecord[] }) {
 
                 {/* Progress bars */}
                 <div className="grid grid-cols-2 gap-2 mt-1">
-                  {/* Saket bar */}
                   {row.accountGroup !== 'saket' && row.owedSaket > 0 && (
                     <div>
                       <div className="text-xs text-gray-400 mb-1">
-                        Paid ${Math.min(row.paid, row.owedSaket).toFixed(0)} / ${row.owedSaket.toFixed(0)}
+                        Paid ${Math.min(row.paidSaket, row.owedSaket).toFixed(0)} / ${row.owedSaket.toFixed(0)}
                         <span className="ml-1 text-gray-300">({saketPaidPct.toFixed(0)}%)</span>
                       </div>
                       <div className="w-full bg-gray-100 rounded-full h-1.5 overflow-hidden flex">
@@ -513,19 +538,33 @@ function BalanceSection({ records }: { records: MonthRecord[] }) {
                       </div>
                     </div>
                   )}
-
-                  {/* Sanjay bar */}
                   {row.accountGroup !== 'dari' && row.owedSanjay > 0 && (
                     <div>
                       <div className="text-xs text-gray-400 mb-1">
-                        No payments tracked yet
+                        Paid ${Math.min(row.paidSanjay, row.owedSanjay).toFixed(0)} / ${row.owedSanjay.toFixed(0)}
+                        <span className="ml-1 text-gray-300">({sanjayPaidPct.toFixed(0)}%)</span>
                       </div>
-                      <div className="w-full bg-gray-100 rounded-full h-1.5 overflow-hidden">
-                        <div className="h-full bg-emerald-300" style={{ width: `100%` }} />
+                      <div className="w-full bg-gray-100 rounded-full h-1.5 overflow-hidden flex">
+                        <div className="h-full bg-green-400 rounded-l-full" style={{ width: `${sanjayPaidPct}%` }} />
+                        {sanjayPaidPct < 100 && (
+                          <div className="h-full bg-emerald-300" style={{ width: `${100 - sanjayPaidPct}%` }} />
+                        )}
                       </div>
                     </div>
                   )}
                 </div>
+
+                {/* Pay button */}
+                {canPay && hasBalance && !isPayerOnly && (
+                  <div className="mt-3">
+                    <button
+                      onClick={() => onPayClick({ accountGroup: row.accountGroup, fromName: row.name, balSaket: row.balSaket, balSanjay: row.balSanjay })}
+                      className="w-full py-2 rounded-xl bg-gray-900 text-white text-sm font-semibold hover:bg-gray-700 active:scale-95 transition-all"
+                    >
+                      💳 Record Payment
+                    </button>
+                  </div>
+                )}
               </div>
             );
           })}
@@ -534,8 +573,11 @@ function BalanceSection({ records }: { records: MonthRecord[] }) {
         {/* Footer */}
         <div className="px-5 py-3 bg-gray-50 border-t border-gray-100">
           <p className="text-xs text-gray-400">
-            Paid amounts from <span className="font-medium text-gray-600">T-Mobile.xlsx</span> "Paid" rows (all counted toward Saket's period).
-            Sanjay period: Jul 2025 – present, no separate payments tracked yet.
+            Saket balances include historical payments from{' '}
+            <span className="font-medium text-gray-600">T-Mobile.xlsx</span> plus any recorded here.
+            {payments.length > 0 && (
+              <span className="ml-1 text-gray-500 font-medium">{payments.length} payment{payments.length !== 1 ? 's' : ''} recorded.</span>
+            )}
           </p>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import type { ParsedBill, MonthRecord, PersonShare } from '../lib/types';
+import type { ParsedBill, MonthRecord, PersonShare, Payment, PayClickData } from '../lib/types';
 import { DEFAULT_CONFIG } from '../lib/config';
 import { calculateBillSplit, getPersonTotal, getVerificationDiff } from '../lib/calculator';
 import { extractTextFromPDF, parseTMobileBillText, detectMonth } from '../lib/parser';
@@ -13,6 +13,7 @@ import HistoryTable from './HistoryTable';
 import CreditConfig from './CreditConfig';
 import Dashboard from './Dashboard';
 import PinDialog from './PinDialog';
+import PaymentModal from './PaymentModal';
 import { isGistEnabled, loadFromGist, saveToGist } from '../lib/gistStorage';
 
 type Tab = 'dashboard' | 'upload' | 'history' | 'credits';
@@ -81,8 +82,11 @@ export default function App() {
   });
   const [savedRecords, setSavedRecords] = useState<MonthRecord[]>([]);
   const [saveStatus, setSaveStatus] = useState<'idle' | 'saved' | 'error'>('idle');
+  const [payments, setPayments] = useState<Payment[]>([]);
+  const [pendingPayGroup, setPendingPayGroup] = useState<PayClickData | null>(null);
+  const [pendingPayDraft, setPendingPayDraft] = useState<Omit<Payment, 'id' | 'date'> | null>(null);
   const [gistLoading, setGistLoading] = useState(false);
-  const [pinDialog, setPinDialog] = useState<'closed' | 'save' | 'migrate'>('closed');
+  const [pinDialog, setPinDialog] = useState<'closed' | 'save' | 'migrate' | 'payment'>('closed');
   const [pinSaving, setPinSaving] = useState(false);
   const [pinError, setPinError] = useState<string | null>(null);
   const [gistSaveStatus, setGistSaveStatus] = useState<'idle' | 'saving' | 'saved' | 'error'>('idle');
@@ -109,8 +113,10 @@ export default function App() {
 
     if (!isGistEnabled()) return;
     setGistLoading(true);
-    loadFromGist().then((gistRecords) => {
+    loadFromGist().then(({ records: gistRecords, payments: gistPayments }) => {
       setGistLoading(false);
+      setPayments(gistPayments);
+
       if (!gistRecords.length) return;
 
       // HISTORY months: always use enrichedHistory (fresh creditConfigs + lineItems).
@@ -258,12 +264,11 @@ export default function App() {
         notes: parsedBill?.rawText ? undefined : 'Manual entry',
         savedAt: new Date().toISOString().slice(0, 10),
       };
-      // Upsert current month into the full records list
       const updated = savedRecords.some((r) => r.month === month)
         ? savedRecords.map((r) => (r.month === month ? currentRecord : r))
         : [currentRecord, ...savedRecords].sort((a, b) => b.month.localeCompare(a.month));
 
-      const result = await saveToGist(updated, pin);
+      const result = await saveToGist({ records: updated, payments }, pin);
       if (result === 'ok') {
         setSavedRecords(updated);
         handleSave();
@@ -276,13 +281,33 @@ export default function App() {
         setPinError('Save failed. Check your connection.');
       }
     } else if (pinDialog === 'migrate') {
-      const result = await saveToGist(savedRecords, pin);
+      const result = await saveToGist({ records: savedRecords, payments }, pin);
       if (result === 'ok') {
         setPinDialog('closed');
       } else if (result === 'wrong_pin') {
         setPinError('Incorrect PIN. Try again.');
       } else {
         setPinError('Migration failed. Check your connection.');
+      }
+    } else if (pinDialog === 'payment' && pendingPayDraft) {
+      const newPayment: Payment = {
+        id: `pay_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`,
+        date: new Date().toISOString().slice(0, 10),
+        ...pendingPayDraft,
+      };
+      const updatedPayments = [...payments, newPayment];
+      const result = await saveToGist({ records: savedRecords, payments: updatedPayments }, pin);
+      if (result === 'ok') {
+        setPayments(updatedPayments);
+        setPendingPayDraft(null);
+        setPendingPayGroup(null);
+        setPinDialog('closed');
+        setGistSaveStatus('saved');
+        setTimeout(() => setGistSaveStatus('idle'), 3000);
+      } else if (result === 'wrong_pin') {
+        setPinError('Incorrect PIN. Try again.');
+      } else {
+        setPinError('Save failed. Check your connection.');
       }
     }
 
@@ -349,7 +374,14 @@ export default function App() {
 
       <main className="max-w-6xl mx-auto px-4 py-6">
         {tab === 'dashboard' && (
-          <Dashboard records={savedRecords} />
+          <Dashboard
+            records={savedRecords}
+            payments={payments}
+            onPayClick={(data) => {
+              setPendingPayGroup(data);
+              setPendingPayDraft(null);
+            }}
+          />
         )}
 
         {tab === 'upload' && (
@@ -420,17 +452,45 @@ export default function App() {
         </div>
       )}
 
+      {/* Payment modal — collect payment details before PIN */}
+      {pendingPayGroup && !pendingPayDraft && (
+        <PaymentModal
+          fromGroup={pendingPayGroup.accountGroup}
+          fromName={pendingPayGroup.fromName}
+          balSaket={pendingPayGroup.balSaket}
+          balSanjay={pendingPayGroup.balSanjay}
+          onSubmit={(draft) => {
+            setPendingPayDraft(draft);
+            setPendingPayGroup(null);
+            setPinError(null);
+            setPinDialog('payment');
+          }}
+          onCancel={() => setPendingPayGroup(null)}
+        />
+      )}
+
       {pinDialog !== 'closed' && (
         <PinDialog
-          title={pinDialog === 'migrate' ? 'Migrate History to Gist' : 'Sync to Gist'}
+          title={
+            pinDialog === 'migrate' ? 'Migrate History to Gist'
+            : pinDialog === 'payment' ? 'Confirm Payment'
+            : 'Sync to Gist'
+          }
           description={
             pinDialog === 'migrate'
               ? 'This will write all records to the Gist as the permanent store. Enter your PIN to confirm.'
+              : pinDialog === 'payment'
+              ? `Enter the shared PIN to record this payment of $${pendingPayDraft?.amount.toFixed(2) ?? '0.00'} to ${pendingPayDraft?.toPayee === 'saket' ? 'Saket' : 'Sanjay'}.`
               : "Enter the shared PIN to persist this month's record."
           }
-          confirmLabel={pinDialog === 'migrate' ? 'Migrate' : 'Sync'}
+          confirmLabel={pinDialog === 'migrate' ? 'Migrate' : pinDialog === 'payment' ? 'Record Payment' : 'Sync'}
           onConfirm={handlePinConfirm}
-          onCancel={() => setPinDialog('closed')}
+          onCancel={() => {
+            setPinDialog('closed');
+            if (pinDialog === 'payment') {
+              setPendingPayDraft(null);
+            }
+          }}
           saving={pinSaving}
           error={pinError}
         />

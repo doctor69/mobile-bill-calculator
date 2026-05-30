@@ -83,6 +83,24 @@ export interface MonthRecord {
   paidBy?: string;  // 'Saket' | 'Sanjay' — who paid T-Mobile that month
 }
 
+export interface Payment {
+  id: string;
+  date: string;                              // YYYY-MM-DD
+  fromGroup: string;                         // accountGroup of the payer
+  fromName: string;
+  toPayee: 'saket' | 'sanjay';
+  amount: number;
+  method: 'venmo' | 'zelle' | 'cash' | 'bank' | 'other';
+  note?: string;
+}
+
+export interface PayClickData {
+  accountGroup: string;
+  fromName: string;
+  balSaket: number;
+  balSanjay: number;
+}
+
 export interface AppConfig {
   accountGroups: AccountGroup[];
   creditConfigs: CreditConfig[];
